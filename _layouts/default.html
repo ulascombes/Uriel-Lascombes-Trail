@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }} — {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="{{ '/' | relative_url }}">Uriel Lascombes</a>
+    <div class="links">
+      <a href="{{ '/resultats/' | relative_url }}">Résultats</a>
+    </div>
+  </nav>
+
+  {{ content }}
+
+  <footer>© {{ 'now' | date: '%Y' }} Uriel Lascombes</footer>
+</body>
+</html>

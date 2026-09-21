@@ -1,0 +1,113 @@
+# Ajoute une nouvelle course en copiant un bloc ci-dessous.
+# Laisse un champ vide (ou supprime la ligne) si tu n'as pas la donnée.
+# La page resultats.md trie automatiquement par date, la plus récente en haut.
+
+- nom: "Trail de Volx en course"
+  date: 2026-09-12
+  km: 21
+  dplus: 1300
+  temps: "1h57min16s"
+  classement: 1
+  itra:
+  utmb:
+  betrail: 823
+
+- nom: "Trail des étoiles"
+  date: 2026-08-16
+  km: 21.5
+  dplus: 1307
+  temps: "1h57min16s"
+  classement: 1
+  itra: 834
+  utmb: 814
+  betrail: 75.13
+
+- nom: "Trail des Mélèzes du Mercantour"
+  date: 2026-07-19
+  km: 25
+  dplus: 1610
+  temps:
+  classement: 8
+  itra:
+  utmb:
+  betrail:
+
+- nom: "Trail du col du Noyer"
+  date: 2026-06-21
+  km: 24
+  dplus: 1350
+  temps: "2h07min50s"
+  classement: 3
+  itra: 840
+  utmb: 818
+  betrail: 75.63
+
+- nom: "Var Verdon Trail Canyon"
+  date: 2026-06-06
+  km: 23.48
+  dplus: 1441
+  temps: "2h28min05s"
+  classement: 1
+  itra: 807
+  utmb:
+  betrail: 72.04
+
+- nom: "Trail de Mimet"
+  date: 2026-05-17
+  km: 29.77
+  dplus: 1931
+  temps: "2h55min36s"
+  classement: 1
+  itra: 768
+  utmb:
+  betrail: 73.85
+
+- nom: "Trail de la Font de Mai"
+  date: 2026-05-03
+  km: 27.82
+  dplus: 1521
+  temps: "2h31min41s"
+  classement: 1
+  itra:
+  utmb:
+  betrail: 69.54
+
+- nom: "Trail des Beaumes de Venise"
+  date: 2026-04-12
+  km: 25.56
+  dplus: 1321
+  temps: "2h16min25s"
+  classement: 1
+  itra:
+  utmb:
+  betrail: 69.8
+
+- nom: "Trail du Ventoux - Championnats de France"
+  date: 2026-03-29
+  km: 28.34
+  dplus: 1395
+  temps: "2h20min44s"
+  classement: 84
+  itra: 781
+  utmb: 764
+  betrail: 70.39
+
+- nom: "Trail des mineurs"
+  date: 2026-03-08
+  km: 27.28
+  dplus: 1097
+  temps: "2h18min49s"
+  classement: 2
+  itra:
+  utmb: 744
+  betrail: 67.8
+
+- nom: "Trail de la galinette"
+  date: 2026-01-25
+  km: 23.37
+  dplus: 1122
+  temps: "1h50min07s"
+  classement: 2
+  itra: 813
+  utmb: 785
+  betrail: 72.76

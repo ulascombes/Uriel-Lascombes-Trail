@@ -1,0 +1,33 @@
+{% assign p = site.data.profil %}
+<div class="stats-bar">
+  <div class="stats-scores">
+    {% if p.itra_score %}
+    <a href="{{ p.itra_link }}" target="_blank" class="score-item">
+      <span class="score-num">{{ p.itra_score }}</span>
+      {% if p.itra_logo %}<img src="{{ p.itra_logo | relative_url }}" alt="ITRA">{% endif %}
+    </a>
+    {% endif %}
+    {% if p.utmb_general %}
+    <a href="{{ p.utmb_link }}" target="_blank" class="score-item">
+      <span class="score-num">{{ p.utmb_general }}</span>
+      {% if p.utmb_logo_general %}<img src="{{ p.utmb_logo_general | relative_url }}" alt="UTMB">{% endif %}
+    </a>
+    {% endif %}
+    {% if p.utmb_20k %}
+    <a href="{{ p.utmb_link }}" target="_blank" class="score-item">
+      <span class="score-num">{{ p.utmb_20k }}</span>
+      {% if p.utmb_logo_20k %}<img src="{{ p.utmb_logo_20k | relative_url }}" alt="UTMB 20k">{% endif %}
+    </a>
+    {% endif %}
+    {% if p.betrail_score %}
+    <a href="{{ p.betrail_link }}" target="_blank" class="score-item">
+      <span class="score-num">{{ p.betrail_score }}</span>
+      {% if p.betrail_logo %}<img src="{{ p.betrail_logo | relative_url }}" alt="BeTrail">{% endif %}
+    </a>
+    {% endif %}
+  </div>
+  <div class="stats-club">
+    Je cours au <a href="{{ p.club_insta }}" target="_blank">{{ p.club_nom }}</a>
+    et coaché par {{ p.coach_nom }} (<a href="{{ p.coach_insta }}" target="_blank">{{ p.coach_insta_handle }}</a>)
+  </div>
+</div>

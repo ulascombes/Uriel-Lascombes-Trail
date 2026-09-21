@@ -1,0 +1,21 @@
+# Ajoute ici tout événement autre qu'une course pour qu'il apparaisse
+# dans la timeline de la page d'accueil, mélangé avec tes résultats.
+#
+# Champs : date (obligatoire), titre, type (texte libre, ex: "Partenariat",
+# "Stage", "Blessure"), description (optionnel), icone (un emoji, optionnel).
+#
+# Exemple (décommente et adapte) :
+#
+# - date: 2026-11-01
+#   titre: "Stage d'altitude à Font-Romeu"
+#   type: "Stage"
+#   description: "Deux semaines de préparation en altitude avant la reprise."
+#   icone: "⛰️"
+#
+# - date: 2026-10-15
+#   titre: "Nouveau partenaire : Nnormal"
+#   type: "Partenariat"
+#   description: "Dotation matériel pour la saison 2027."
+#   icone: "🤝"
+
+[]

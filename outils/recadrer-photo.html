@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Recadrer une photo</title>
+<style>
+  body { font-family: -apple-system, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+  h1 { font-size: 1.3rem; }
+  .controls { display: flex; gap: 1rem; align-items: center; margin: 1rem 0; flex-wrap: wrap; }
+  #canvasWrap { position: relative; border: 1px solid #ccc; overflow: hidden; touch-action: none; }
+  canvas { display: block; }
+  #cropBox {
+    position: absolute;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2000px rgba(0,0,0,0.5);
+    cursor: move;
+  }
+  button, select, input[type=range] { font-size: 0.95rem; padding: 0.4rem 0.7rem; }
+  .out { margin-top: 1rem; }
+  .out img { max-width: 100%; border: 1px solid #ccc; }
+</style>
+</head>
+<body>
+  <h1>Recadrer une photo</h1>
+  <p>1. Choisis une photo. 2. Choisis le format. 3. Déplace le cadre (glisser) et ajuste le zoom. 4. Télécharge le résultat, dépose-le dans le bon dossier du site.</p>
+
+  <input type="file" id="fileInput" accept="image/*">
+
+  <div class="controls">
+    <label>Format :
+      <select id="ratioSelect">
+        <option value="3">Bannière (3:1)</option>
+        <option value="1">Profil carré (1:1)</option>
+      </select>
+    </label>
+    <label>Zoom : <input type="range" id="zoom" min="0.3" max="1" step="0.01" value="0.8"></label>
+    <button id="downloadBtn">Télécharger le recadrage</button>
+  </div>
+
+  <div id="canvasWrap">
+    <canvas id="canvas"></canvas>
+    <div id="cropBox"></div>
+  </div>
+
+  <div class="out" id="out"></div>
+
+<script>
+const fileInput = document.getElementById('fileInput');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const canvasWrap = document.getElementById('canvasWrap');
+const cropBox = document.getElementById('cropBox');
+const ratioSelect = document.getElementById('ratioSelect');
+const zoom = document.getElementById('zoom');
+const downloadBtn = document.getElementById('downloadBtn');
+const out = document.getElementById('out');
+
+let img = new Image();
+let displayScale = 1; // image pixels -> canvas pixels
+let crop = { x: 0, y: 0, w: 100, h: 100 };
+let dragging = false, dragStart = { x: 0, y: 0 };
+
+fileInput.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (ev) => { img.onload = initCanvas; img.src = ev.target.result; };
+  reader.readAsDataURL(file);
+});
+
+function initCanvas() {
+  const maxW = 680;
+  displayScale = Math.min(1, maxW / img.width);
+  canvas.width = img.width * displayScale;
+  canvas.height = img.height * displayScale;
+  canvasWrap.style.width = canvas.width + 'px';
+  canvasWrap.style.height = canvas.height + 'px';
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  updateCropBox(true);
+}
+
+function currentRatio() { return parseFloat(ratioSelect.value); }
+
+function updateCropBox(reset) {
+  if (!img.src) return;
+  const ratio = currentRatio();
+  const z = parseFloat(zoom.value);
+  let w = canvas.width * z;
+  let h = w / ratio;
+  if (h > canvas.height) { h = canvas.height * z; w = h * ratio; }
+  if (reset || crop.w === 100) {
+    crop = { x: (canvas.width - w) / 2, y: (canvas.height - h) / 2, w, h };
+  } else {
+    crop.w = w; crop.h = h;
+    crop.x = Math.min(Math.max(0, crop.x), canvas.width - w);
+    crop.y = Math.min(Math.max(0, crop.y), canvas.height - h);
+  }
+  cropBox.style.left = crop.x + 'px';
+  cropBox.style.top = crop.y + 'px';
+  cropBox.style.width = crop.w + 'px';
+  cropBox.style.height = crop.h + 'px';
+}
+
+ratioSelect.addEventListener('change', () => updateCropBox(true));
+zoom.addEventListener('input', () => updateCropBox(false));
+
+cropBox.addEventListener('mousedown', (e) => {
+  dragging = true;
+  dragStart = { x: e.clientX - crop.x, y: e.clientY - crop.y };
+});
+window.addEventListener('mousemove', (e) => {
+  if (!dragging) return;
+  crop.x = Math.min(Math.max(0, e.clientX - dragStart.x), canvas.width - crop.w);
+  crop.y = Math.min(Math.max(0, e.clientY - dragStart.y), canvas.height - crop.h);
+  cropBox.style.left = crop.x + 'px';
+  cropBox.style.top = crop.y + 'px';
+});
+window.addEventListener('mouseup', () => dragging = false);
+
+downloadBtn.addEventListener('click', () => {
+  if (!img.src) { alert('Choisis une photo d\'abord.'); return; }
+  const ratio = currentRatio();
+  const outW = ratio === 1 ? 800 : 1600;
+  const outH = Math.round(outW / ratio);
+  const outCanvas = document.createElement('canvas');
+  outCanvas.width = outW;
+  outCanvas.height = outH;
+  const octx = outCanvas.getContext('2d');
+  const sx = crop.x / displayScale, sy = crop.y / displayScale;
+  const sw = crop.w / displayScale, sh = crop.h / displayScale;
+  octx.drawImage(img, sx, sy, sw, sh, 0, 0, outW, outH);
+  const dataUrl = outCanvas.toDataURL('image/jpeg', 0.88);
+  const a = document.createElement('a');
+  a.href = dataUrl;
+  a.download = ratio === 1 ? 'profil.jpg' : 'couverture.jpg';
+  a.click();
+  out.innerHTML = '<p>Aperçu :</p><img src="' + dataUrl + '">';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+club_nom: "Trail Club de Provence"
+club_insta: "https://www.instagram.com/trailclubdeprovence?stkn=MXJwY2V1Znd1YWZ2Yg=="
+
+coach_nom: "Jean-Baptiste Sautreau"
+coach_insta_handle: "jbs_training"
+coach_insta: "https://www.instagram.com/jbs_training?stkn=Zjd2a29kaTN1a3gw"
+
+# Pas d'API publique ITRA/UTMB/BeTrail exploitable depuis un site statique
+# GitHub Pages (pas de backend) → mets ces valeurs à jour toi-même de temps
+# en temps.
+itra_score: 824
+itra_link: "https://itra.run/RunnerSpace/lascombes.uriel.3811167"
+itra_logo: "/assets/images/logos/itra.png"
+
+utmb_general: 804
+utmb_20k: 807
+utmb_link: "https://utmb.world/fr/runner/3811167.uriel.lascombes"
+utmb_logo_general: "/assets/images/logos/utmb-general.png"
+utmb_logo_20k: "/assets/images/logos/utmb-20k.png"
+
+betrail_score: 75.18
+betrail_link: "https://www.betrail.run/runner/my-page/overview"
+betrail_logo: "/assets/images/logos/betrail.png"

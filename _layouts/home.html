@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="hero-cover-wrap">
+  <img class="hero-cover" style="object-position: {{ page.cover_position | default: 'center' }};" src="{{ page.cover | relative_url }}" alt="Photo de couverture">
+  <div class="hero-profile-row">
+    <img src="{{ page.profile | relative_url }}" alt="{{ site.title }}">
+  </div>
+</div>
+
+<div class="hero-block">
+  <div class="hero-name-block">
+    <p class="hero-name">{{ site.title }}</p>
+    <p class="hero-tagline">{{ page.tagline }}</p>
+  </div>
+
+  {% include stats-bar.html %}
+
+  {{ content }}
+</div>

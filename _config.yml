@@ -1,0 +1,11 @@
+title: Uriel Lascombes
+description: "Trail runner — résultats, récits de course, tests de matériel"
+
+# Pas de thème externe : design 100% custom (voir assets/css/style.css)
+
+exclude:
+  - outils/
+  - README.md
+
+# Décommenter et renseigner si tu achètes un nom de domaine plus tard
+# url: "https://tondomaine.fr"
