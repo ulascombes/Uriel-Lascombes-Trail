@@ -20,9 +20,7 @@ tagline: "Coureur de trail court"
 
   {% if item.nom %}
   <div class="tl-item">
-    {% if item.classement == 1 %}<span class="tl-medal gold">🏆</span>
-    {% elsif item.classement == 2 %}<span class="tl-medal silver">🥈</span>
-    {% elsif item.classement == 3 %}<span class="tl-medal bronze">🥉</span>
+    {% if item.emoji %}<span class="tl-medal{% if item.classement == 1 %} gold{% elsif item.classement == 2 %} silver{% elsif item.classement == 3 %} bronze{% else %} neutral{% endif %}">{{ item.emoji }}</span>
     {% else %}<span class="tl-dot"></span>
     {% endif %}
     <div class="tl-date">{{ date_fr }}</div>
@@ -39,6 +37,8 @@ tagline: "Coureur de trail court"
       {% if item.dplus %} · {{ item.dplus }} m D+{% endif %}
       {% if item.temps %} · {{ item.temps }}{% endif %}
     </div>
+    {% if item.commentaire %}<div class="tl-comment">« {{ item.commentaire }} »</div>{% endif %}
+    {% if item.chaussures %}<div class="tl-shoes">Chaussures : {{ item.chaussures }}</div>{% endif %}
     {% if item.itra or item.utmb or item.betrail %}
     <div class="tl-scores">
       {% if item.itra %}<span class="tl-score-mini small">{% if p.itra_logo %}<img src="{{ p.itra_logo | relative_url }}" alt="ITRA">{% endif %}{{ item.itra }}</span>{% endif %}

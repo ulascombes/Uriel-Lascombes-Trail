@@ -1,6 +1,13 @@
 # Ajoute une nouvelle course en copiant un bloc ci-dessous.
 # Laisse un champ vide (ou supprime la ligne) si tu n'as pas la donnée.
 # La page resultats.md trie automatiquement par date, la plus récente en haut.
+#
+# emoji : affiché sur la ligne de la timeline, à la place du point.
+#   Renseigne-le pour CHAQUE course : 🏆 pour une victoire, 🥈 pour une 2e place,
+#   🥉 pour une 3e place, ou tout autre emoji libre pour les autres résultats
+#   (ex: 🤕 blessure, 🇫🇷 qualif France). Laisse vide pour un simple point neutre.
+# commentaire : une phrase courte, affichée en italique entre guillemets
+# chaussures : le modèle porté pour la course
 
 - nom: "Trail de Volx en course"
   date: 2026-09-12
@@ -9,8 +16,11 @@
   temps: "1h57min16s"
   classement: 1
   itra:
-  utmb:
-  betrail: 823
+  utmb: 824
+  betrail: 74.87
+  emoji: "🏆"
+  commentaire:
+  chaussures:
 
 - nom: "Trail des étoiles"
   date: 2026-08-16
@@ -21,6 +31,9 @@
   itra: 834
   utmb: 814
   betrail: 75.13
+  emoji: "🏆"
+  commentaire:
+  chaussures:
 
 - nom: "Trail des Mélèzes du Mercantour"
   date: 2026-07-19
@@ -31,6 +44,9 @@
   itra:
   utmb:
   betrail:
+  emoji: "🤕"
+  commentaire:
+  chaussures:
 
 - nom: "Trail du col du Noyer"
   date: 2026-06-21
@@ -41,6 +57,9 @@
   itra: 840
   utmb: 818
   betrail: 75.63
+  emoji: "🥉"
+  commentaire:
+  chaussures:
 
 - nom: "Var Verdon Trail Canyon"
   date: 2026-06-06
@@ -51,6 +70,9 @@
   itra: 807
   utmb:
   betrail: 72.04
+  emoji: "🏆"
+  commentaire:
+  chaussures:
 
 - nom: "Trail de Mimet"
   date: 2026-05-17
@@ -61,6 +83,9 @@
   itra: 768
   utmb:
   betrail: 73.85
+  emoji: "🏆"
+  commentaire:
+  chaussures:
 
 - nom: "Trail de la Font de Mai"
   date: 2026-05-03
@@ -71,6 +96,9 @@
   itra:
   utmb:
   betrail: 69.54
+  emoji: "🏆"
+  commentaire:
+  chaussures:
 
 - nom: "Trail des Beaumes de Venise"
   date: 2026-04-12
@@ -81,8 +109,11 @@
   itra:
   utmb:
   betrail: 69.8
+  emoji: "🏆"
+  commentaire:
+  chaussures:
 
-- nom: "Trail du Ventoux - Championnats de France"
+- nom: "Trail du Ventoux"
   date: 2026-03-29
   km: 28.34
   dplus: 1395
@@ -91,6 +122,9 @@
   itra: 781
   utmb: 764
   betrail: 70.39
+  emoji: "🇫🇷"
+  commentaire:
+  chaussures:
 
 - nom: "Trail des mineurs"
   date: 2026-03-08
@@ -101,8 +135,11 @@
   itra:
   utmb: 744
   betrail: 67.8
+  emoji: "🥈"
+  commentaire:
+  chaussures:
 
-- nom: "Trail de la galinette"
+- nom: "Galinette"
   date: 2026-01-25
   km: 23.37
   dplus: 1122
@@ -111,3 +148,6 @@
   itra: 813
   utmb: 785
   betrail: 72.76
+  emoji: "🥈"
+  commentaire:
+  chaussures:

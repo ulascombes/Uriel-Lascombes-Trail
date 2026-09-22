@@ -173,6 +173,7 @@ img { max-width: 100%; display: block; }
 .tl-medal.gold { background: #f3e6bd; }
 .tl-medal.silver { background: #e5e6e8; }
 .tl-medal.bronze { background: #ecd7c4; }
+.tl-medal.neutral { background: var(--bg); }
 
 .tl-date {
   font-size: 0.76rem;
@@ -184,6 +185,17 @@ img { max-width: 100%; display: block; }
   font-size: 1.1rem;
   font-weight: 700;
   margin: 0.2rem 0 0.15rem;
+}
+.tl-comment {
+  font-style: italic;
+  color: var(--text);
+  font-size: 0.92rem;
+  margin-top: 0.4rem;
+}
+.tl-shoes {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-top: 0.2rem;
 }
 .tl-rank {
   font-weight: 700;

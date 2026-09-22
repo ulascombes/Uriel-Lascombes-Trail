@@ -17,9 +17,7 @@ permalink: /resultats/
   {% assign date_fr = jour | append: " " | append: months[midx] | append: " " | append: parts[0] %}
 
   <div class="tl-item">
-    {% if c.classement == 1 %}<span class="tl-medal gold">🏆</span>
-    {% elsif c.classement == 2 %}<span class="tl-medal silver">🥈</span>
-    {% elsif c.classement == 3 %}<span class="tl-medal bronze">🥉</span>
+    {% if c.emoji %}<span class="tl-medal{% if c.classement == 1 %} gold{% elsif c.classement == 2 %} silver{% elsif c.classement == 3 %} bronze{% else %} neutral{% endif %}">{{ c.emoji }}</span>
     {% else %}<span class="tl-dot"></span>
     {% endif %}
     <div class="tl-date">{{ date_fr }}</div>
@@ -36,6 +34,8 @@ permalink: /resultats/
       {% if c.dplus %} · {{ c.dplus }} m D+{% endif %}
       {% if c.temps %} · {{ c.temps }}{% endif %}
     </div>
+    {% if c.commentaire %}<div class="tl-comment">« {{ c.commentaire }} »</div>{% endif %}
+    {% if c.chaussures %}<div class="tl-shoes">Chaussures : {{ c.chaussures }}</div>{% endif %}
     {% if c.itra or c.utmb or c.betrail %}
     <div class="tl-scores">
       {% if c.itra %}<span class="tl-score-mini">{% if p.itra_logo %}<img src="{{ p.itra_logo | relative_url }}" alt="ITRA">{% endif %}{{ c.itra }}</span>{% endif %}
