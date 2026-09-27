@@ -1,0 +1,6 @@
+{%- comment -%} Photo de la chaussure, ou silhouette si pas encore de photo. Variable : sh {%- endcomment -%}
+{%- if sh.image and sh.image != "" -%}
+<img class="shoe-img" src="{{ sh.image | relative_url }}" alt="{{ sh.marque }} {{ sh.title }}" loading="lazy">
+{%- else -%}
+<svg class="shoe-placeholder" viewBox="0 0 240 110" role="img" aria-label="Photo à venir"><path d="M18 78c0-9 5-15 13-18l40-16c8-3 13-10 17-18l4-8c2-4 7-5 10-2 9 9 21 14 34 14h6c6 0 10 4 11 10l2 10c1 5 5 9 10 10l35 7c12 2 22 11 24 23l1 6H26c-5 0-8-4-8-8z"/><path class="shoe-sole" d="M18 86h214v6c0 5-4 8-8 8H30c-7 0-12-6-12-12z"/></svg>
+{%- endif -%}

@@ -1,0 +1,11 @@
+---
+layout: page
+title: Récits de course
+permalink: /recits/
+description: "Récits de course d'Uriel Lascombes : déroulé, ce qui a marché, ce qui reste à travailler."
+---
+<p class="lede">Chaque course en quelques paragraphes : comment elle s'est jouée, ce que j'en retiens, ce que j'avais aux pieds.</p>
+{%- assign recits = site.recits | sort: "date" | reverse %}
+<div class="recit-grid">
+  {%- for r in recits %}{% include recit-card.html %}{% endfor %}
+</div>

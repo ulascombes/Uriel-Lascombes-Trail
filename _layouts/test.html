@@ -1,0 +1,44 @@
+---
+layout: default
+---
+{%- assign sh = page -%}
+{%- assign courses = site.data.resultats | where: "chaussures", page.nom_resultats | sort: "date" | reverse -%}
+<article class="shoe-page">
+  <header class="wrap-narrow recit-head">
+    <p class="kicker"><a href="{{ '/tests/' | relative_url }}">Tests matériel</a> · {{ page.marque }}</p>
+    <h1 class="recit-title">{{ page.marque }} {{ page.title }}</h1>
+    {%- if page.podium %}
+    <p class="recit-result{% if page.podium == 1 %} is-win{% endif %}">{% assign medal_rank = page.podium %}{% include medal.html %}<span class="rr-label">{{ page.podium }}<sup>{% if page.podium == 1 %}re{% else %}e{% endif %}</sup> de mon podium</span></p>
+    {%- endif %}
+    {%- if page.accroche %}<p class="recit-chapo">« {{ page.accroche }} »</p>{% endif %}
+  </header>
+
+  <div class="wrap-narrow shoe-top">
+    <div class="shoe-hero">{% include chaussure-visuel.html %}</div>
+    <dl class="shoe-specs">
+      <div><dt>Marque</dt><dd>{{ page.marque }}</dd></div>
+      <div><dt>Modèle</dt><dd>{{ page.title }}</dd></div>
+      {%- if page.taille != "" and page.taille %}<div><dt>Taille</dt><dd>{{ page.taille }}</dd></div>{% endif %}
+      {%- if page.poids != "" and page.poids %}<div><dt>Poids mesuré</dt><dd>{{ page.poids }} g{% if page.sans_semelle %} <span class="spec-note">sans semelle de propreté</span>{% endif %}</dd></div>{% endif %}
+      <div><dt>Drop</dt><dd>{{ page.drop | replace: ".", "," }} mm</dd></div>
+      <div><dt>Hauteur de semelle</dt><dd>{{ page.stack_talon | replace: ".", "," }} mm au talon · {{ page.stack_avant | replace: ".", "," }} mm à l'avant</dd></div>
+    </dl>
+  </div>
+
+  <div class="recit-body wrap-narrow prose">
+    {{ content }}
+
+    {%- if courses.size > 0 %}
+    <h2>Courses avec cette paire</h2>
+    <ul class="shoe-races">
+      {%- for c in courses %}
+      {%- assign rec = site.recits | where: "ref", c.ref | first -%}
+      <li><span class="sr-date">{{ c.date | date: "%m/%Y" }}</span> {% if rec %}<a href="{{ rec.url | relative_url }}">{{ c.nom }}</a>{% else %}{{ c.nom }}{% endif %}{% if c.classement %} · {% if c.classement == 1 %}victoire{% else %}{{ c.classement }}<sup>e</sup>{% endif %}{% endif %}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+    <p class="shoe-note">Hauteur de semelle et drop : données fabricant.{% if page.poids != "" and page.poids %} Poids mesuré sur ma paire, pour une chaussure{% if page.taille != "" and page.taille %} en {{ page.taille }}{% endif %}. Quand je peux, je retire la semelle de propreté.{% endif %}</p>
+  </div>
+
+  <div class="wrap-narrow"><nav class="recit-nav" aria-label="Autres tests"><a href="{{ '/tests/' | relative_url }}"><span>Retour</span>Toutes les paires testées</a></nav></div>
+</article>

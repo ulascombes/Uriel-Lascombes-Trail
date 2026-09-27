@@ -1,0 +1,69 @@
+# Articles de presse. Le plus récent en premier (tri automatique par date).
+# titre   : ton résumé (ce que l'article dit de toi) — c'est lui qui s'affiche en gros
+# titre_original : le titre du journal
+# extrait : une phrase courte de l'article où tu es cité (facultatif)
+# abonnes : true si l'article est réservé aux abonnés
+# course  : ref de la course dans resultats.yml (le récit affichera l'article)
+
+- media: "La Provence"
+  date: 2026-09-12
+  titre: "Victoire au Volx en course, seul sous les deux heures"
+  titre_original: "Course à pied : une affluence record, un sprint final et du beau monde sur le 22e Volx en course"
+  extrait: "Le vainqueur du trail, Uriel Lascombes (TC de Provence), seul concurrent sous les 2 h (1:57'33), a salué les paysages du parc naturel régional du Luberon."
+  url: "https://www.laprovence.com/article/sports/82760483084687/course-a-pied-une-affluence-record-un-sprint-final-et-du-beau-monde-sur-le-22e-volx-en-course"
+  abonnes: false
+  course: volx-2026
+
+- media: "Le Dauphiné libéré"
+  date: 2026-08-16
+  titre: "Trail des Étoiles : victoire sur le semi du Rasis"
+  titre_original: "Romain Laurent et Maryline Nakache sacrés"
+  extrait:
+  url: "https://www.ledauphine.com/sport/2026/08/16/romain-laurent-et-maryline-nakache-sacres"
+  abonnes: true
+  course: etoiles-2026
+
+- media: "Aix Athlé Provence"
+  date: 2026-06-22
+  titre: "Trail de Mimet : victoire sur le 29 km"
+  titre_original: "Trail de Mimet 2026"
+  extrait: "Le 29 km a vu la victoire d'Uriel Lascombes (Trail Club de Provence) en 2 h 55, devant un plateau particulièrement dense."
+  url: "https://www.aix-athle.com/trail-de-mimet-2026/"
+  abonnes: false
+  course: mimet-2026
+
+- media: "Nice-Matin"
+  date: 2026-06-06
+  titre: "Var Verdon Trail Canyon : victoire sur le Grand Marges"
+  titre_original: "Un Vauclusien et une Londaise remportent l'épreuve reine du Var Verdon Trail Canyon 2026"
+  extrait:
+  url: "https://www.nicematin.com/sports/course-pedestre/un-vauclusien-et-une-londaise-remportent-l-epreuve-reine-du-var-verdon-trail-canyon-2026-10684037"
+  abonnes: true
+  course: var-verdon-2026
+
+- media: "Le Dauphiné libéré"
+  date: 2026-04-12
+  titre: "Trail des Beaumes de Venise : victoire sur le 26 km"
+  titre_original: "Une édition très relevée"
+  extrait:
+  url: "https://www.ledauphine.com/sport/2026/04/12/une-edition-tres-relevee"
+  abonnes: true
+  course: beaumes-de-venise-2026
+
+- media: "Le Dauphiné libéré"
+  date: 2026-04-12
+  titre: "Trail des Beaumes de Venise : le récit de la journée"
+  titre_original: "1 000 coureurs au départ, quatre parcours : revivez le trail de Beaumes-de-Venise"
+  extrait:
+  url: "https://www.ledauphine.com/sport/2026/04/12/1-000-coureurs-au-depart-quatre-parcours-revivez-le-trail-de-beaumes-de-venise"
+  abonnes: false
+  course: beaumes-de-venise-2026
+
+- media: "La Provence"
+  date: 2026-03-08
+  titre: "Ronde des Mineurs : deuxième au sprint"
+  titre_original: "Course nature : une 16e édition historique pour la Ronde des Mineurs à Gréasque"
+  extrait:
+  url: "https://www.laprovence.com/article/sports/4544992425609214/course-nature-une-16e-edition-historique-pour-la-ronde-des-mineurs-a-greasque"
+  abonnes: false
+  course: mineurs-2026

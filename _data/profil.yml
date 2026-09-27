@@ -1,14 +1,33 @@
+# Infos générales. À mettre à jour à la main de temps en temps
+# (ITRA, UTMB et BeTrail n'ont pas d'API publique utilisable ici).
+
+nom: "Uriel Lascombes"
+accroche: "Trail court · Marseille"
+intro: >-
+  Snowboardeur des Pyrénées devenu traileur en Provence. Un accident de
+  parapente m'a ramené à la course à pied ; depuis, je cours surtout là où
+  ça monte, avec l'envie d'aller le plus loin possible.
+
+email: "uriel.lascombes@laposte.net"
+instagram: "https://www.instagram.com/uriel_lascombes/"
+instagram_handle: "uriel_lascombes"
+strava: "https://strava.app.link/fIdIMTR2q3b"
+ffa: "https://www.athle.fr/athletes/2515889/resultats"
+
+# Niveau FFA trail (affiché avec les cotes ITRA / UTMB / BeTrail)
+niveau_ffa: "N4"
+niveau_ffa_lien: "https://www.athle.fr/athletes/2515889"
+ffa_logo: "/assets/images/logos/ffa.png"
+
 club_nom: "Trail Club de Provence"
-club_insta: "https://www.instagram.com/trailclubdeprovence?stkn=MXJwY2V1Znd1YWZ2Yg=="
+club_lien: "https://www.instagram.com/trailclubdeprovence/"
 
 coach_nom: "Jean-Baptiste Sautreau"
-coach_insta_handle: "jbs_training"
-coach_insta: "https://www.instagram.com/jbs_training?stkn=Zjd2a29kaTN1a3gw"
+coach_lien: "https://www.instagram.com/jbs_training/"
+coach_handle: "jbs_training"
 
-# Pas d'API publique ITRA/UTMB/BeTrail exploitable depuis un site statique
-# GitHub Pages (pas de backend) → mets ces valeurs à jour toi-même de temps
-# en temps.
-itra_score: 824
+# Cotes actuelles (mise à jour : 25/09/2026)
+itra_score: 838
 itra_link: "https://itra.run/RunnerSpace/lascombes.uriel.3811167"
 itra_logo: "/assets/images/logos/itra.png"
 
@@ -19,5 +38,21 @@ utmb_logo_general: "/assets/images/logos/utmb-general.png"
 utmb_logo_20k: "/assets/images/logos/utmb-20k.png"
 
 betrail_score: 75.18
-betrail_link: "https://www.betrail.run/runner/my-page/overview"
+betrail_link: "https://www.betrail.run/runner/lascombes.uriel/overview"
 betrail_logo: "/assets/images/logos/betrail.png"
+
+# Profils de dénivelé dans les récits (true pour les afficher)
+afficher_profils: false
+
+# Photos qui défilent en haut de l'accueil (fichiers de assets/images/photos/).
+# Chaque photo doit exister aussi en version -large.jpg et -small.jpg.
+hero_photos:
+  - mimet-2026-4.jpg
+  - mineurs-2026-2.jpg
+  - etoiles-2026-2.jpg
+
+# Challenges en cours, affichés discrètement dans "Repères" (page À propos).
+# Vide la liste (challenges_en_cours: []) pour ne rien afficher.
+challenges_en_cours:
+  - "En tête du Challenge des Trails de Provence"
+  - "En tête du Challenge Trail Région Sud"

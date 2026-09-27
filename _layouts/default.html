@@ -1,22 +1,68 @@
+{%- assign p = site.data.profil -%}
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title | default: site.title }} — {{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {%- if page.title %}
+  <title>{{ page.title }} · {{ site.title }}</title>
+  {%- else %}
+  <title>{{ site.title }} · {{ p.accroche }}</title>
+  {%- endif %}
+  {%- assign desc = page.description | default: page.excerpt_text | default: site.description | strip_html | strip_newlines | truncate: 160 %}
+  <meta name="description" content="{{ desc }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="{% if page.layout == 'recit' %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ desc }}">
+  <meta property="og:image" content="{{ page.image | default: '/assets/images/og.jpg' | absolute_url }}">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="preload" href="{{ '/assets/fonts/archivo.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
-<body>
-  <nav class="nav">
-    <a class="brand" href="{{ '/' | relative_url }}">Uriel Lascombes</a>
-    <div class="links">
-      <a href="{{ '/resultats/' | relative_url }}">Résultats</a>
+<body class="{% if page.layout == 'home' %}is-home{% endif %}">
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="{{ '/' | relative_url }}">Uriel Lascombes</a>
+      <nav aria-label="Navigation principale">
+        <a href="{{ '/resultats/' | relative_url }}"{% if page.url == '/resultats/' %} aria-current="page"{% endif %}>Résultats</a>
+        <a href="{{ '/recits/' | relative_url }}"{% if page.url contains '/recits/' %} aria-current="page"{% endif %}>Récits</a>
+        {%- if site.tests.size > 0 %}
+        <a href="{{ '/tests/' | relative_url }}"{% if page.url contains '/tests/' %} aria-current="page"{% endif %}>Tests</a>
+        {%- endif %}
+        <a href="{{ '/a-propos/' | relative_url }}"{% if page.url == '/a-propos/' %} aria-current="page"{% endif %}>À propos</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  {{ content }}
+  <main>
+    {{ content }}
+  </main>
 
-  <footer>© {{ 'now' | date: '%Y' }} Uriel Lascombes</footer>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-name">Uriel Lascombes</p>
+        <p class="footer-meta">{{ p.accroche }} · {{ p.club_nom }}</p>
+        <a class="footer-coach" href="{{ p.coach_lien }}" target="_blank" rel="noopener"><span>Entraîné par</span><img src="{{ '/assets/images/logos/jbs-training.png' | relative_url }}" alt="JBS Training, {{ p.coach_nom }}"></a>
+      </div>
+      <ul class="footer-links">
+        <li><a href="mailto:{{ p.email }}">{{ p.email }}</a></li>
+        <li><a href="{{ p.instagram }}" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="{{ p.strava }}" target="_blank" rel="noopener">Strava</a></li>
+        <li><a href="{{ p.itra_link }}" target="_blank" rel="noopener">ITRA</a></li>
+        <li><a href="{{ p.utmb_link }}" target="_blank" rel="noopener">UTMB</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom-line"><hr></div>
+    <div class="wrap footer-bottom">
+      <span>© {{ 'now' | date: '%Y' }} Uriel Lascombes</span>
+      <span><a href="{{ '/a-propos/' | relative_url }}#photographes">Crédits photos</a></span>
+    </div>
+  </footer>
+  <script src="{{ '/assets/js/site.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 </body>
 </html>

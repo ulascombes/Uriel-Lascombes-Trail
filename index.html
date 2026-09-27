@@ -1,0 +1,47 @@
+---
+layout: home
+---
+{%- assign courses = site.data.resultats | sort: "date" | reverse -%}
+<section class="wrap block" aria-labelledby="derniers-titre">
+  <div class="block-head">
+    <h2 id="derniers-titre" class="section-title">Derniers résultats</h2>
+    <a class="more" href="{{ '/resultats/' | relative_url }}">Tous les résultats</a>
+  </div>
+  {%- assign rt_list = courses | slice: 0, 5 -%}
+  {%- assign rt_comments = false -%}
+  {% include results-table.html %}
+</section>
+
+<section class="photo-band" aria-label="Photos de course">
+  {%- assign ph_src = '/assets/images/photos/mimet-2026-7.jpg' -%}{%- assign ph_class = 'pb-wide' -%}{%- assign ph_lazy = true -%}
+  {% include photo.html %}
+  {%- assign ph_src = '/assets/images/photos/pichauris-2025-1.jpg' -%}{%- assign ph_lazy = true -%}
+  {% include photo.html %}
+  {%- assign ph_src = '/assets/images/photos/melezes-2026-5.jpg' -%}{%- assign ph_lazy = true -%}
+  {% include photo.html %}
+</section>
+
+{%- assign recits = site.recits | sort: "date" | reverse -%}
+{%- if recits.size > 0 %}
+<section class="wrap block" aria-labelledby="recits-titre">
+  <div class="block-head">
+    <h2 id="recits-titre" class="section-title">Récits de course</h2>
+    <a class="more" href="{{ '/recits/' | relative_url }}">Tous les récits</a>
+  </div>
+  <div class="recit-grid">
+    {%- for r in recits limit: 3 %}{% include recit-card.html %}{% endfor %}
+  </div>
+</section>
+{%- endif %}
+
+{%- assign news = site.data.timeline | sort: "date" | reverse -%}
+{%- if news.size > 0 %}
+<section class="wrap block" aria-labelledby="news-titre">
+  <h2 id="news-titre" class="section-title">Actualités</h2>
+  <ul class="news">
+    {%- for n in news limit: 4 %}
+    <li><span class="news-date">{{ n.date | date: "%d/%m/%Y" }}</span>{% if n.type %}<span class="news-type">{{ n.type }}</span>{% endif %}<strong>{{ n.titre }}</strong>{% if n.description %} <span>{{ n.description }}</span>{% endif %}</li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}

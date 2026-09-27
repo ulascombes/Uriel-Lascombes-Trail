@@ -1,0 +1,12 @@
+# Faits marquants affichés sous le bilan de chaque année (page Résultats).
+# Clé = l'année entre guillemets. Supprime une ligne pour la retirer.
+
+"2026":
+  - titre: "Leader"
+    challenge: "Challenge des Trails de Provence"
+    lien: "https://www.trailsdeprovence.fr/"
+    note: "classement provisoire"
+  - titre: "Leader"
+    challenge: "Challenge Trail Région Sud"
+    lien: "https://www.provence-athle.fr/index.php/challenges"
+    note: "classement provisoire"

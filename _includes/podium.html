@@ -1,0 +1,19 @@
+{%- assign pod_n = 0 -%}{%- for t in site.tests -%}{%- if t.podium -%}{%- assign pod_n = pod_n | plus: 1 -%}{%- endif -%}{%- endfor -%}
+{%- if pod_n > 0 %}
+<div class="podium" aria-label="Mon podium de chaussures">
+  {%- for rank in (1..3) %}
+  {%- assign sh = site.tests | where: "podium", rank | first -%}
+  {%- if sh %}
+  <a class="podium-step podium-{{ rank }}" href="{{ sh.url | relative_url }}">
+    <span class="podium-visual">{% include chaussure-visuel.html %}</span>
+    <span class="podium-name">
+      <span class="podium-brand">{{ sh.marque }}</span>
+      <span class="podium-model">{{ sh.title }}</span>
+      {%- if sh.accroche %}<span class="podium-quote">« {{ sh.accroche }} »</span>{% endif %}
+    </span>
+    <span class="podium-block">{% assign medal_rank = rank %}{% include medal.html %}<span class="podium-num">{{ rank }}</span></span>
+  </a>
+  {%- endif %}
+  {%- endfor %}
+</div>
+{%- endif %}

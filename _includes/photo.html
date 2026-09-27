@@ -1,0 +1,15 @@
+{%- comment -%}
+  Photo seule avec légende et crédit (voir _data/photos.yml).
+  Variables : ph_src (chemin complet), ph_alt, ph_legende (sinon légende auto), ph_class, ph_lazy
+{%- endcomment -%}
+{%- assign ph_file = ph_src | split: "/" | last -%}
+{%- assign ph_info = site.data.photos.photos[ph_file] -%}
+{%- unless ph_legende -%}{%- assign lg_course = ph_info.course -%}{%- capture ph_legende -%}{% include legende.html %}{%- endcapture -%}{%- endunless -%}
+{%- assign cr_file = ph_file -%}{%- capture ph_credit -%}{% include credit.html %}{%- endcapture -%}
+<figure{% if ph_class %} class="{{ ph_class }}"{% endif %}>
+  <img src="{{ ph_src | relative_url }}" alt="{{ ph_alt | default: ph_legende }}"{% if ph_lazy %} loading="lazy"{% endif %}{% if ph_info.cadrage %} style="object-position: {{ ph_info.cadrage }};"{% endif %}>
+  {%- if ph_legende != "" or ph_credit != "" %}
+  <figcaption>{{ ph_legende }}{% if ph_credit != "" %}<span class="credit">{% if ph_legende != "" %} · {% endif %}{{ ph_credit }}</span>{% endif %}</figcaption>
+  {%- endif %}
+</figure>
+{%- assign ph_class = nil -%}{%- assign ph_legende = nil -%}{%- assign ph_lazy = nil -%}{%- assign ph_alt = nil -%}

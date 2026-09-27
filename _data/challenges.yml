@@ -1,0 +1,13 @@
+# Challenges (circuits de courses). Dans resultats.yml, ajoute à une course :
+#   challenges: [trails-provence]
+# pour afficher l'étiquette avec le lien vers le site du challenge.
+
+trails-provence:
+  nom: "Challenge des Trails de Provence"
+  court: "Trails de Provence"
+  lien: "https://www.trailsdeprovence.fr/"
+
+region-sud:
+  nom: "Challenge Trail Région Sud (Ligue d'athlétisme)"
+  court: "Région Sud"
+  lien: "https://www.provence-athle.fr/index.php/challenges"

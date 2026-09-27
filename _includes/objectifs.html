@@ -1,0 +1,25 @@
+{%- assign obj = site.data.objectifs -%}
+{%- if obj.courses.size > 0 %}
+{%- assign om = "janv.,févr.,mars,avr.,mai,juin,juil.,août,sept.,oct.,nov.,déc." | split: "," -%}
+<section class="goals-block" aria-labelledby="objectifs-titre">
+  <h2 id="objectifs-titre" class="year-title">{{ obj.saison }} <span class="goals-sub">objectifs</span></h2>
+  <ol class="goals">
+    {%- for g in obj.courses %}
+    <li class="goal{% if g.championnat %} is-champ{% endif %}">
+      {%- assign glogo = g.logo | default: nil -%}{%- if glogo == nil and g.championnat -%}{%- assign glogo = site.data.profil.ffa_logo -%}{%- endif %}
+      <p class="goal-logo">{% if glogo %}<img src="{{ glogo | relative_url }}" alt="">{% endif %}</p>
+      <div class="goal-body">
+      <p class="goal-top"><span class="goal-date">{% if g.date %}{% assign gm = g.date | date: "%-m" | minus: 1 %}{{ g.date | date: "%-d" }} {{ om[gm] }}{% else %}{{ g.date_texte }}{% endif %}</span>{% if g.lien %}<a class="goal-link" href="{{ g.lien }}" target="_blank" rel="noopener">Site officiel</a>{% endif %}</p>
+      <p class="goal-name">{{ g.nom }}</p>
+      <p class="goal-format">{{ g.format }}{% if g.lieu and g.lieu != "" %}<span> · {{ g.lieu }}</span>{% endif %}</p>
+      {%- if g.km or g.dplus %}
+      <p class="goal-figures">{% if g.km %}<span><b>{{ g.km }}</b> km</span>{% endif %}{% if g.dplus %}<span><b>{{ g.dplus }}</b> m D+</span>{% endif %}</p>
+      {%- else %}
+      <p class="goal-figures" aria-hidden="true"><span><b>&nbsp;</b></span></p>
+      {%- endif %}
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+{%- endif %}

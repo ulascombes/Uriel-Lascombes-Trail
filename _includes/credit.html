@@ -1,0 +1,3 @@
+{%- comment -%} Crédit « Photo : Nom » pour un fichier. Variable : cr_file {%- endcomment -%}
+{%- assign cr_info = site.data.photos.photos[cr_file] -%}
+{%- if cr_info.photographe -%}{%- assign cr_a = site.data.photos.photographes[cr_info.photographe] -%}{%- if cr_a -%}Photo : {% if cr_a.lien != "" and cr_a.lien %}<a href="{{ cr_a.lien }}" target="_blank" rel="noopener">{{ cr_a.nom }}</a>{% else %}{{ cr_a.nom }}{% endif %}{%- endif -%}{%- endif -%}

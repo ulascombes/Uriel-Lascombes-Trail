@@ -1,11 +1,38 @@
 title: Uriel Lascombes
-description: "Trail runner — résultats, récits de course, tests de matériel"
+description: "Trail court en Provence. Résultats, récits de course et matériel."
+lang: fr
 
-# Pas de thème externe : design 100% custom (voir assets/css/style.css)
+# Le dépôt s'appelle Uriel-Lascombes-Trail : GitHub Pages le sert donc à
+# https://ulascombes.github.io/Uriel-Lascombes-Trail/
+# Si tu passes un jour sur un nom de domaine (ex. urielascombes.fr),
+# remplace url par ce domaine et vide baseurl ("").
+url: "https://ulascombes.github.io"
+baseurl: "/Uriel-Lascombes-Trail"
+
+collections:
+  recits:
+    output: true
+    permalink: /recits/:name/
+  # Pour plus tard : un fichier .md par paire testée dans _tests/
+  tests:
+    output: true
+    permalink: /tests/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: recits
+    values:
+      layout: recit
+  - scope:
+      path: ""
+      type: tests
+    values:
+      layout: test
 
 exclude:
   - outils/
   - README.md
-
-# Décommenter et renseigner si tu achètes un nom de domaine plus tard
-# url: "https://tondomaine.fr"
+  - Gemfile
+  - Gemfile.lock
+  - "Claude outputs"

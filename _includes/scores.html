@@ -1,0 +1,18 @@
+{%- assign p = site.data.profil -%}
+<ul class="scores">
+  {%- if p.itra_score %}
+  <li><a href="{{ p.itra_link }}" target="_blank" rel="noopener"><span class="score-num">{{ p.itra_score }}</span><img src="{{ p.itra_logo | relative_url }}" alt="Cote ITRA"></a></li>
+  {%- endif %}
+  {%- if p.utmb_general %}
+  <li><a href="{{ p.utmb_link }}" target="_blank" rel="noopener"><span class="score-num">{{ p.utmb_general }}</span><img src="{{ p.utmb_logo_general | relative_url }}" alt="UTMB Index"></a></li>
+  {%- endif %}
+  {%- if p.utmb_20k %}
+  <li><a href="{{ p.utmb_link }}" target="_blank" rel="noopener"><span class="score-num">{{ p.utmb_20k }}</span><img src="{{ p.utmb_logo_20k | relative_url }}" alt="UTMB Index 20K"></a></li>
+  {%- endif %}
+  {%- if p.niveau_ffa %}
+  <li><a href="{{ p.niveau_ffa_lien }}" target="_blank" rel="noopener" title="Niveau FFA trail"><span class="score-num">{{ p.niveau_ffa }}</span><img src="{{ p.ffa_logo | relative_url }}" alt="Niveau FFA trail"></a></li>
+  {%- endif %}
+  {%- if p.betrail_score %}
+  <li>{% if p.betrail_link != "" and p.betrail_link %}<a href="{{ p.betrail_link }}" target="_blank" rel="noopener">{% else %}<span class="score-static">{% endif %}<span class="score-num">{{ p.betrail_score | replace: ".", "," }}</span><img src="{{ p.betrail_logo | relative_url }}" alt="Cote BeTrail">{% if p.betrail_link != "" and p.betrail_link %}</a>{% else %}</span>{% endif %}</li>
+  {%- endif %}
+</ul>

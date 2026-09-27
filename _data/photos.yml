@@ -1,0 +1,219 @@
+# Crédits photos
+# -----------------------------------------------------------------
+# 1. Déclare chaque photographe UNE fois dans "photographes"
+#    (un identifiant court, puis son nom et un lien : Instagram, site...).
+# 2. Dans "photos", associe chaque fichier de assets/images/photos/
+#    à l'identifiant du photographe.
+# Le crédit s'affiche alors sous la photo, partout où elle est utilisée,
+# et le photographe apparaît dans les remerciements de la page À propos.
+#
+# Les noms de fichiers suivent la course : <course>-<numéro>.jpg
+# "course" relie la photo à un résultat (pour la légende automatique).
+# "portrait: true" : photo verticale, affichée entière dans les carrousels.
+# "cadrage" (facultatif) : quelle partie de la photo garder quand elle est
+# recadrée, ex. "center 20%" (20 % = plus près du haut), "left top"...
+
+photographes:
+  bernardeau:
+    nom: "@bernardeau.outdoor"
+    lien: "https://www.instagram.com/bernardeau.outdoor/"
+  juulien:
+    nom: "@juulien_br"
+    lien: "https://www.instagram.com/juulien_br/"
+  laure-elvie:
+    nom: "@laure_elviephotographie"
+    lien: "https://www.instagram.com/laure_elviephotographie/"
+  eric-barnabe:
+    nom: "@eric_barnabe_photographie"
+    lien: "https://www.instagram.com/eric_barnabe_photographie/"
+  galinette-orga:
+    nom: "@traildelagalinette"
+    lien: "https://www.instagram.com/traildelagalinette/"
+  runvaucluse:
+    nom: "@runvaucluse.fr"
+    lien: "https://www.instagram.com/runvaucluse.fr/"
+  beaumes-orga:
+    nom: "@trailbeaumesdevenise"
+    lien: "https://www.instagram.com/trailbeaumesdevenise/"
+  verdon-orga:
+    nom: "@varverdontrailcanyon"
+    lien: "https://www.instagram.com/varverdontrailcanyon/"
+  antoinejiquel:
+    nom: "@antoinejiquel_photography"
+    lien: "https://www.instagram.com/antoinejiquel_photography/"
+  julie-dumey:
+    nom: "@julie.dumey"
+    lien: "https://www.instagram.com/julie.dumey/"
+  bencyl:
+    nom: "@bencyl_prod"
+    lien: "https://www.instagram.com/bencyl_prod/"
+  duclet:
+    nom: "Stéphane Duclet"
+    lien: ""
+  # exemple:
+  #   nom: "Prénom Nom"
+  #   lien: "https://www.instagram.com/compte/"
+
+photos:
+  beaumes-de-venise-2026-1.jpg:
+    course: beaumes-de-venise-2026
+    photographe: beaumes-orga
+    portrait: true
+  beaumes-de-venise-2026-2.jpg:
+    course: beaumes-de-venise-2026
+    photographe: beaumes-orga
+    portrait: true
+  beaumes-de-venise-2026-3.jpg:
+    course: beaumes-de-venise-2026
+    photographe: beaumes-orga
+    portrait: true
+  beaumes-de-venise-2026-4.jpg:
+    course: beaumes-de-venise-2026
+    photographe: beaumes-orga
+  col-du-noyer-2026-1.jpg:
+    course: col-du-noyer-2026
+    photographe: juulien
+    portrait: true
+  col-du-noyer-2026-2.jpg:
+    course: col-du-noyer-2026
+    photographe: juulien
+    portrait: true
+  col-du-noyer-2026-3.jpg:
+    course: col-du-noyer-2026
+    photographe: juulien
+    portrait: true
+  col-du-noyer-2026-4.jpg:
+    course: col-du-noyer-2026
+    photographe: juulien
+    portrait: true
+  etoiles-2026-1.jpg:
+    course: etoiles-2026
+    photographe: julie-dumey
+    portrait: true
+  etoiles-2026-2.jpg:
+    course: etoiles-2026
+    photographe: bencyl
+  font-de-mai-2026-1.jpg:
+    course: font-de-mai-2026
+    photographe:
+  galinette-2026-1.jpg:
+    course: galinette-2026
+    photographe: galinette-orga
+  galinette-2026-2.jpg:
+    course: galinette-2026
+    photographe: galinette-orga
+  galinette-2026-3.jpg:
+    course: galinette-2026
+    photographe: galinette-orga
+  melezes-2026-1.jpg:
+    course: melezes-2026
+    photographe: antoinejiquel
+  melezes-2026-2.jpg:
+    course: melezes-2026
+    photographe: antoinejiquel
+  melezes-2026-3.jpg:
+    course: melezes-2026
+    photographe: antoinejiquel
+  melezes-2026-4.jpg:
+    course: melezes-2026
+    photographe: antoinejiquel
+    portrait: true
+  melezes-2026-5.jpg:
+    course: melezes-2026
+    photographe: antoinejiquel
+    portrait: true
+  mimet-2026-1.jpg:
+    course: mimet-2026
+    photographe: bernardeau
+  mimet-2026-2.jpg:
+    course: mimet-2026
+    photographe: bernardeau
+  mimet-2026-3.jpg:
+    course: mimet-2026
+    photographe: bernardeau
+  mimet-2026-4.jpg:
+    course: mimet-2026
+    photographe: bernardeau
+    cadrage: "center 0%"
+  mimet-2026-5.jpg:
+    course: mimet-2026
+    photographe: bernardeau
+  mimet-2026-6.jpg:
+    course: mimet-2026
+    photographe: bernardeau
+    portrait: true
+  mimet-2026-7.jpg:
+    course: mimet-2026
+    photographe: bernardeau
+  mineurs-2026-1.jpg:
+    course: mineurs-2026
+    photographe:
+  mineurs-2026-2.jpg:
+    course: mineurs-2026
+    photographe: laure-elvie
+  mineurs-2026-3.jpg:
+    course: mineurs-2026
+    photographe:
+    portrait: true
+  nocturne-noel-2025-1.jpg:
+    course: nocturne-noel-2025
+    photographe:
+  nocturne-noel-2025-2.jpg:
+    course: nocturne-noel-2025
+    photographe:
+    portrait: true
+  pichauris-2025-1.jpg:
+    course: pichauris-2025
+    photographe: eric-barnabe
+    portrait: true
+    cadrage: "center 6%"
+  pichauris-2025-2.jpg:
+    course: pichauris-2025
+    photographe: eric-barnabe
+    portrait: true
+  roquefortrail-2025-1.jpg:
+    course: roquefortrail-2025
+    photographe:
+  roquefortrail-2025-2.jpg:
+    course: roquefortrail-2025
+    photographe:
+  roquefortrail-2025-3.jpg:
+    course: roquefortrail-2025
+    photographe:
+    portrait: true
+  var-verdon-2026-1.jpg:
+    course: var-verdon-2026
+    photographe: verdon-orga
+    portrait: true
+    cadrage: "center 12%"
+  var-verdon-2026-2.jpg:
+    course: var-verdon-2026
+    photographe: verdon-orga
+  ventoux-2026-1.jpg:
+    course: ventoux-2026
+    photographe:
+    portrait: true
+    cadrage: "center 15%"
+  ventoux-2026-2.jpg:
+    course: ventoux-2026
+    photographe:
+  ventoux-2026-3.jpg:
+    course: ventoux-2026
+    photographe: runvaucluse
+    portrait: true
+  var-verdon-2026-3.jpg:
+    course: var-verdon-2026
+    photographe: verdon-orga
+  volx-2026-1.jpg:
+    course: volx-2026
+    photographe:
+    portrait: true
+  volx-2026-3.jpg:
+    course: volx-2026
+    photographe: duclet
+  volx-2026-4.jpg:
+    course: volx-2026
+    photographe:
+  volx-2026-6.jpg:
+    course: volx-2026
+    photographe:

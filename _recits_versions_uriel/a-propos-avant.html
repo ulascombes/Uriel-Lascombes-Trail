@@ -1,0 +1,71 @@
+---
+layout: page
+title: À propos
+permalink: /a-propos/
+description: "Uriel Lascombes, coureur de trail court à Marseille, Trail Club de Provence. Parcours, repères et contact."
+---
+{%- assign p = site.data.profil -%}
+<div class="about">
+  {%- assign ph_src = '/assets/images/photos/col-du-noyer-2026-2.jpg' -%}{%- assign ph_alt = 'Uriel Lascombes en montée au Trail du Col du Noyer' -%}{%- assign ph_class = 'about-photo' -%}
+  {% include photo.html %}
+
+  <div class="about-text prose">
+    <p>J'ai grandi dans les Pyrénées-Orientales, puis fait mon lycée en sport-études snowboard à Font-Romeu. La course à pied est venue à côté, comme une façon de se balader en montagne. Les cross UNSS gagnés à l'époque m'ont montré que j'avais quelques prédispositions.</p>
+    <p>La montagne est restée mon terrain de jeu sous toutes ses formes : trail, splitboard, alpinisme, escalade, parapente. En 2024, installé à Marseille pour mes études, j'ai rejoint le Trail Club de Provence. La même année, un accident de parapente m'a poussé à me recentrer sur le trail et à m'entraîner de façon plus structurée.</p>
+    <p>Depuis 2026, je fais partie de la team performance du club. Je suis à l'aise sur les formats courts, entre 20 et 30 km, sur les terrains techniques provençaux et dans les montées. Les descentes raides sont mon chantier du moment.</p>
+    <p>À côté, je prépare une thèse en neurosciences. On y retrouve la même chose qu'à l'entraînement : de la rigueur, de la curiosité et beaucoup de patience.</p>
+
+    <h2>Repères</h2>
+    <dl class="kv">
+      <div><dt>Né en</dt><dd>2000</dd></div>
+      <div><dt>Basé à</dt><dd>Marseille</dd></div>
+      <div><dt>Club</dt><dd><a href="{{ p.club_lien }}" target="_blank" rel="noopener">{{ p.club_nom }}</a>, team performance</dd></div>
+      <div><dt>Entraîneur</dt><dd><a href="{{ p.coach_lien }}" target="_blank" rel="noopener">{{ p.coach_nom }}</a></dd></div>
+      <div><dt>Formats</dt><dd>Trail court, 20 à 30 km</dd></div>
+      <div><dt>Nutrition</dt><dd>Baouw, à l'entraînement comme en course</dd></div>
+      {%- if p.challenges_en_cours.size > 0 %}
+      <div><dt>En cours</dt><dd>{% for ch in p.challenges_en_cours %}{{ ch }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}<span class="kv-note">classements provisoires</span></dd></div>
+      {%- endif %}
+    </dl>
+
+    <h2>Profils</h2>
+    <ul class="profile-links">
+      <li><a href="{{ p.itra_link }}" target="_blank" rel="noopener">ITRA</a></li>
+      <li><a href="{{ p.utmb_link }}" target="_blank" rel="noopener">UTMB Index</a></li>
+      {%- if p.betrail_link != "" and p.betrail_link %}<li><a href="{{ p.betrail_link }}" target="_blank" rel="noopener">BeTrail</a></li>{% endif %}
+      <li><a href="{{ p.ffa }}" target="_blank" rel="noopener">FFA</a></li>
+      <li><a href="{{ p.strava }}" target="_blank" rel="noopener">Strava</a></li>
+      <li><a href="{{ p.instagram }}" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+
+    <h2 id="contact">Contact</h2>
+    <p>Pour un partenariat, une course ou simplement échanger : <a href="mailto:{{ p.email }}">{{ p.email }}</a>, ou en message sur Instagram (<a href="{{ p.instagram }}" target="_blank" rel="noopener">@{{ p.instagram_handle }}</a>).</p>
+
+    {%- assign phs = site.data.photos.photographes %}
+    <h2 id="photographes">Merci aux photographes</h2>
+    {%- if phs %}
+    <p>Les photos de ce site sont l'œuvre de photographes présents sur les courses et des organisateurs qui les partagent. Merci à eux.</p>
+    <ul class="credits-list">
+      {%- for ph in phs %}
+      {%- assign info = ph[1] %}
+      <li>{% if info.lien != "" and info.lien %}<a href="{{ info.lien }}" target="_blank" rel="noopener">{{ info.nom }}</a>{% else %}{{ info.nom }}{% endif %}</li>
+      {%- endfor %}
+    </ul>
+    {%- else %}
+    <p>Merci aux photographes présents sur les courses, dont les photos illustrent ce site.</p>
+    {%- endif %}
+
+    <a class="coach-card" href="{{ p.coach_lien }}" target="_blank" rel="noopener">
+      <img src="{{ '/assets/images/logos/jbs-training.png' | relative_url }}" alt="JBS Training">
+      <span>Mon entraînement est construit avec {{ p.coach_nom }} (JBS Training).</span>
+    </a>
+
+    {%- assign presse = site.data.presse | sort: "date" | reverse %}
+    {%- if presse.size > 0 %}
+    <h2 id="presse">On parle de moi</h2>
+    <div class="press-list">
+      {%- for a in presse %}{% include presse-item.html %}{% endfor %}
+    </div>
+    {%- endif %}
+  </div>
+</div>

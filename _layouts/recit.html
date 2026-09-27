@@ -1,0 +1,84 @@
+---
+layout: default
+---
+{%- assign p = site.data.profil -%}
+{%- assign c = site.data.resultats | where: "ref", page.ref | first -%}
+{%- assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," -%}
+{%- assign d = c.date | default: page.date -%}
+{%- assign m = d | date: "%-m" | minus: 1 -%}
+<article class="recit">
+  <header class="recit-head wrap-narrow">
+    <p class="kicker"><a href="{{ '/recits/' | relative_url }}">Récits</a> · <time datetime="{{ d | date: '%Y-%m-%d' }}">{{ d | date: "%-d" }} {{ mois[m] }} {{ d | date: "%Y" }}</time></p>
+    <h1 class="recit-title">{{ page.title }}</h1>
+    {%- if c.classement %}
+    <p class="recit-result{% if c.classement == 1 %} is-win{% elsif c.classement <= 3 %} is-podium{% endif %}">
+      {%- if c.classement <= 3 %}{% assign medal_rank = c.classement %}{% include medal.html %}{% endif -%}
+      <span class="rr-label">{% if c.classement == 1 %}Victoire{% else %}{{ c.classement }}<sup>e</sup> place{% endif %}</span>
+      {%- if c.temps %}<span class="rr-time">en {% assign t_raw = c.temps %}{% include temps.html %}</span>{% endif %}
+    </p>
+    {%- endif %}
+    {%- if page.chapo %}<p class="recit-chapo">{{ page.chapo }}</p>{% endif %}
+    {%- if c.challenges %}<p class="recit-tags">{% for ch in c.challenges %}{% assign chi = site.data.challenges[ch] %}{% if chi.lien != "" and chi.lien %}<a class="tag-challenge" href="{{ chi.lien }}" target="_blank" rel="noopener">{{ chi.nom }}</a>{% else %}<span class="tag-challenge">{{ chi.nom }}</span>{% endif %}{% endfor %}</p>{% endif %}
+  </header>
+
+  {%- if c %}
+  <div class="wrap-narrow">
+    <dl class="facts">
+      {%- if c.km %}<div><dt>Distance</dt><dd>{{ c.km | replace: ".", "," }} km</dd></div>{% endif %}
+      {%- if c.dplus %}<div><dt>Dénivelé</dt><dd>{{ c.dplus }} m</dd></div>{% endif %}
+      {%- if c.itra %}<div class="fact-score"><dt><img src="{{ p.itra_logo | relative_url }}" alt="ITRA"></dt><dd>{{ c.itra }}</dd></div>{% endif %}
+      {%- if c.utmb %}<div class="fact-score"><dt><img src="{{ p.utmb_logo_general | relative_url }}" alt="UTMB Index"></dt><dd>{{ c.utmb }}</dd></div>{% endif %}
+      {%- if c.betrail %}<div class="fact-score"><dt><img src="{{ p.betrail_logo | relative_url }}" alt="BeTrail"></dt><dd>{{ c.betrail | replace: ".", "," }}</dd></div>{% endif %}
+    </dl>
+  </div>
+  {%- endif %}
+
+  {%- capture prof_path %}/assets/images/profils/{{ page.ref }}.png{% endcapture -%}
+  {%- assign prof = site.static_files | where: "path", prof_path | first -%}
+  {%- if site.data.profil.afficher_profils and prof %}
+  <div class="wrap-narrow">
+    <figure class="profil" aria-label="Profil de la course">
+      <div class="profil-trace" style="-webkit-mask-image: url('{{ prof_path | relative_url }}'); mask-image: url('{{ prof_path | relative_url }}');"></div>
+      <figcaption>Profil{% if c.km %} · {{ c.km | replace: ".", "," }} km{% endif %}{% if c.dplus %} · {{ c.dplus }} m D+{% endif %}</figcaption>
+    </figure>
+  </div>
+  {%- endif %}
+
+  {%- if page.photos and page.photos.size > 0 %}
+  <div class="wrap recit-media">
+    {%- assign car_photos = page.photos -%}
+    {% include carrousel.html %}
+  </div>
+  {%- elsif page.image and page.image != "" %}
+  <div class="wrap">
+  {%- assign ph_src = page.image -%}{%- assign ph_alt = page.image_alt | default: page.title -%}{%- assign ph_legende = page.image_legende -%}{%- assign ph_class = 'recit-photo' -%}
+  {% include photo.html %}
+  </div>
+  {%- endif %}
+
+  <div class="recit-body wrap-narrow prose">
+    {{ content }}
+    {%- if c.chaussures %}
+    {%- assign shoe = site.tests | where: "nom_resultats", c.chaussures | first %}
+    <p class="recit-gear"><span>Aux pieds</span> {% if shoe %}<a href="{{ shoe.url | relative_url }}">{{ c.chaussures }}</a>{% else %}{{ c.chaussures }}{% endif %}</p>
+    {%- endif %}
+  </div>
+
+  {%- assign presse = site.data.presse | where: "course", page.ref -%}
+  {%- if presse.size > 0 %}
+  <div class="wrap-narrow">
+    <aside class="recit-press">
+      <h2 class="section-title">Dans la presse</h2>
+      {%- for a in presse %}{% include presse-item.html %}{% endfor %}
+    </aside>
+  </div>
+  {%- endif %}
+
+  {%- assign all = site.recits | sort: "date" -%}
+  {%- for r in all -%}{%- if r.url == page.url -%}{%- assign idx = forloop.index0 -%}{%- endif -%}{%- endfor -%}
+  {%- assign prev_i = idx | minus: 1 -%}{%- assign next_i = idx | plus: 1 -%}
+  <div class="wrap-narrow"><nav class="recit-nav" aria-label="Autres récits">
+    {%- if prev_i >= 0 %}{% assign pr = all[prev_i] %}<a class="rn-prev" href="{{ pr.url | relative_url }}"><span>Course précédente</span>{{ pr.title }}</a>{% else %}<span></span>{% endif %}
+    {%- if next_i < all.size %}{% assign nx = all[next_i] %}<a class="rn-next" href="{{ nx.url | relative_url }}"><span>Course suivante</span>{{ nx.title }}</a>{% endif %}
+  </nav></div>
+</article>

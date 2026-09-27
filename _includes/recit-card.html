@@ -1,0 +1,22 @@
+{%- assign rc = site.data.resultats | where: "ref", r.ref | first -%}
+{%- assign rimg = nil -%}{%- if r.photos and r.photos.size > 0 -%}{%- assign rimg = '/assets/images/photos/' | append: r.photos.first -%}{%- elsif r.image -%}{%- assign rimg = r.image -%}{%- endif -%}
+<a class="recit-card" href="{{ r.url | relative_url }}">
+  {%- if rimg %}
+  <span class="recit-card-media">
+    {%- assign rimg_file = rimg | split: "/" | last -%}{%- assign rimg_info = site.data.photos.photos[rimg_file] -%}
+    <img src="{{ rimg | relative_url }}" alt="" loading="lazy"{% if rimg_info.cadrage %} style="object-position: {{ rimg_info.cadrage }};"{% endif %}>
+    {%- if rc.classement %}
+    <span class="card-badge{% if rc.classement == 1 %} is-win{% endif %}">{% if rc.classement <= 3 %}{% assign medal_rank = rc.classement %}{% include medal.html %}{% endif %}<span>{% if rc.classement == 1 %}Victoire{% else %}{{ rc.classement }}<sup>e</sup>{% if rc.classement <= 3 %} place{% endif %}{% endif %}</span></span>
+    {%- endif %}
+  </span>
+  {%- else %}
+  <span class="recit-card-bib" aria-hidden="true">
+    <span class="bib-top">{% if rc.classement and rc.classement <= 3 %}{% assign medal_rank = rc.classement %}{% include medal.html %}{% elsif rc.classement %}<span class="bib-rank">{{ rc.classement }}<sup>e</sup></span>{% endif %}<span class="bib-date">{{ r.date | date: "%d.%m.%y" }}</span></span>
+    <span class="bib-big">{% if rc.km %}{{ rc.km | replace: ".", "," }}<small>km</small>{% else %}{{ r.date | date: "%Y" }}{% endif %}</span>
+    <span class="bib-sub">{% unless rc %}{{ r.sous_titre | default: "Bilan de saison" }}{% endunless %}{% if rc.dplus %}{{ rc.dplus }} m D+{% endif %}{% if rc.temps %} · {% assign t_raw = rc.temps %}{% include temps.html %}{% endif %}</span>
+  </span>
+  {%- endif %}
+  <span class="recit-card-meta">{{ r.date | date: "%m/%Y" }}{% if rc.classement %} · {% if rc.classement == 1 %}Victoire{% else %}<span class="nocaps">{{ rc.classement }}<sup>e</sup></span> place{% endif %}{% endif %}</span>
+  <span class="recit-card-title">{{ r.title }}</span>
+  {%- if r.chapo %}<span class="recit-card-chapo">{{ r.chapo }}</span>{% endif %}
+</a>

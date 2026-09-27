@@ -1,0 +1,44 @@
+# Objectifs de la saison à venir, affichés en haut de la page Résultats.
+# Champs : nom, date (AAAA-MM-JJ), date_texte (si la date exacte n'est pas connue),
+# lieu, km, dplus, format, lien (site officiel), logo (image dans assets/images/logos/),
+# championnat (true : logo FFA si pas d'autre logo)
+saison: 2027
+courses:
+  - nom: "Transgrancanaria"
+    format: "Half"
+    date: 2027-02-25
+    lieu: "Grande Canarie, Espagne"
+    km: 23
+    dplus: 1800
+    lien: "https://transgrancanaria.net/en/starter-21-km/"
+    logo: "/assets/images/logos/transgrancanaria.png"
+    championnat: false
+
+  - nom: "Championnats de France de trail"
+    format: "Trail court"
+    date: 2027-05-15
+    lieu: "Guerlédan, Bretagne"
+    km:
+    dplus:
+    lien: "https://www.athle.fr/contenu/6271"
+    championnat: true
+
+  - nom: "Cross du Mont-Blanc"
+    format: "23 km du Mont-Blanc"
+    date:
+    date_texte: "fin juin"
+    lieu: "Chamonix → Planpraz"
+    km: 23
+    dplus: 1700
+    lien: "https://www.marathonmontblanc.fr/en/races/23km-du-mont-blanc"
+    logo: "/assets/images/logos/marathon-mont-blanc.png"
+    championnat: false
+
+  - nom: "Championnats de France de course verticale"
+    format: "Kilomètre vertical"
+    date: 2027-07-03
+    lieu: "Arrens-Marsous, Hautes-Pyrénées"
+    km:
+    dplus: 1000
+    lien: "https://www.athle.fr/contenu/calendrier-championnats-de-france/32"
+    championnat: true

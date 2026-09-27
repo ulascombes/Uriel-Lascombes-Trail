@@ -1,0 +1,8 @@
+{%- comment -%} Un article de presse. Variable : a {%- endcomment -%}
+{%- assign pm = "janv.,févr.,mars,avr.,mai,juin,juil.,août,sept.,oct.,nov.,déc." | split: "," -%}{%- assign pmi = a.date | date: "%-m" | minus: 1 -%}
+<article class="press-item">
+  <p class="press-meta"><span class="press-media">{{ a.media }}</span> · {{ a.date | date: "%-d" }} {{ pm[pmi] }} {{ a.date | date: "%Y" }}{% if a.abonnes %} · <span class="press-lock">abonnés</span>{% endif %}</p>
+  <p class="press-title"><a href="{{ a.url }}" target="_blank" rel="noopener">{{ a.titre }}</a></p>
+  {%- if a.extrait %}<blockquote class="press-quote">« {{ a.extrait }} »</blockquote>{% endif %}
+  <p class="press-original">{{ a.titre_original }}</p>
+</article>

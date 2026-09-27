@@ -1,0 +1,3 @@
+{%- comment -%} Légende automatique à partir de la course. Variable : lg_course {%- endcomment -%}
+{%- assign lg_c = site.data.resultats | where: "ref", lg_course | first -%}
+{%- if lg_c -%}{%- assign lg_mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," -%}{%- assign lg_m = lg_c.date | date: "%-m" | minus: 1 -%}{{ lg_c.nom }}, {{ lg_mois[lg_m] }} {{ lg_c.date | date: "%Y" }}{%- endif -%}

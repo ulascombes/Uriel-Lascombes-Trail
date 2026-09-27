@@ -1,0 +1,40 @@
+{%- comment -%}
+  Carrousel de photos qui défilent (fondu). Variables :
+  - car_photos : liste de noms de fichiers (dans assets/images/photos/)
+  - car_class  : classe CSS en plus (ex. "carousel-hero")
+  - car_hero   : true pour utiliser les versions -large / -small
+  - car_legendes : false pour masquer les légendes
+{%- endcomment -%}
+{%- assign car_n = car_photos.size -%}
+<div class="carousel{% if car_class %} {{ car_class }}{% endif %}" data-interval="{{ car_interval | default: 4500 }}" aria-roledescription="carrousel" aria-label="Photos">
+  <div class="car-track">
+  {%- for f in car_photos %}
+    {%- assign ci = site.data.photos.photos[f] -%}
+    {%- assign lg_course = ci.course -%}{%- capture car_leg -%}{% include legende.html %}{%- endcapture -%}
+    {%- assign cr_file = f -%}{%- capture car_cr -%}{% include credit.html %}{%- endcapture -%}
+    {%- assign car_base = f | remove: ".jpg" -%}
+    <figure class="car-slide{% if forloop.first %} is-active{% endif %}{% if ci.portrait %} is-portrait{% endif %}" aria-roledescription="diapositive" aria-label="{{ forloop.index }} sur {{ car_n }}"{% unless forloop.first %} aria-hidden="true"{% endunless %}>
+      {%- if car_hero %}
+      <picture>
+        <source media="(max-width: 800px)" srcset="{{ '/assets/images/photos/' | append: car_base | append: '-small.jpg' | relative_url }}">
+        <img src="{{ '/assets/images/photos/' | append: car_base | append: '-large.jpg' | relative_url }}" alt="{{ car_leg }}"{% unless forloop.first %} loading="lazy"{% endunless %}{% if ci.cadrage %} style="object-position: {{ ci.cadrage }};"{% endif %}>
+      </picture>
+      {%- else %}
+      {%- if ci.portrait %}<img class="car-bg" src="{{ '/assets/images/photos/' | append: f | relative_url }}" alt="" aria-hidden="true" loading="lazy">{% endif %}
+      <img class="car-img" src="{{ '/assets/images/photos/' | append: f | relative_url }}" alt="{{ car_leg }}"{% unless forloop.first %} loading="lazy"{% endunless %}{% if ci.cadrage %} style="object-position: {{ ci.cadrage }};"{% endif %}>
+      {%- endif %}
+      {%- unless car_legendes == false %}
+      <figcaption>{{ car_leg }}{% if car_cr != "" %}<span class="credit">{% if car_leg != "" %} · {% endif %}{{ car_cr }}</span>{% endif %}</figcaption>
+      {%- endunless %}
+    </figure>
+  {%- endfor %}
+  </div>
+  {%- if car_n > 1 %}
+  <button class="car-btn car-prev" type="button" aria-label="Photo précédente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="car-btn car-next" type="button" aria-label="Photo suivante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div class="car-dots" role="tablist">
+    {%- for f in car_photos %}<button type="button" role="tab" aria-label="Photo {{ forloop.index }}"{% if forloop.first %} aria-selected="true"{% endif %}></button>{% endfor %}
+  </div>
+  {%- endif %}
+</div>
+{%- assign car_class = nil -%}{%- assign car_hero = nil -%}{%- assign car_legendes = nil -%}{%- assign car_interval = nil -%}

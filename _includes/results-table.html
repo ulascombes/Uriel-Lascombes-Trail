@@ -1,0 +1,50 @@
+{%- comment -%}
+  Tableau de résultats. Variables attendues :
+  - rt_list : la liste de courses (déjà triée)
+  - rt_comments : true pour afficher les commentaires
+  - rt_year : (optionnel) n'affiche que cette année
+{%- endcomment -%}
+{%- assign p = site.data.profil -%}
+{%- assign mois = "janv.,févr.,mars,avr.,mai,juin,juil.,août,sept.,oct.,nov.,déc." | split: "," -%}
+<ol class="results">
+  <li class="results-head" aria-hidden="true">
+    <span class="r-rank"></span>
+    <span class="r-date">Date</span>
+    <span class="r-name">Course</span>
+    <span class="r-dist">Format</span>
+    <span class="r-time">Temps</span>
+    <span class="r-score"><img src="{{ p.itra_logo | relative_url }}" alt="ITRA"></span>
+    <span class="r-score"><img src="{{ p.utmb_logo_general | relative_url }}" alt="UTMB Index"></span>
+    <span class="r-score"><img src="{{ p.betrail_logo | relative_url }}" alt="BeTrail"></span>
+  </li>
+{%- for c in rt_list %}
+  {%- if rt_year -%}{%- assign cy = c.date | date: "%Y" -%}{%- if cy != rt_year -%}{%- continue -%}{%- endif -%}{%- endif -%}
+  {%- assign rec = site.recits | where: "ref", c.ref | first -%}
+  {%- assign m = c.date | date: "%-m" | minus: 1 -%}
+  <li class="result{% if c.classement and c.classement <= 3 %} is-podium{% endif %}">
+    <span class="r-rank">
+      {%- if c.classement and c.classement <= 3 -%}
+        {%- assign medal_rank = c.classement -%}{%- include medal.html -%}
+      {%- elsif c.classement -%}
+        <span class="rank-num">{{ c.classement }}<sup>e</sup></span>
+      {%- endif -%}
+    </span>
+    <span class="r-date"><time datetime="{{ c.date | date: '%Y-%m-%d' }}">{{ c.date | date: "%-d" }} {{ mois[m] }}</time></span>
+    <span class="r-name">
+      <span class="r-title">{% if rec %}<a href="{{ rec.url | relative_url }}">{{ c.nom }}</a>{% else %}{{ c.nom }}{% endif %}</span>
+      {%- if c.mention %} <span class="r-mention">{{ c.mention }}</span>{% endif %}
+      {%- for ch in c.challenges %}{% assign chi = site.data.challenges[ch] %} {% if chi.lien != "" and chi.lien %}<a class="tag-challenge" href="{{ chi.lien }}" target="_blank" rel="noopener" title="{{ chi.nom }}">{{ chi.court }}</a>{% else %}<span class="tag-challenge" title="{{ chi.nom }}">{{ chi.court }}</span>{% endif %}{% endfor %}
+      {%- if rt_comments and c.commentaire %}<span class="r-comment">{{ c.commentaire }}</span>{% endif %}
+      {%- if rt_comments and c.chaussures %}{% assign shoe = site.tests | where: "nom_resultats", c.chaussures | first %}<span class="r-shoes">Aux pieds : {% if shoe %}<a href="{{ shoe.url | relative_url }}">{{ c.chaussures }}</a>{% else %}{{ c.chaussures }}{% endif %}</span>{% endif %}
+      {%- if rec %}<a class="r-link" href="{{ rec.url | relative_url }}">Récit de course</a>{% endif %}
+    </span>
+    <span class="r-dist">{% if c.km %}{{ c.km | replace: ".", "," }} km{% endif %}{% if c.dplus %}<span class="sep"> · </span>{{ c.dplus }} m D+{% endif %}</span>
+    <span class="r-time">{% assign t_raw = c.temps %}{% include temps.html %}</span>
+    <span class="r-scores">
+    <span class="r-score">{% if c.itra %}<img class="r-score-logo" src="{{ p.itra_logo | relative_url }}" alt="ITRA">{{ c.itra }}{% else %}<span class="nil">–</span>{% endif %}</span>
+    <span class="r-score">{% if c.utmb %}<img class="r-score-logo" src="{{ p.utmb_logo_general | relative_url }}" alt="UTMB">{{ c.utmb }}{% else %}<span class="nil">–</span>{% endif %}</span>
+    <span class="r-score">{% if c.betrail %}<img class="r-score-logo" src="{{ p.betrail_logo | relative_url }}" alt="BeTrail">{{ c.betrail | replace: ".", "," }}{% else %}<span class="nil">–</span>{% endif %}</span>
+    </span>
+  </li>
+{%- endfor %}
+</ol>

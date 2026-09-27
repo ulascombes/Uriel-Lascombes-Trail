@@ -1,0 +1,24 @@
+---
+layout: page
+title: Tests matériel
+permalink: /tests/
+description: "Les chaussures de trail testées par Uriel Lascombes : podium, caractéristiques et avis."
+---
+<p class="lede">J'aime tester des paires. Voici celles que j'utilise, mon podium du moment, et pour chacune ce que j'en pense à l'usage.</p>
+
+{% include podium.html %}
+
+<h2 class="section-title tests-all-title">Toutes les paires</h2>
+<div class="shoe-grid">
+  {%- assign tous = site.tests | sort: "title" -%}
+  {%- for sh in tous %}
+  {%- assign n_courses = site.data.resultats | where: "chaussures", sh.nom_resultats | size -%}
+  <a class="shoe-card" href="{{ sh.url | relative_url }}">
+    <span class="shoe-card-visual">{% include chaussure-visuel.html %}</span>
+    <span class="shoe-card-brand">{{ sh.marque }}{% if sh.podium %} · podium n°{{ sh.podium }}{% endif %}</span>
+    <span class="shoe-card-model">{{ sh.title }}</span>
+    <span class="shoe-card-meta">{% if sh.poids != "" and sh.poids %}{{ sh.poids }} g{% if sh.sans_semelle %}*{% endif %} · {% endif %}Drop {{ sh.drop | replace: ".", "," }} mm · {% if n_courses > 0 %}{{ n_courses }} course{% if n_courses > 1 %}s{% endif %}{% else %}pas encore en course{% endif %}</span>
+  </a>
+  {%- endfor %}
+</div>
+<p class="shoe-note">Poids mesurés sur mes paires, en 42, pour une chaussure. * Sans la semelle de propreté, que je retire quand je peux.</p>

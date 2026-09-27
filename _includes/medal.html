@@ -1,0 +1,2 @@
+{%- comment -%} Médaille SVG. Variable attendue : medal_rank (1, 2 ou 3). {%- endcomment -%}
+<svg class="medal medal-{{ medal_rank }}" viewBox="0 0 28 36" role="img" aria-label="{% if medal_rank == 1 %}Victoire{% else %}{{ medal_rank }}e place{% endif %}"><path class="medal-ribbon" d="M7 0h6l3.2 10.5-5 3.5zM15 0h6l-4.2 14-4.3-3.5z"/><circle class="medal-disc" cx="14" cy="23" r="11"/><circle class="medal-ring" cx="14" cy="23" r="8.2"/><text x="14" y="27.2" text-anchor="middle">{{ medal_rank }}</text></svg>

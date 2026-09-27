@@ -1,20 +1,34 @@
 ---
 layout: default
 ---
-<div class="hero-cover-wrap">
-  <img class="hero-cover" style="object-position: {{ page.cover_position | default: 'center' }};" src="{{ page.cover | relative_url }}" alt="Photo de couverture">
-  <div class="hero-profile-row">
-    <img src="{{ page.profile | relative_url }}" alt="{{ site.title }}">
+{%- assign p = site.data.profil -%}
+{%- assign courses = site.data.resultats | sort: "date" | reverse -%}
+{%- assign saison = courses.first.date | date: "%Y" -%}
+{%- assign n_courses = 0 -%}{%- assign n_victoires = 0 -%}{%- assign n_podiums = 0 -%}
+{%- for c in courses -%}
+  {%- assign y = c.date | date: "%Y" -%}
+  {%- if y == saison -%}
+    {%- assign n_courses = n_courses | plus: 1 -%}
+    {%- if c.classement == 1 -%}{%- assign n_victoires = n_victoires | plus: 1 -%}{%- endif -%}
+    {%- if c.classement and c.classement <= 3 -%}{%- assign n_podiums = n_podiums | plus: 1 -%}{%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<section class="hero">
+  {%- assign car_photos = p.hero_photos -%}{%- assign car_class = "carousel-hero" -%}{%- assign car_hero = true -%}{%- assign car_interval = 5000 -%}
+  {% include carrousel.html %}
+  <div class="hero-text wrap">
+    <p class="kicker">{{ p.accroche }}</p>
+    <h1 class="hero-name">Uriel<br>Lascombes</h1>
   </div>
-</div>
+</section>
 
-<div class="hero-block">
-  <div class="hero-name-block">
-    <p class="hero-name">{{ site.title }}</p>
-    <p class="hero-tagline">{{ page.tagline }}</p>
+<section class="intro wrap">
+  <p class="intro-text">{{ p.intro }}</p>
+  <div class="intro-side">
+    {% include scores.html %}
+    <p class="club-line">Licencié au <a href="{{ p.club_lien }}" target="_blank" rel="noopener">{{ p.club_nom }}</a>, entraîné par <a href="{{ p.coach_lien }}" target="_blank" rel="noopener">{{ p.coach_nom }}</a>.</p>
   </div>
+</section>
 
-  {% include stats-bar.html %}
-
-  {{ content }}
-</div>
+{{ content }}

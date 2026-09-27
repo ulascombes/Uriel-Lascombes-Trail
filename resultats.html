@@ -1,0 +1,45 @@
+---
+layout: page
+title: Résultats
+permalink: /resultats/
+description: "Tous les résultats en trail d'Uriel Lascombes : classements, temps, cotes ITRA, UTMB Index et BeTrail."
+---
+{%- assign courses = site.data.resultats | sort: "date" | reverse -%}
+{%- assign years = "" -%}
+{%- for c in courses -%}{%- assign y = c.date | date: "%Y" -%}{%- unless years contains y -%}{%- assign years = years | append: y | append: "," -%}{%- endunless -%}{%- endfor -%}
+{%- assign years = years | split: "," -%}
+
+<p class="lede">Classement au scratch. Les cotes sont celles attribuées à chaque course par ITRA, l'UTMB Index et BeTrail. Cliquez sur une course pour lire son récit quand il existe.</p>
+
+{% include objectifs.html %}
+
+{% for y in years %}{% if y == "" %}{% continue %}{% endif %}
+<section class="year-block" aria-labelledby="annee-{{ y }}">
+  {%- assign n_c = 0 -%}{%- assign n_v = 0 -%}{%- assign n_2 = 0 -%}{%- assign n_3 = 0 -%}
+  {%- for c in courses -%}{%- assign cy = c.date | date: "%Y" -%}{%- if cy == y -%}
+    {%- assign n_c = n_c | plus: 1 -%}
+    {%- if c.classement == 1 -%}{%- assign n_v = n_v | plus: 1 -%}{%- endif -%}
+    {%- if c.classement == 2 -%}{%- assign n_2 = n_2 | plus: 1 -%}{%- endif -%}
+    {%- if c.classement == 3 -%}{%- assign n_3 = n_3 | plus: 1 -%}{%- endif -%}
+  {%- endif -%}{%- endfor -%}
+  {%- assign faits = site.data.saisons[y] -%}
+  <header class="year-head">
+    <h2 id="annee-{{ y }}" class="year-title">{{ y }}</h2>
+    <ul class="year-stats">
+      <li><b>{{ n_c }}</b> course{% if n_c > 1 %}s{% endif %}</li>
+      {%- if n_v > 0 %}<li class="ys-1">{% assign medal_rank = 1 %}{% include medal.html %}<b>{{ n_v }}</b> victoire{% if n_v > 1 %}s{% endif %}</li>{% endif %}
+      {%- if n_2 > 0 %}<li class="ys-2">{% assign medal_rank = 2 %}{% include medal.html %}<b>{{ n_2 }}</b><span class="ys-long">{% if n_2 > 1 %}deuxièmes places{% else %}deuxième place{% endif %}</span><span class="ys-short">× 2<sup>e</sup></span></li>{% endif %}
+      {%- if n_3 > 0 %}<li class="ys-3">{% assign medal_rank = 3 %}{% include medal.html %}<b>{{ n_3 }}</b><span class="ys-long">{% if n_3 > 1 %}troisièmes places{% else %}troisième place{% endif %}</span><span class="ys-short">× 3<sup>e</sup></span></li>{% endif %}
+    </ul>
+  </header>
+  {%- if faits and faits.size > 0 %}
+  <ul class="year-highlights">
+    {%- for f in faits %}
+    <li>{% assign medal_rank = 1 %}{% include medal.html %}<span class="yh-text"><strong>{{ f.titre }}</strong>{% if f.lien %}<a href="{{ f.lien }}" target="_blank" rel="noopener">{{ f.challenge }}</a>{% else %}<span>{{ f.challenge }}</span>{% endif %}{% if f.note %}<em>{{ f.note }}</em>{% endif %}</span></li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+  {%- assign rt_list = courses -%}{%- assign rt_year = y -%}{%- assign rt_comments = true -%}
+  {% include results-table.html %}
+</section>
+{% endfor %}
