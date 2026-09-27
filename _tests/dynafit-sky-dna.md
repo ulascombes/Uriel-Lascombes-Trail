@@ -15,5 +15,3 @@ image: "/assets/images/tests/dynafit-sky-dna.jpg"
 ---
 
 La paire que j'ai le plus utilisée en 2026, à l'entraînement comme en course : Galinette, Ventoux, Beaumes de Venise, Font de Mai.
-
-<!-- À compléter : points forts, points faibles, pour quel terrain / quel format. -->

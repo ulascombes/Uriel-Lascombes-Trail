@@ -34,14 +34,3 @@ layout: home
 </section>
 {%- endif %}
 
-{%- assign news = site.data.timeline | sort: "date" | reverse -%}
-{%- if news.size > 0 %}
-<section class="wrap block" aria-labelledby="news-titre">
-  <h2 id="news-titre" class="section-title">Actualités</h2>
-  <ul class="news">
-    {%- for n in news limit: 4 %}
-    <li><span class="news-date">{{ n.date | date: "%d/%m/%Y" }}</span>{% if n.type %}<span class="news-type">{{ n.type }}</span>{% endif %}<strong>{{ n.titre }}</strong>{% if n.description %} <span>{{ n.description }}</span>{% endif %}</li>
-    {%- endfor %}
-  </ul>
-</section>
-{%- endif %}

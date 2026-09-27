@@ -33,16 +33,6 @@ layout: default
   </div>
   {%- endif %}
 
-  {%- capture prof_path %}/assets/images/profils/{{ page.ref }}.png{% endcapture -%}
-  {%- assign prof = site.static_files | where: "path", prof_path | first -%}
-  {%- if site.data.profil.afficher_profils and prof %}
-  <div class="wrap-narrow">
-    <figure class="profil" aria-label="Profil de la course">
-      <div class="profil-trace" style="-webkit-mask-image: url('{{ prof_path | relative_url }}'); mask-image: url('{{ prof_path | relative_url }}');"></div>
-      <figcaption>Profil{% if c.km %} · {{ c.km | replace: ".", "," }} km{% endif %}{% if c.dplus %} · {{ c.dplus }} m D+{% endif %}</figcaption>
-    </figure>
-  </div>
-  {%- endif %}
 
   {%- if page.photos and page.photos.size > 0 %}
   <div class="wrap recit-media">

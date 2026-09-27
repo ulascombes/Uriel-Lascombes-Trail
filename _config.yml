@@ -31,8 +31,6 @@ defaults:
       layout: test
 
 exclude:
-  - outils/
   - README.md
   - Gemfile
   - Gemfile.lock
-  - "Claude outputs"

@@ -1,94 +1,77 @@
-# Site Uriel Lascombes
+# Uriel Lascombes – trail
 
-Site Jekyll servi par GitHub Pages à l'adresse
-https://ulascombes.github.io/Uriel-Lascombes-Trail/
+Mon site perso : résultats, récits de course et chaussures testées.
+En ligne sur https://ulascombes.github.io/Uriel-Lascombes-Trail/ (GitHub Pages, Jekyll).
 
-## Mise en ligne
+## Où modifier quoi
 
-1. Pousse le dépôt sur GitHub (`ulascombes/Uriel-Lascombes-Trail`).
-2. Dans Settings > Pages : Source = « Deploy from a branch », branche `main`, dossier `/ (root)`.
-3. Le site est en ligne en une à deux minutes.
+| Je veux…                         | Fichier                                   |
+|----------------------------------|-------------------------------------------|
+| ajouter une course               | `_data/resultats.yml` (copier un bloc)    |
+| écrire un récit                  | `_recits/<ref>.md`                        |
+| ajouter une paire de chaussures  | `_tests/<nom>.md` + photo dans `assets/images/tests/` |
+| mettre à jour mes cotes          | `_data/profil.yml`                        |
+| créditer une photo               | `_data/photos.yml`                        |
+| ajouter un article de presse     | `_data/presse.yml`                        |
+| changer les objectifs            | `_data/objectifs.yml`                     |
+| bilan d'une saison (leader, etc.)| `_data/saisons.yml`                       |
+| texte de la page À propos        | `a-propos.html`                           |
 
-Le `baseurl` de `_config.yml` doit correspondre au nom du dépôt. Si tu passes
-sur un nom de domaine, mets le domaine dans `url` et vide `baseurl`.
+Chaque fichier de `_data/` commence par quelques lignes qui expliquent ses champs.
 
-## Ajouter une course
+## Récit
 
-Ouvre `_data/resultats.yml` et copie un bloc en haut de la liste. Le tri,
-les médailles (1er, 2e, 3e) et les chiffres de la saison sur l'accueil
-se calculent tout seuls.
-
-## Ajouter un récit de course
-
-Crée `_recits/<ref>.md`, où `<ref>` est la même valeur que le champ `ref`
-de la course dans `resultats.yml`. Le lien depuis la page Résultats
-apparaît automatiquement. Modèle :
+Le nom du fichier reprend le `ref` de la course dans `resultats.yml`, et le lien
+« Récit de course » apparaît tout seul. Place, temps, distance et cotes viennent
+de `resultats.yml`, pas besoin de les recopier.
 
     ---
     title: "Nom de la course"
     ref: nom-course-2027
     date: 2027-04-10
-    chapo: "Une ou deux phrases de résumé."
-    image: /assets/images/photos/nom-course.jpg   # facultatif
-    image_legende: "Nom de la course, avril 2027"
+    chapo: "Une phrase de résumé."
+    photos:
+      - nom-course-2027-1.jpg
+      - nom-course-2027-2.jpg
     ---
 
-    Deux ou trois paragraphes.
+    Le récit.
 
     ## À retenir
 
-    - Point 1
-    - Point 2
+    - …
 
-Un récit qui contient `published: false` est un brouillon : il n'apparaît
-pas sur le site (ni le lien « Récit » dans les résultats). Supprime cette
-ligne quand il est prêt. Des brouillons existent déjà pour les courses
-sans récit.
-
-Les chiffres (place, distance, temps, cotes) et les chaussures sont repris
-de `resultats.yml` : inutile de les répéter dans le récit.
-
-## Tests de chaussures (plus tard)
-
-La collection `_tests/` est déjà déclarée dans `_config.yml`. Il suffira
-d'y créer un premier fichier `.md` et une page `tests.html` : le lien
-« Tests » apparaîtra alors dans le menu.
-
-## Crédits photos
-
-Tout se passe dans `_data/photos.yml` :
-
-1. déclare chaque photographe une seule fois dans `photographes` (nom + lien Instagram ou site) ;
-2. dans `photos`, indique pour chaque fichier l'identifiant de son photographe.
-
-Le crédit « Photo : Nom » s'affiche alors sous la photo, partout où elle est
-utilisée, et le photographe est ajouté aux remerciements de la page À propos.
-Le champ `cadrage` (ex. `"center 15%"`) permet de choisir la zone gardée
-quand une photo est recadrée.
-
-## Challenges
-
-Les challenges sont décrits dans `_data/challenges.yml`. Pour rattacher une
-course à un challenge, ajoute `challenges: [trails-provence]` à son bloc dans
-`resultats.yml` : une étiquette avec le lien vers le site du challenge apparaît.
-
-Un récit de bilan (par ex. celui du challenge en fin de saison) se crée comme
-un récit normal dans `_recits/`, sans champ `ref`.
+Avec `published: false`, le récit reste en brouillon et n'apparaît pas sur le site.
 
 ## Photos
 
-Mets les photos en 1600 px de large maximum (2400 px pour la couverture)
-dans `assets/images/photos/`. Les originaux de 10 Mo ralentissent le site.
-Sur Mac : `sips -Z 1600 photo.jpg --out assets/images/photos/photo.jpg`.
+Dans `assets/images/photos/`, 1800 px de large maximum. Sur Mac :
+`sips -Z 1800 photo.jpg --out assets/images/photos/photo.jpg`.
+Les photos du haut de l'accueil (`hero_photos` dans `profil.yml`) existent aussi
+en `-large.jpg` (2400 px) et `-small.jpg` (1200 px).
 
-## Cotes ITRA / UTMB / BeTrail
+Si une photo est mal cadrée sur une carte, ajoute `cadrage: "center 20%"` à son
+entrée dans `photos.yml` (0 % = on garde le haut, 100 % = le bas).
 
-À mettre à jour à la main dans `_data/profil.yml` (cotes actuelles) et
-dans `_data/resultats.yml` (cote de chaque course).
+## Chaussures
 
-## Aperçu en local (facultatif)
+Champs d'une fiche : `marque`, `title`, `nom_resultats` (le nom exact utilisé dans
+le champ `chaussures` de `resultats.yml`), `taille`, `poids`, `drop`, `stack_talon`,
+`stack_avant`, `image`. `podium: 1`, `2` ou `3` pour le podium, et
+`sans_semelle: true` si le poids est pris sans la semelle de propreté.
 
-    gem install bundler jekyll
-    jekyll serve
+## Aperçu en local
 
-puis ouvre http://localhost:4000/Uriel-Lascombes-Trail/
+Depuis le dossier du site :
+
+    docker run --rm -it -v "$PWD":/site -w /site -v jekyll-gems:/usr/local/bundle \
+      -p 4000:4000 -p 35729:35729 ruby:3.3 \
+      bash -c "gem install jekyll --no-document && jekyll serve --host 0.0.0.0 --livereload --force_polling"
+
+puis http://localhost:4000/Uriel-Lascombes-Trail/. Après une modification de
+`_config.yml`, il faut relancer la commande.
+
+## Nom de domaine
+
+Pour passer sur un domaine perso : le déclarer dans Settings > Pages, puis dans
+`_config.yml` mettre le domaine dans `url` et vider `baseurl`.

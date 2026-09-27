@@ -15,5 +15,3 @@ image: "/assets/images/tests/hoka-zinal-3.jpg"
 ---
 
 Première course avec cette paire au Trail des Étoiles, et un vrai régal : super légère et confortable, elle donne envie d'accélérer.
-
-<!-- À compléter : points forts, points faibles, pour quel terrain / quel format. -->

@@ -137,14 +137,6 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
   background: #2a2a28;
   color: #fff;
 }
-.hero-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 62% 40%;
-}
 .hero::after {
   content: "";
   position: absolute;
@@ -165,16 +157,6 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
   line-height: 0.88;
   letter-spacing: -0.01em;
   font-size: clamp(3.4rem, 11vw, 9rem);
-}
-.hero-caption {
-  position: absolute;
-  right: var(--gutter);
-  bottom: 14px;
-  z-index: 2;
-  margin: 0;
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  color: rgba(255,255,255,0.7);
 }
 
 /* ---------- Intro ---------- */
@@ -224,29 +206,6 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
   font-variant-numeric: tabular-nums;
 }
 .scores img { height: 26px; width: auto; max-width: 100%; object-fit: contain; }
-
-/* ---------- Saison ---------- */
-.season {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 2rem;
-  padding-top: 1.6rem;
-  padding-bottom: 1.6rem;
-  border-top: 1px solid var(--line);
-}
-.season-figures { display: flex; gap: clamp(1.5rem, 6vw, 4.5rem); margin: 0; }
-.season-figures div { display: flex; flex-direction: column-reverse; }
-.season-figures dt { font-size: 0.8rem; color: var(--muted); letter-spacing: 0.03em; }
-.season-figures dd {
-  margin: 0;
-  font-weight: 800;
-  font-stretch: 70%;
-  font-size: clamp(2.6rem, 6vw, 4rem);
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-.season-figures .fig-gold dd { color: var(--accent); }
 
 /* ---------- Blocs génériques ---------- */
 .block { padding-top: clamp(2.5rem, 6vw, 4rem); padding-bottom: clamp(1rem, 3vw, 2rem); }
@@ -415,24 +374,7 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
 .recit-card-chapo { font-family: var(--serif); color: var(--ink-2); font-size: 0.98rem; line-height: 1.45; }
 .recit-card:hover .recit-card-title { color: var(--accent); }
 
-/* ---------- Actualités ---------- */
-.news { list-style: none; padding: 0; margin: 1rem 0 0; }
-.news li { padding: 0.8rem 0; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 0.3rem 0.8rem; align-items: baseline; }
-.news-date { font-size: 0.85rem; color: var(--muted); }
-.news-type { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-ink); }
-
-/* ---------- Bandeau contact ---------- */
-.contact-band {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  margin-top: clamp(3rem, 7vw, 5rem);
-  margin-bottom: clamp(3rem, 7vw, 5rem);
-  padding-top: 2rem;
-  border-top: 1px solid var(--ink);
-}
-.contact-band p { font-family: var(--serif); font-size: 1.1rem; max-width: 56ch; margin: 0.8rem 0 0; color: var(--ink-2); }
+/* ---------- Bouton ---------- */
 .button {
   display: inline-block;
   flex-shrink: 0;
@@ -564,11 +506,8 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
   .brand { font-size: 0.82rem; }
   .nav nav a { font-size: 0.84rem; }
   .hero { height: 78vh; min-height: 460px; }
-  .hero-img { object-position: 72% 40%; }
-  .hero-caption { display: none; }
   .scores img { height: 20px; }
   .score-num { font-size: 1.35rem; }
-  .season { flex-direction: column; gap: 0.8rem; }
 
   .results-head { display: none !important; }
   .results li {
@@ -596,7 +535,6 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
   .photo-band .pb-wide { grid-column: 1 / 3; }
   .photo-band figure { height: 240px; }
   .recit-grid { grid-template-columns: 1fr; }
-  .contact-band { flex-direction: column; align-items: flex-start; }
   .about { grid-template-columns: 1fr; }
   .about-photo { position: static; }
   .kv div { grid-template-columns: 100px 1fr; }
@@ -607,7 +545,6 @@ a:hover { color: var(--accent); text-decoration-color: currentColor; }
 
 /* ---------- Crédits photos ---------- */
 figure .credit a { color: inherit; text-decoration: underline; text-decoration-color: rgba(127,127,127,0.5); }
-.hero-caption a { color: inherit; }
 .credits-list { list-style: none !important; padding: 0 !important; font-family: var(--sans); font-size: 0.95rem; columns: 2; }
 .credits-list li { margin: 0 0 0.4rem; }
 .kv-note { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
@@ -770,25 +707,6 @@ a.tag-challenge:hover { background: var(--ink); color: var(--paper); }
   .carousel-hero .car-btn { display: none; }
 }
 
-/* ---------- Profil de la course ---------- */
-.profil { margin: 1.6rem 0 0; }
-.profil-trace {
-  width: 100%;
-  aspect-ratio: 768 / 136;
-  background: var(--ink-2);
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-}
-.profil figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
 /* ---------- Entraîneur ---------- */
 .footer-coach { display: inline-flex; align-items: center; gap: 0.7rem; margin-top: 1.1rem; }
 .footer-coach span { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: #9a948a; }
@@ -910,11 +828,6 @@ a.tag-challenge:hover { background: var(--ink); color: var(--paper); }
 }
 
 /* ---------- En bref / objectifs ---------- */
-.season-figures .fig-level dd a { text-decoration: none; color: var(--ink); }
-.season-figures .fig-level dd a:hover { color: var(--accent); }
-@media (max-width: 640px) {
-  .season-figures { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem; }
-}
 
 /* ---------- Objectifs (page Résultats) ---------- */
 .goals-block { margin-bottom: 3.5rem; }
@@ -929,8 +842,6 @@ a.tag-challenge:hover { background: var(--ink); color: var(--paper); }
 .goal-format span { color: var(--muted); }
 .goal-figures { display: flex; gap: 1rem; margin-top: 0.8rem !important; font-size: 0.85rem; color: var(--muted); }
 .goal-figures b { font-weight: 800; font-stretch: 75%; font-size: 1.4rem; color: var(--ink); margin-right: 0.15rem; }
-.goal-foot { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: auto !important; padding-top: 1rem; }
-.goal-ffa { height: 18px; width: auto; }
 .goal-link { font-size: 0.8rem; font-weight: 600; color: var(--accent-ink); margin-left: auto; }
 @media (max-width: 960px) { .goals { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .goals { grid-template-columns: 1fr; } }
@@ -939,7 +850,6 @@ a.tag-challenge:hover { background: var(--ink); color: var(--paper); }
 .goal.is-champ .goal-logo img { max-height: 64px; }
 .goal-link { white-space: nowrap; }
 .goal-body { margin-top: auto; }
-.goal .goal-foot { margin-top: 0 !important; padding-top: 1.1rem; }
 /* objectifs : lignes alignées d'une carte à l'autre */
 .goal-body { margin-top: 0; }
 .goal-top { display: flex; justify-content: space-between; align-items: baseline; gap: 0.6rem; }

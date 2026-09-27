@@ -2,17 +2,6 @@
 layout: default
 ---
 {%- assign p = site.data.profil -%}
-{%- assign courses = site.data.resultats | sort: "date" | reverse -%}
-{%- assign saison = courses.first.date | date: "%Y" -%}
-{%- assign n_courses = 0 -%}{%- assign n_victoires = 0 -%}{%- assign n_podiums = 0 -%}
-{%- for c in courses -%}
-  {%- assign y = c.date | date: "%Y" -%}
-  {%- if y == saison -%}
-    {%- assign n_courses = n_courses | plus: 1 -%}
-    {%- if c.classement == 1 -%}{%- assign n_victoires = n_victoires | plus: 1 -%}{%- endif -%}
-    {%- if c.classement and c.classement <= 3 -%}{%- assign n_podiums = n_podiums | plus: 1 -%}{%- endif -%}
-  {%- endif -%}
-{%- endfor -%}
 
 <section class="hero">
   {%- assign car_photos = p.hero_photos -%}{%- assign car_class = "carousel-hero" -%}{%- assign car_hero = true -%}{%- assign car_interval = 5000 -%}

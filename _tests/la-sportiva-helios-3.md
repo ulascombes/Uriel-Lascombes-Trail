@@ -15,5 +15,3 @@ image: "/assets/images/tests/la-sportiva-helios-3.jpg"
 ---
 
 Très légère, on l'oublie au pied. En contrepartie, l'amorti est limité : je la réserve aux formats courts et aux terrains pas trop cassants.
-
-<!-- À compléter : points forts, points faibles, pour quel terrain / quel format. -->

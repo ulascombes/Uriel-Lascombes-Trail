@@ -41,9 +41,6 @@ betrail_score: 75.18
 betrail_link: "https://www.betrail.run/runner/lascombes.uriel/overview"
 betrail_logo: "/assets/images/logos/betrail.png"
 
-# Profils de dénivelé dans les récits (true pour les afficher)
-afficher_profils: false
-
 # Photos qui défilent en haut de l'accueil (fichiers de assets/images/photos/).
 # Chaque photo doit exister aussi en version -large.jpg et -small.jpg.
 hero_photos:

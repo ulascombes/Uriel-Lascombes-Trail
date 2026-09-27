@@ -17,5 +17,3 @@ image: "/assets/images/tests/nnormal-kjerag.jpg"
 ---
 
 Ma paire pour les terrains provençaux. Légère, confortable, dynamique sur le plat, et surtout vraiment protectrice dans les cailloux : c'est elle qui me donne confiance dans les descentes techniques.
-
-<!-- À compléter : points forts, points faibles, pour quel terrain / quel format. -->

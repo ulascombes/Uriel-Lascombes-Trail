@@ -14,5 +14,3 @@ image: "/assets/images/tests/scarpa-spin-race.jpg"
 ---
 
 Utilisée à l'entraînement pour l'instant, pas encore en course. Mon avis viendra avec les premières courses.
-
-<!-- À compléter : points forts, points faibles, pour quel terrain / quel format. -->
