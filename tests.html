@@ -4,9 +4,26 @@ title: Tests matériel
 permalink: /tests/
 description: "Les chaussures de trail testées par Uriel Lascombes : podium, caractéristiques et avis."
 ---
-<p class="lede">J'aime tester des paires. Voici celles que j'utilise, mon podium du moment, et pour chacune ce que j'en pense à l'usage.</p>
+<div class="lede">
+<p>J'aime tester des chaussures : pour moi, c'est le matériel le plus important en trail. Comme je fais du trail court, je cherche des modèles plutôt minimalistes. Mes critères : le poids, une bonne accroche, du confort et une protection suffisante dans les cailloux.</p>
+<p>Voici celles que j'utilise en compétition et à l'entraînement, avec mon podium du moment : mes trois paires préférées.</p>
+</div>
 
 {% include podium.html %}
+
+<h2 class="section-title tests-all-title">En résumé</h2>
+<div class="shoe-table-wrap">
+<table class="shoe-table">
+  <thead>
+    <tr><th scope="col">Paire</th><th scope="col" class="num">Poids</th><th scope="col" class="num">Drop</th><th scope="col" class="num">Talon</th><th scope="col">Caillouteux</th><th scope="col">Roulant</th><th scope="col">Montagne</th></tr>
+  </thead>
+  <tbody>
+  {%- for rank in (1..3) %}{% assign sh = site.tests | where: "podium", rank | first %}{% if sh %}{% include ligne-chaussure.html %}{% endif %}{% endfor %}
+  {%- for sh in site.tests %}{% unless sh.podium %}{% include ligne-chaussure.html %}{% endunless %}{% endfor %}
+  </tbody>
+</table>
+</div>
+<p class="shoe-note">+ à +++ : mon ressenti selon le terrain. Hauteur de semelle au talon et drop : données fabricant.</p>
 
 <h2 class="section-title tests-all-title">Toutes les paires</h2>
 <div class="shoe-grid">

@@ -4,6 +4,7 @@ title: "Supertrac RC 3"
 marque: "Scott"
 podium:
 accroche:
+usage:
 nom_resultats: "Scott Supertrac RC 3"
 taille: "42"
 poids: 230

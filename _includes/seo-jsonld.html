@@ -1,0 +1,12 @@
+{%- comment -%} Données structurées pour Google : la personne (accueil, À propos) et les avis chaussures. {%- endcomment -%}
+{%- assign p = site.data.profil -%}
+{%- capture person -%}
+{"@type": "Person", "name": {{ p.nom | jsonify }}, "url": {{ '/' | absolute_url | jsonify }}, "jobTitle": "Coureur de trail", "address": {"@type": "PostalAddress", "addressLocality": "Marseille", "addressCountry": "FR"}, "memberOf": {"@type": "SportsTeam", "name": {{ p.club_nom | jsonify }}}, "sameAs": [{{ p.instagram | jsonify }}, {{ p.strava | jsonify }}, {{ p.itra_link | jsonify }}, {{ p.utmb_link | jsonify }}, {{ p.betrail_link | jsonify }}, {{ p.ffa | jsonify }}]}
+{%- endcapture -%}
+{%- if page.layout == 'home' or page.url == '/a-propos/' %}
+<script type="application/ld+json">{"@context": "https://schema.org", {{ person | remove_first: "{" }}</script>
+{%- elsif page.layout == 'test' %}
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "name": {{ page.marque | append: ' ' | append: page.title | prepend: 'Test ' | jsonify }}, "url": {{ page.url | absolute_url | jsonify }}, "inLanguage": "fr", "author": {{ person }}, "itemReviewed": {"@type": "Product", "name": {{ page.marque | append: ' ' | append: page.title | jsonify }}, "brand": {"@type": "Brand", "name": {{ page.marque | jsonify }}}{% if page.image and page.image != "" %}, "image": {{ page.image | absolute_url | jsonify }}{% endif %}}, "reviewBody": {{ page.content | strip_html | strip_newlines | strip | jsonify }}}</script>
+{%- elsif page.layout == 'recit' %}
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": {{ page.title | jsonify }}, "datePublished": {{ page.date | date_to_xmlschema | jsonify }}, "inLanguage": "fr", "url": {{ page.url | absolute_url | jsonify }}, "author": {{ person }}}</script>
+{%- endif %}

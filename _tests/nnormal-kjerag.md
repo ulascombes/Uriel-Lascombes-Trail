@@ -1,19 +1,31 @@
 ---
-# Fiche test. Remplis les champs vides (poids mesuré, taille) et le texte.
 layout: test
-title: "Kjerag"
+title: "Kjerag 01"
 marque: "NNormal"
 podium: 1
 accroche: "Le parfait compromis"
-# Texte tel qu'il apparaît dans le champ "chaussures" de resultats.yml,
-# pour lister automatiquement les courses faites avec cette paire.
+usage: "Ma paire de compétition, sur les sentiers caillouteux provençaux comme sur les parcours plus variés."
 nom_resultats: "NNormal Kjerag"
 taille: "42"
 poids: 215
-drop: 6             # mm (donnée fabricant)
-stack_talon: 23.5   # mm (donnée fabricant)
-stack_avant: 17.5   # mm (donnée fabricant)
+drop: 6
+stack_talon: 23.5
+stack_avant: 17.5
 image: "/assets/images/tests/nnormal-kjerag.jpg"
+jaime:
+  - "Le confort"
+  - "Le dynamisme"
+  - "L'accroche"
+  - "La protection"
+  - "La légèreté"
+  - "La tenue du pied"
+jaime_moins:
+  - "Un peu chaude"
+  - "Remplacée par la Kjerag 02 : la 01 devient difficile à trouver"
+terrain:
+  caillouteux: 3
+  roulant: 2
+  montagne: 2
 ---
 
-Ma paire pour les terrains provençaux. Légère, confortable, dynamique sur le plat, et surtout vraiment protectrice dans les cailloux : c'est elle qui me donne confiance dans les descentes techniques.
+Pour moi, c'est le compromis parfait. Le poids reste contenu, mais la protection est bonne dans les cailloux. Elle est à l'aise partout : je l'apprécie autant sur les terrains caillouteux provençaux que sur les relances roulantes, un peu de route ou en forêt. Très confortable, et les lacets tiennent bien.

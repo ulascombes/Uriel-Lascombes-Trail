@@ -11,6 +11,7 @@ layout: default
     <p class="recit-result{% if page.podium == 1 %} is-win{% endif %}">{% assign medal_rank = page.podium %}{% include medal.html %}<span class="rr-label">{{ page.podium }}<sup>{% if page.podium == 1 %}re{% else %}e{% endif %}</sup> de mon podium</span></p>
     {%- endif %}
     {%- if page.accroche %}<p class="recit-chapo">« {{ page.accroche }} »</p>{% endif %}
+    {%- if page.usage %}<p class="shoe-usage"><span>Je l'utilise pour</span>{{ page.usage }}</p>{% endif %}
   </header>
 
   <div class="wrap-narrow shoe-top">
@@ -22,11 +23,27 @@ layout: default
       {%- if page.poids != "" and page.poids %}<div><dt>Poids mesuré</dt><dd>{{ page.poids }} g{% if page.sans_semelle %} <span class="spec-note">sans semelle de propreté</span>{% endif %}</dd></div>{% endif %}
       <div><dt>Drop</dt><dd>{{ page.drop | replace: ".", "," }} mm</dd></div>
       <div><dt>Hauteur de semelle</dt><dd>{{ page.stack_talon | replace: ".", "," }} mm au talon · {{ page.stack_avant | replace: ".", "," }} mm à l'avant</dd></div>
+      {%- if page.terrain %}
+      <div><dt>Terrain caillouteux</dt><dd>{% assign note = page.terrain.caillouteux %}{% include note-terrain.html %}</dd></div>
+      <div><dt>Terrain roulant</dt><dd>{% assign note = page.terrain.roulant %}{% include note-terrain.html %}</dd></div>
+      <div><dt>Montagne</dt><dd>{% assign note = page.terrain.montagne %}{% include note-terrain.html %}</dd></div>
+      {%- endif %}
     </dl>
   </div>
 
   <div class="recit-body wrap-narrow prose">
+    {%- if page.jaime or page.jaime_moins %}<h2>Mon avis</h2>{% endif %}
     {{ content }}
+    {%- if page.jaime or page.jaime_moins %}
+    <div class="shoe-pros">
+      {%- if page.jaime %}
+      <div class="pros-col pros-plus"><h3>J'aime</h3><ul>{% for x in page.jaime %}<li>{{ x }}</li>{% endfor %}</ul></div>
+      {%- endif %}
+      {%- if page.jaime_moins %}
+      <div class="pros-col pros-moins"><h3>J'aime moins</h3><ul>{% for x in page.jaime_moins %}<li>{{ x }}</li>{% endfor %}</ul></div>
+      {%- endif %}
+    </div>
+    {%- endif %}
 
     {%- if courses.size > 0 %}
     <h2>Courses avec cette paire</h2>

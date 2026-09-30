@@ -913,3 +913,40 @@ a.tag-challenge:hover { background: var(--ink); color: var(--paper); }
 
 /* Poids sans semelle de propreté */
 .spec-note { display: block; font-weight: 400; font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
+
+/* ---------- Chaussures : usage, avis, tableau ---------- */
+.lede p { margin: 0 0 0.8rem; }
+.lede p:last-child { margin-bottom: 0; }
+.shoe-usage { font-size: 0.95rem; color: var(--ink); margin: 0.9rem 0 0; max-width: 60ch; }
+.shoe-usage span { display: block; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.2rem; }
+
+.note { font-family: var(--sans); font-weight: 700; font-size: 1.05rem; letter-spacing: 0.1em; white-space: nowrap; }
+.note-plus { color: var(--line); }
+.note-plus.on { color: var(--accent); }
+.note-vide { color: var(--muted); }
+
+.shoe-pros { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.6rem 0 0.5rem; }
+.pros-col h3 { font-family: var(--sans); font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 0.6rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--ink); }
+.pros-col ul { list-style: none; margin: 0; padding: 0; }
+.pros-col li { font-family: var(--sans); font-size: 0.92rem; padding: 0.4rem 0 0.4rem 1.2rem; border-bottom: 1px solid var(--line); position: relative; }
+.pros-col li::before { position: absolute; left: 0; font-weight: 700; }
+.pros-plus li::before { content: "+"; color: var(--accent); }
+.pros-moins li::before { content: "–"; color: var(--muted); }
+
+.shoe-table-wrap { overflow-x: auto; margin-top: 1.2rem; -webkit-overflow-scrolling: touch; }
+.shoe-table { width: 100%; border-collapse: collapse; font-family: var(--sans); font-size: 0.92rem; min-width: 640px; }
+.shoe-table th, .shoe-table td { text-align: left; padding: 0.75rem 0.8rem 0.75rem 0; border-bottom: 1px solid var(--line); vertical-align: middle; }
+.shoe-table thead th { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 500; border-bottom: 1px solid var(--ink); }
+.shoe-table tbody th { font-weight: 700; white-space: nowrap; }
+.shoe-table tbody th a { text-decoration: none; }
+.shoe-table tbody th a:hover { color: var(--accent); }
+.st-brand { font-weight: 400; color: var(--muted); }
+.st-pod { display: inline-block; width: 22px; }
+.st-pod svg { width: 15px; height: auto; vertical-align: -3px; }
+.shoe-table .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; padding-right: 1.4rem; }
+.shoe-table td:last-child, .shoe-table th:last-child { padding-right: 0; }
+@media (max-width: 640px) {
+  .shoe-pros { grid-template-columns: 1fr; gap: 1rem; }
+}
+
+.shoe-table-wrap + .shoe-note { margin-bottom: 3.5rem; }

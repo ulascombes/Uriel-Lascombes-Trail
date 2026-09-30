@@ -1,0 +1,6 @@
+{%- comment -%} Note de 1 à 3 affichée en + / ++ / +++. Variable : note {%- endcomment -%}
+{%- if note -%}
+<span class="note" aria-label="{{ note }} sur 3">{% for i in (1..3) %}<span class="note-plus{% if i <= note %} on{% endif %}" aria-hidden="true">+</span>{% endfor %}</span>
+{%- else -%}
+<span class="note-vide" aria-label="pas encore noté">–</span>
+{%- endif -%}

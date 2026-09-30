@@ -1,0 +1,9 @@
+<tr>
+  <th scope="row"><span class="st-pod">{% if sh.podium %}{% assign medal_rank = sh.podium %}{% include medal.html %}{% endif %}</span><a href="{{ sh.url | relative_url }}"><span class="st-brand">{{ sh.marque }}</span> {{ sh.title }}</a></th>
+  <td class="num">{% if sh.poids %}{{ sh.poids }} g{% if sh.sans_semelle %}*{% endif %}{% else %}–{% endif %}</td>
+  <td class="num">{{ sh.drop | replace: ".", "," }} mm</td>
+  <td class="num">{{ sh.stack_talon | replace: ".", "," }} mm</td>
+  <td>{% assign note = sh.terrain.caillouteux %}{% include note-terrain.html %}</td>
+  <td>{% assign note = sh.terrain.roulant %}{% include note-terrain.html %}</td>
+  <td>{% assign note = sh.terrain.montagne %}{% include note-terrain.html %}</td>
+</tr>

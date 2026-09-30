@@ -4,21 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- if page.layout == 'test' %}
+  {%- assign seo_title = 'Test ' | append: page.marque | append: ' ' | append: page.title | append: ' : avis et poids mesuré' %}
+  {%- capture auto_desc %}Mon avis sur la {{ page.marque }} {{ page.title }} en trail{% if page.poids %} : {{ page.poids }} g mesurés en {{ page.taille }}{% if page.sans_semelle %} (sans semelle de propreté){% endif %}{% endif %}, drop {{ page.drop | replace: ".", "," }} mm, et les courses faites avec.{% endcapture %}
+  {%- elsif page.layout == 'recit' %}
+  {%- capture seo_title %}{{ page.title }} {{ page.date | date: "%Y" }} : récit de course{% endcapture %}
+  {%- assign auto_desc = page.chapo %}
+  {%- else %}
+  {%- assign seo_title = page.title %}
+  {%- assign auto_desc = nil %}
+  {%- endif %}
   {%- if page.title %}
-  <title>{{ page.title }} · {{ site.title }}</title>
+  <title>{{ seo_title }} · {{ site.title }}</title>
   {%- else %}
   <title>{{ site.title }} · {{ p.accroche }}</title>
   {%- endif %}
-  {%- assign desc = page.description | default: page.excerpt_text | default: site.description | strip_html | strip_newlines | truncate: 160 %}
+  {%- assign desc = page.description | default: auto_desc | default: site.description | strip_html | strip_newlines | strip | truncate: 160 %}
   <meta name="description" content="{{ desc }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <meta property="og:type" content="{% if page.layout == 'recit' %}article{% else %}website{% endif %}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
   <meta property="og:description" content="{{ desc }}">
-  <meta property="og:image" content="{{ page.image | default: '/assets/images/og.jpg' | absolute_url }}">
+  {%- if page.photos and page.photos.size > 0 %}{% assign og_img = '/assets/images/photos/' | append: page.photos.first %}{% else %}{% assign og_img = page.image | default: '/assets/images/og.jpg' %}{% endif %}
+  <meta property="og:image" content="{{ og_img | absolute_url }}">
   <meta property="og:locale" content="fr_FR">
   <meta name="twitter:card" content="summary_large_image">
+  {% include seo-jsonld.html %}
   <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="preload" href="{{ '/assets/fonts/archivo.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
