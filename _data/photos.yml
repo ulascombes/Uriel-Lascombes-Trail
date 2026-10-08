@@ -145,6 +145,7 @@ photos:
   mimet-2026-7.jpg:
     course: mimet-2026
     photographe: bernardeau
+    cadrage: "center 2%"
   mineurs-2026-1.jpg:
     course: mineurs-2026
     photographe:
