@@ -920,9 +920,10 @@ a.tag-challenge:hover { background: var(--ink); color: var(--paper); }
 .shoe-usage { font-size: 0.95rem; color: var(--ink); margin: 0.9rem 0 0; max-width: 60ch; }
 .shoe-usage span { display: block; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.2rem; }
 
-.note { font-family: var(--sans); font-weight: 700; font-size: 1.05rem; letter-spacing: 0.1em; white-space: nowrap; }
-.note-plus { color: var(--line); }
-.note-plus.on { color: var(--accent); }
+.note { display: inline-flex; align-items: center; gap: 3px; white-space: nowrap; vertical-align: middle; }
+.note-seg { width: 13px; height: 7px; border-radius: 1.5px; background: var(--line); }
+.note-seg.on { background: var(--accent); }
+.note-num { font-family: var(--sans); font-size: 0.78rem; font-weight: 600; color: var(--muted); margin-left: 0.5rem; font-variant-numeric: tabular-nums; }
 .note-vide { color: var(--muted); }
 
 .shoe-pros { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.6rem 0 0.5rem; }

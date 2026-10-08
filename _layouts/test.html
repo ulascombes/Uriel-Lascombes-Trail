@@ -24,9 +24,9 @@ layout: default
       <div><dt>Drop</dt><dd>{{ page.drop | replace: ".", "," }} mm</dd></div>
       <div><dt>Hauteur de semelle</dt><dd>{{ page.stack_talon | replace: ".", "," }} mm au talon · {{ page.stack_avant | replace: ".", "," }} mm à l'avant</dd></div>
       {%- if page.terrain %}
-      <div><dt>Terrain caillouteux</dt><dd>{% assign note = page.terrain.caillouteux %}{% include note-terrain.html %}</dd></div>
+      <div><dt>Terrain provençal</dt><dd>{% assign note_num = true %}{% assign note = page.terrain.provence %}{% include note-terrain.html %}</dd></div>
+      <div><dt>Montagne alpine</dt><dd>{% assign note = page.terrain.alpes %}{% include note-terrain.html %}</dd></div>
       <div><dt>Terrain roulant</dt><dd>{% assign note = page.terrain.roulant %}{% include note-terrain.html %}</dd></div>
-      <div><dt>Montagne</dt><dd>{% assign note = page.terrain.montagne %}{% include note-terrain.html %}</dd></div>
       {%- endif %}
     </dl>
   </div>

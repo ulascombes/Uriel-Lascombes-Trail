@@ -19,10 +19,10 @@ jaime:
 jaime_moins:
   - "Un peu plus lourde"
   - "Assez rigide, peu dynamique"
-terrain:
-  caillouteux: 3
-  roulant: 1
-  montagne: 2
+terrain:   # note sur 5
+  provence: 4   # sentiers très caillouteux, petits cailloux qui roulent
+  alpes: 4      # montagne, granit, gros blocs
+  roulant: 2    # pistes, forêt, route
 ---
 
 Le système de serrage est super et donne une très bonne tenue du pied. La semelle est top : elle adhère en toutes circonstances. La protection est bonne, mais la chaussure est assez rigide et manque un peu de dynamisme.

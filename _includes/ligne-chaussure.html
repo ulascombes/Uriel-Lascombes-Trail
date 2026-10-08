@@ -3,7 +3,7 @@
   <td class="num">{% if sh.poids %}{{ sh.poids }} g{% if sh.sans_semelle %}*{% endif %}{% else %}–{% endif %}</td>
   <td class="num">{{ sh.drop | replace: ".", "," }} mm</td>
   <td class="num">{{ sh.stack_talon | replace: ".", "," }} mm</td>
-  <td>{% assign note = sh.terrain.caillouteux %}{% include note-terrain.html %}</td>
+  <td>{% assign note_num = false %}{% assign note = sh.terrain.provence %}{% include note-terrain.html %}</td>
+  <td>{% assign note = sh.terrain.alpes %}{% include note-terrain.html %}</td>
   <td>{% assign note = sh.terrain.roulant %}{% include note-terrain.html %}</td>
-  <td>{% assign note = sh.terrain.montagne %}{% include note-terrain.html %}</td>
 </tr>
