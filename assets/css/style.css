@@ -951,3 +951,10 @@ a.tag-challenge:hover { background: var(--ink); color: var(--paper); }
 }
 
 .shoe-table-wrap + .shoe-note { margin-bottom: 3.5rem; }
+
+/* Club + entraîneur (pied de page, À propos) */
+.footer-partners { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 2rem; margin-top: 1.1rem; }
+.footer-partners .footer-coach { margin-top: 0; }
+.footer-club img { height: 44px; }
+.coach-card img, .club-card img { width: 150px; height: 52px; object-fit: contain; object-position: left center; }
+.club-card + .coach-card { margin-top: 0.8rem; }

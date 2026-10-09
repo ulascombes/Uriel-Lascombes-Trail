@@ -59,7 +59,10 @@
       <div>
         <p class="footer-name">Uriel Lascombes</p>
         <p class="footer-meta">{{ p.accroche }} · {{ p.club_nom }}</p>
-        <a class="footer-coach" href="{{ p.coach_lien }}" target="_blank" rel="noopener"><span>Entraîné par</span><img src="{{ '/assets/images/logos/jbs-training.png' | relative_url }}" alt="JBS Training, {{ p.coach_nom }}"></a>
+        <div class="footer-partners">
+          <a class="footer-coach footer-club" href="{{ p.club_lien }}" target="_blank" rel="noopener"><span>Licencié au</span><img src="{{ '/assets/images/logos/tcp.png' | relative_url }}" alt="{{ p.club_nom }}"></a>
+          <a class="footer-coach" href="{{ p.coach_lien }}" target="_blank" rel="noopener"><span>Entraîné par</span><img src="{{ '/assets/images/logos/jbs-training.png' | relative_url }}" alt="JBS Training, {{ p.coach_nom }}"></a>
+        </div>
       </div>
       <ul class="footer-links">
         <li><a href="mailto:{{ p.email }}">{{ p.email }}</a></li>

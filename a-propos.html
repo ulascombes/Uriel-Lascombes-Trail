@@ -65,6 +65,10 @@ description: "Uriel Lascombes, coureur de trail court à Marseille, Trail Club d
     <p>Merci aux photographes présents sur les courses, dont les photos illustrent ce site.</p>
     {%- endif %}
 
+    <a class="coach-card club-card" href="{{ p.club_lien }}" target="_blank" rel="noopener">
+      <img src="{{ '/assets/images/logos/tcp.png' | relative_url }}" alt="{{ p.club_nom }}">
+      <span>Je cours sous les couleurs du {{ p.club_nom }}.</span>
+    </a>
     <a class="coach-card" href="{{ p.coach_lien }}" target="_blank" rel="noopener">
       <img src="{{ '/assets/images/logos/jbs-training.png' | relative_url }}" alt="JBS Training">
       <span>Mon entraînement est construit avec {{ p.coach_nom }} (JBS Training).</span>
