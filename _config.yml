@@ -2,12 +2,9 @@ title: Uriel Lascombes
 description: "Trail court en Provence. Résultats, récits de course et matériel."
 lang: fr
 
-# Le dépôt s'appelle Uriel-Lascombes-Trail : GitHub Pages le sert donc à
-# https://ulascombes.github.io/Uriel-Lascombes-Trail/
-# Si tu passes un jour sur un nom de domaine (ex. urielascombes.fr),
-# remplace url par ce domaine et vide baseurl ("").
-url: "https://ulascombes.github.io"
-baseurl: "/Uriel-Lascombes-Trail"
+# Site servi sur le domaine perso (acheté chez OVH, fichier CNAME à la racine).
+url: "https://uriellascombes.fr"
+baseurl: ""
 
 collections:
   recits:
