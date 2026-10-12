@@ -1,5 +1,5 @@
 ---
-title: "Trail du Ventoux, championnat de France"
+title: "Trail du Ventoux"
 ref: ventoux-2026
 date: 2026-03-29
 chapo: "Mon premier championnat de France de trail court : un niveau très élevé, une préparation perturbée et beaucoup d'enseignements."

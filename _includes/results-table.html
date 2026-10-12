@@ -29,7 +29,7 @@
         <span class="rank-num">{{ c.classement }}<sup>e</sup></span>
       {%- endif -%}
     </span>
-    <span class="r-date"><time datetime="{{ c.date | date: '%Y-%m-%d' }}">{{ c.date | date: "%-d" }} {{ mois[m] }}</time></span>
+    <span class="r-date"><time datetime="{{ c.date | date: '%Y-%m-%d' }}">{% assign jour = c.date | date: "%-d" %}{% if jour == "1" %}1<sup>er</sup>{% else %}{{ jour }}{% endif %} {{ mois[m] }}</time></span>
     <span class="r-name">
       <span class="r-title">{% if rec %}<a href="{{ rec.url | relative_url }}">{{ c.nom }}</a>{% else %}{{ c.nom }}{% endif %}</span>
       {%- if c.mention %} <span class="r-mention">{{ c.mention }}</span>{% endif %}

@@ -5,7 +5,7 @@ marque: "La Sportiva"
 podium: 3
 accroche: "De vrais chaussons"
 usage: "Les parcours roulants et les montées, quand le terrain n'est pas trop cassant."
-nom_resultats: "La Sportiva Helios 3"
+nom_resultats: "La Sportiva Helios III"
 taille: "42"
 poids: 200
 sans_semelle: true
