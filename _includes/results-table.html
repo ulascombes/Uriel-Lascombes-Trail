@@ -34,7 +34,8 @@
       <span class="r-title">{% if rec %}<a href="{{ rec.url | relative_url }}">{{ c.nom }}</a>{% else %}{{ c.nom }}{% endif %}</span>
       {%- if c.mention %} <span class="r-mention">{{ c.mention }}</span>{% endif %}
       {%- for ch in c.challenges %}{% assign chi = site.data.challenges[ch] %} {% if chi.lien != "" and chi.lien %}<a class="tag-challenge" href="{{ chi.lien }}" target="_blank" rel="noopener" title="{{ chi.nom }}">{{ chi.court }}</a>{% else %}<span class="tag-challenge" title="{{ chi.nom }}">{{ chi.court }}</span>{% endif %}{% endfor %}
-      {%- if rt_comments and c.commentaire %}<span class="r-comment">{{ c.commentaire }}</span>{% endif %}
+      {%- assign r_txt = c.commentaire -%}{%- if rec and rec.chapo -%}{%- assign r_txt = rec.chapo -%}{%- endif -%}
+      {%- if rt_comments and r_txt %}<span class="r-comment">{{ r_txt }}</span>{% endif %}
       {%- if rt_comments and c.chaussures %}{% assign shoe = site.tests | where: "nom_resultats", c.chaussures | first %}<span class="r-shoes">Aux pieds : {% if shoe %}<a href="{{ shoe.url | relative_url }}">{{ c.chaussures }}</a>{% else %}{{ c.chaussures }}{% endif %}</span>{% endif %}
       {%- if rec %}<a class="r-link" href="{{ rec.url | relative_url }}">Récit de course</a>{% endif %}
     </span>

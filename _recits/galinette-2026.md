@@ -2,7 +2,7 @@
 title: "Trail de la Galinette"
 ref: galinette-2026
 date: 2026-01-25
-chapo: "Première course de l'année et vingt kilomètres de duel. Thomas a été le plus fort à la fin, je termine à 14 secondes."
+chapo: "Première course de l'année et vingt kilomètres de duel."
 photos:
   - galinette-2026-1.jpg
   - galinette-2026-3.jpg

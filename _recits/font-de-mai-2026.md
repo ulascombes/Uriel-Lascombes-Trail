@@ -2,7 +2,7 @@
 title: "Trail de la Font de Mai"
 ref: font-de-mai-2026
 date: 2026-05-03
-chapo: "Un beau duel dans les premiers kilomètres, puis la longue montée du Taoumé, dans le massif du Garlaban."
+chapo: "Un super moment sur les traces de Marcel Pagnol."
 photos:
   - font-de-mai-2026-1.jpg
 ---

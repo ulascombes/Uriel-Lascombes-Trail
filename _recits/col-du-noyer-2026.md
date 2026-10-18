@@ -2,7 +2,7 @@
 title: "Trail du Col du Noyer"
 ref: col-du-noyer-2026
 date: 2026-06-21
-chapo: "Une course magnifique et exigeante dans le Dévoluy, un plateau relevé et une troisième place jouée dans le dernier kilomètre."
+chapo: "Une course magnifique et exigeante, un plateau relevé et une troisième place jouée dans le dernier kilomètre."
 photos:
   - col-du-noyer-2026-2.jpg
   - col-du-noyer-2026-1.jpg

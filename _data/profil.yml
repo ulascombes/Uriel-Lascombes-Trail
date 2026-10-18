@@ -52,6 +52,4 @@ hero_photos:
 
 # Challenges en cours, affichés discrètement dans "Repères" (page À propos).
 # Vide la liste (challenges_en_cours: []) pour ne rien afficher.
-challenges_en_cours:
-  - "En tête du Challenge des Trails de Provence"
-  - "En tête du Challenge Trail Région Sud"
+challenges_en_cours: []

@@ -16,5 +16,5 @@ Ensuite, je fais la course seul, sans me mettre dans le rouge. Le parcours est v
 
 ## À retenir
 
-- Une victoire construite sans forcer, et des jambes qui répondent jusqu'au bout.
+- Une victoire construite sans se cramer, et des jambes qui répondent jusqu'au bout.
 - Un parcours comme je les aime : varié, joueur, avec du dénivelé.
