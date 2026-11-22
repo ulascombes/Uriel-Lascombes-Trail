@@ -30,6 +30,17 @@ layout: default
       {%- if c.utmb %}<div class="fact-score"><dt><img src="{{ p.utmb_logo_general | relative_url }}" alt="UTMB Index"></dt><dd>{{ c.utmb }}</dd></div>{% endif %}
       {%- if c.betrail %}<div class="fact-score"><dt><img src="{{ p.betrail_logo | relative_url }}" alt="BeTrail"></dt><dd>{{ c.betrail | replace: ".", "," }}</dd></div>{% endif %}
     </dl>
+    {%- assign presse_c = site.data.presse | where: "course", page.ref -%}
+    {%- if c.resultats_url or presse_c.size > 0 %}
+    <ul class="recit-links">
+      {%- if c.resultats_url %}
+      <li><a href="{{ c.resultats_url }}" target="_blank" rel="noopener">Résultats complets</a></li>
+      {%- endif %}
+      {%- for a in presse_c %}
+      <li><a href="{{ a.url }}" target="_blank" rel="noopener">Dans {{ a.media }}</a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
   </div>
   {%- endif %}
 
@@ -47,13 +58,41 @@ layout: default
   {%- endif %}
 
   {%- assign rprof = site.data.profils[page.ref] -%}
+  {%- assign rch = site.data.courses_chiffres[page.ref] -%}
   {%- if rprof %}
   <div class="wrap recit-profile-wrap">
     <figure class="recit-profile">
-      <svg viewBox="0 0 1000 40" preserveAspectRatio="none" role="img" aria-label="Profil d'altitude de la course"><path class="rp-area" d="{{ rprof.d }} L1000,40 L0,40 Z"/><path class="rp-line" d="{{ rprof.d }}" vector-effect="non-scaling-stroke"/></svg>
-      <figcaption><span>Altitude de {{ rprof.alt_min }} à {{ rprof.alt_max }} m</span>{% if c.km %}<span>{{ c.km | replace: ".", "," }} km</span>{% endif %}</figcaption>
+      <div class="rp-plot">
+        <svg viewBox="0 0 1000 40" preserveAspectRatio="none" role="img" aria-label="Profil d'altitude de la course"><path class="rp-area" d="{{ rprof.d }} L1000,40 L0,40 Z"/><path class="rp-line" d="{{ rprof.d }}" vector-effect="non-scaling-stroke"/>{% if rch.montee %}<path class="rp-climb" d="{{ rch.montee }}" vector-effect="non-scaling-stroke"/>{% endif %}</svg>
+        {%- for pt in rch.pointages %}{% if pt.x %}
+        <span class="rp-pt" style="left: {{ pt.x }}%; top: {{ pt.y }}%;" aria-hidden="true">{{ forloop.index }}</span>
+        {%- endif %}{% endfor %}
+      </div>
+      <figcaption><span>Altitude de {{ rprof.alt_min }} à {{ rprof.alt_max }} m{% if rch.montee %}<span class="rp-key">{{ rch.montee_legende | default: "en bleu foncé" }}</span>{% endif %}</span>{% if c.km %}<span>{{ c.km | replace: ".", "," }} km</span>{% endif %}</figcaption>
     </figure>
   </div>
+  {%- endif %}
+
+  {%- if rch.pointages or rch.chiffres %}
+  <section class="wrap recit-profile-wrap race-data" aria-labelledby="chiffres-titre">
+    <h2 id="chiffres-titre" class="race-data-title">La course en chiffres</h2>
+    {%- if rch.pointages %}
+    <ol class="rp-splits">
+      {%- for pt in rch.pointages %}
+      <li>{% if pt.x %}<span class="rp-n">{{ forloop.index }}</span>{% else %}<span class="rp-n is-end" aria-hidden="true"></span>{% endif %}<span class="rp-where">{% if pt.nom %}{{ pt.nom }}{% elsif pt.nom_lieu %}{{ pt.nom_lieu }}, km {{ pt.km | replace: ".", "," }}{% else %}Km {{ pt.km }}{% endif %}</span>{% if pt.place %}<span class="rp-what">{{ pt.place }}<sup>{% if pt.place == 1 %}er{% else %}e{% endif %}</sup>{% if pt.ecart %}, {{ pt.ecart }}{% endif %}</span>{% if pt.temps %}<span class="rp-time">{{ pt.temps }}{% if pt.allure %}, {{ pt.allure }}{% endif %}</span>{% endif %}{% else %}<span class="rp-what">{{ pt.temps }}</span>{% if pt.allure %}<span class="rp-time">{{ pt.allure }}</span>{% endif %}{% endif %}</li>
+      {%- endfor %}
+    </ol>
+    {%- assign rp_first = rch.pointages | first -%}
+    {%- if rch.pointages_montre %}<p class="rp-note">Pas de pointage officiel sur cette course : repères choisis sur ma trace, temps et allure moyenne depuis le repère précédent d'après ma montre.</p>{% elsif rp_first.allure %}<p class="rp-note">Temps officiel au pointage, et allure moyenne depuis le pointage précédent.</p>{% endif %}
+    {%- endif %}
+    {%- if rch.chiffres %}
+    <ul class="race-facts">
+      {%- for f in rch.chiffres %}
+      <li{% if f.saison %} class="is-season"{% endif %}>{% if f.saison %}<p class="rf-tag">Repère de saison</p>{% endif %}<p class="rf-title">{{ f.titre }}</p><p class="rf-text">{{ f.texte }}</p></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </section>
   {%- endif %}
 
   <div class="recit-body wrap-narrow prose">

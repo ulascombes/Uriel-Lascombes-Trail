@@ -1,0 +1,499 @@
+# Analyse chiffrée affichée sur la page de récit (bloc « La course en chiffres »).
+# Une entrée par course, avec le même ref que dans resultats.yml. Tout est facultatif.
+#
+# pointages : place et avance (ou retard) à chaque point de contrôle, d'après les résultats officiels.
+#   km : distance d'après ma montre ; temps : mon temps officiel au pointage ;
+#   allure : allure du tronçon depuis le pointage précédent (distance de ma montre) ;
+#   x / y : position du repère sur le profil (en %), calculée par Claude.
+# pointages_montre: true => pas de pointage officiel : repères choisis sur ma trace, temps et allures d'après ma montre (sans place).
+# montee : la portion du profil à surligner en bleu foncé (tracé SVG dans le repère 1000 × 40 du profil),
+#   montee_legende : la légende affichée sous le profil.
+# chiffres : 2 à 4 faits marquants. titre en gras, texte court (le HTML <b> est accepté).
+#   saison: true => repère de saison (record de la saison qui fait le lien entre les courses).
+
+championnats-regionaux-2026:
+  pointages_montre: true
+  pointages:
+    - nom_lieu: "Sortie du champ"
+      km: 1.1
+      x: 4.8
+      y: 59.6
+      temps: "3'51"
+      allure: "3'34/km"
+    - nom_lieu: "Fin de la boucle 1"
+      km: 8.4
+      x: 36.4
+      y: 63.3
+      temps: "32'56"
+      allure: "3'59/km"
+    - nom_lieu: "Fin de la boucle 2"
+      km: 15.7
+      x: 68.0
+      y: 59.2
+      temps: "1h02'14"
+      allure: "4'01/km"
+    - nom: "Arrivée"
+      temps: "1h32'26"
+      allure: "4'04/km"
+  chiffres:
+    - titre: "Le classement"
+      texte: "Champion régional avec <b>5'26 d'avance</b> sur le deuxième, parmi 68 classés."
+    - titre: "Trois boucles régulières"
+      texte: "Sur les 7,15 km communs à chaque tour : 28'33, 28'43 puis 29'10. <b>37 s</b> perdues entre la première et la dernière boucle."
+    - titre: "Ma course la plus rapide"
+      texte: "23,1 km à <b>15 km/h</b> de moyenne : le parcours le plus roulant et le plus rapide de ma saison."
+      saison: true
+    - titre: "Le départ cross"
+      texte: "1,1 km dans un champ boueux en 3'56, soit <b>16,5 km/h</b>, pour sortir du champ en tête."
+
+pichauris-2026:
+  pointages:
+    - nom_lieu: "Baume Sourne"
+      km: 8
+      place: 1
+      ecart: "2'16 d'avance"
+      x: 33.9
+      y: 24.3
+      temps: "40'01"
+      allure: "4'49/km"
+    - nom_lieu: "Garlaban"
+      km: 17
+      place: 1
+      ecart: "4'44 d'avance"
+      x: 67.8
+      y: 6.8
+      temps: "1h26'30"
+      allure: "5'30/km"
+    - nom: "Arrivée"
+      place: 1
+      ecart: "3'23 d'avance"
+      temps: "2h08'42"
+      allure: "5'16/km"
+  montee: "M540.3,36.6 L545.5,35.1 L555.6,33.1 L565.7,29.6 L575.8,26.4 L585.9,24.1 L596.0,21.3 L606.1,20.4 L616.2,18.8 L626.3,16.9 L636.4,12.4 L646.5,8.1 L656.6,8.4 L666.7,6.7 L676.8,2.0 L677.4,2.3"
+  montee_legende: "en bleu foncé, la montée du Garlaban"
+  chiffres:
+    - titre: "Les tronçons"
+      texte: "Meilleur temps des 323 arrivants sur <b>2 des 3 tronçons</b>, jusqu'au sommet du Garlaban."
+    - titre: "La montée du Garlaban"
+      texte: "445 m de dénivelé sur 3,4 km (13 %), montés en 23'25, soit <b>1 140 m/h</b>."
+    - titre: "La descente du Garlaban"
+      texte: "188 m de descente à 20 % dans les cailloux mouillés, avec la chaîne et le pierrier : <b>7'13</b> pour moins d'un kilomètre."
+
+volx-2026:
+  pointages:
+    - km: 6
+      place: 1
+      ecart: "1'06 d'avance"
+      x: 27.5
+      y: 71.8
+      temps: "30'11"
+      allure: "5'04/km"
+    - km: 13
+      place: 1
+      ecart: "4'46 d'avance"
+      x: 62.0
+      y: 32.3
+      temps: "1h12'40"
+      allure: "5'42/km"
+    - km: 17
+      place: 1
+      ecart: "6'29 d'avance"
+      x: 80.4
+      y: 64.3
+      temps: "1h34'45"
+      allure: "5'34/km"
+    - nom: "Arrivée"
+      place: 1
+      ecart: "8'17 d'avance"
+      temps: "1h57'33"
+      allure: "5'25/km"
+  montee: "M806.2,26.2 L808.1,26.6 L818.2,22.9 L828.3,18.2 L838.4,14.3 L848.5,10.4 L852.5,9.9"
+  montee_legende: "en bleu foncé, la montée la plus raide"
+  chiffres:
+    - titre: "En tête de bout en bout"
+      texte: "Premier à chaque pointage, avec le meilleur temps des 126 arrivants sur <b>chacun des quatre tronçons</b>."
+    - titre: "La montée la plus raide"
+      texte: "Au km 17 : 179 m de dénivelé en 1,1 km, à 16,6 % de moyenne. Montée en 8'40, soit <b>1 240 m/h</b>."
+    - titre: "La dernière descente"
+      texte: "281 m de descente sur 2,3 km jusqu'à l'arrivée, avalés en 10'55, soit <b>12,7 km/h</b> de moyenne."
+
+etoiles-2026:
+  pointages_montre: true
+  pointages:
+    - nom_lieu: "Haut de la première montée"
+      km: 4.4
+      x: 20.5
+      y: 45.5
+      temps: "28'35"
+      allure: "6'30/km"
+    - nom_lieu: "Haut de la dernière côte"
+      km: 13.9
+      x: 64.7
+      y: 5.0
+      temps: "1h21'18"
+      allure: "5'33/km"
+    - nom_lieu: "Bas de la descente en lacets"
+      km: 17.9
+      x: 83.3
+      y: 80.3
+      temps: "1h39'25"
+      allure: "4'32/km"
+    - nom: "Arrivée"
+      temps: "1h57'16"
+      allure: "4'57/km"
+  montee: "M646.5,2.0 L656.6,3.5 L666.7,4.7 L676.8,6.4 L686.9,8.8 L697.0,10.5 L707.1,12.0 L717.2,14.4 L727.3,16.3 L737.4,17.4 L747.5,19.1 L757.6,21.0 L767.7,23.1 L777.8,25.8 L787.9,28.1 L798.0,29.1 L808.1,30.2 L818.2,31.2 L828.3,32.5 L832.6,32.1"
+  montee_legende: "en bleu foncé, la descente en lacets"
+  chiffres:
+    - titre: "Ma victoire la plus serrée"
+      texte: "<b>25 s d'avance</b> sur le deuxième, parmi 466 classés, après une chute au km 18."
+      saison: true
+    - titre: "Ma descente la plus rapide"
+      texte: "La descente en lacets, au coude à coude : 751 m sur 4 km à 19 %, en 17'39, soit <b>2 550 m de dénivelé par heure</b>, le rythme le plus élevé de ma saison."
+      saison: true
+    - titre: "Le retour vers le village"
+      texte: "Après le pont, 3,6 km de montée douce (172 m) à <b>12,1 km/h</b> pour reprendre la tête."
+
+melezes-2026:
+  pointages:
+    - nom_lieu: "Le Seignus"
+      km: 17
+      place: 2
+      ecart: "6'13 de retard"
+      x: 66.0
+      y: 75.6
+      temps: "1h43'58"
+      allure: "5'57/km"
+    - nom: "Arrivée"
+      place: 8
+      ecart: "38'19 de retard"
+      temps: "3h03'20"
+      allure: "8'46/km"
+  montee: "M0.0,37.9 L0.0,37.9 L10.1,38.0 L20.2,38.0 L30.3,37.7 L40.4,37.1 L50.5,36.8 L60.6,36.2 L70.7,35.1 L80.8,33.8 L90.9,32.6 L101.0,31.3 L111.1,30.5 L121.2,29.9 L131.3,29.0 L141.4,28.0 L151.5,27.1 L161.6,26.2 L171.7,24.9 L181.8,23.9 L191.9,22.9 L202.0,21.6 L212.1,20.3 L222.2,19.0 L232.3,18.1 L242.4,17.1 L252.5,15.9 L262.6,15.0 L272.7,14.4 L282.8,13.8 L292.9,13.0 L303.0,11.4 L313.1,9.6 L323.2,8.4 L333.3,8.4 L343.4,7.2 L353.5,6.1 L363.6,4.0 L373.7,2.4 L383.8,2.0 L384.9,2.0"
+  montee_legende: "en bleu foncé, la montée initiale"
+  chiffres:
+    - titre: "Le classement"
+      texte: "8<sup>e</sup> sur 259 classés malgré le genou, soit <b>les 4 % de tête</b>."
+    - titre: "Ma plus longue montée"
+      texte: "1 141 m de dénivelé d'un seul tenant sur les 10 premiers kilomètres, en <b>1&nbsp;h&nbsp;10</b>, dont six avec la tête de course."
+      saison: true
+    - titre: "La fin en marchant"
+      texte: "Les 4 derniers kilomètres en marchant, en <b>35 minutes</b>, pour aller au bout."
+
+col-du-noyer-2026:
+  pointages:
+    - nom_lieu: "Col de Gleize"
+      km: 8
+      place: 2
+      ecart: "6 s de retard"
+      x: 33.4
+      y: 30.7
+      temps: "42'29"
+      allure: "5'15/km"
+    - nom_lieu: "Crêtes de Coste Folle"
+      km: 12
+      place: 2
+      ecart: "21 s de retard"
+      x: 50.8
+      y: 20.5
+      temps: "1h06'49"
+      allure: "5'55/km"
+    - nom: "Arrivée"
+      place: 3
+      ecart: "1'51 de retard"
+      temps: "2h07'50"
+      allure: "5'11/km"
+  montee: "M587.5,2.1 L596.0,2.6 L606.1,5.4 L616.2,9.2 L626.3,11.5 L636.4,13.1 L646.5,14.4 L656.6,15.7 L666.7,17.7 L676.8,19.6 L686.9,21.3 L697.0,23.1 L707.1,25.0 L717.2,26.3 L727.3,27.8 L737.4,29.2 L747.5,30.6 L757.6,31.8 L767.7,33.0 L777.8,34.5 L787.9,36.0 L798.0,37.0 L808.1,38.0 L808.3,38.0"
+  montee_legende: "en bleu foncé, la descente en lacets"
+  chiffres:
+    - titre: "La montée finale"
+      texte: "393 m de dénivelé sur 2,8 km (13,8 %) en pleine chaleur, en 23'34, au contact de la tête."
+    - titre: "La descente en lacets"
+      texte: "778 m de descente sur 5,4 km, raide et caillouteuse, en <b>23'56</b> (13,4 km/h). La deuxième place s'y joue."
+
+var-verdon-2026:
+  pointages_montre: true
+  pointages:
+    - nom_lieu: "Après la montée roulante"
+      km: 7.7
+      x: 32.8
+      y: 60.7
+      temps: "39'46"
+      allure: "5'10/km"
+    - nom_lieu: "Fin de la partie technique"
+      km: 12.7
+      x: 54.0
+      y: 61.5
+      temps: "1h13'31"
+      allure: "6'45/km"
+    - nom_lieu: "Haut de la grande montée"
+      km: 18.4
+      x: 78.3
+      y: 5.5
+      temps: "1h58'30"
+      allure: "7'53/km"
+    - nom: "Arrivée"
+      temps: "2h28'05"
+      allure: "5'50/km"
+  montee: "M540.4,24.6 L545.5,24.7 L555.6,23.9 L565.7,23.9 L575.8,23.9 L585.9,22.7 L596.0,21.9 L606.1,20.6 L616.2,18.6 L626.3,16.3 L636.4,14.2 L646.5,12.4 L656.6,11.3 L666.7,11.4 L676.8,11.2 L686.9,10.9 L697.0,10.3 L707.1,8.7 L717.2,7.8 L727.3,6.2 L737.4,5.8 L747.5,4.9 L757.6,4.0 L767.7,2.6 L777.8,2.0 L783.0,2.2"
+  montee_legende: "en bleu foncé, la grande montée"
+  chiffres:
+    - titre: "La descente du départ"
+      texte: "Un départ rare, en descente : 187 m sur 2,2 km, avalés à <b>19 km/h</b>, ma plus grande vitesse de la saison en descente."
+      saison: true
+    - titre: "La grande montée"
+      texte: "634 m de dénivelé sur 5,7 km (11 %), relancés fort, en <b>44'41</b>."
+    - titre: "La descente finale"
+      texte: "774 m de descente sur 5,1 km jusqu'à l'arrivée, à fond, en <b>29'54</b>. Victoire avec 3'56 d'avance."
+
+mimet-2026:
+  pointages_montre: true
+  pointages:
+    - nom_lieu: "Km 8"
+      km: 8
+      x: 26.8
+      y: 52.3
+      temps: "45'17"
+      allure: "5'40/km"
+    - nom_lieu: "Après les trois murs"
+      km: 13.3
+      x: 44.6
+      y: 30.3
+      temps: "1h19'51"
+      allure: "6'31/km"
+    - nom_lieu: "Km 25"
+      km: 25
+      x: 83.9
+      y: 32.4
+      temps: "2h29'23"
+      allure: "5'57/km"
+    - nom: "Arrivée"
+      temps: "2h55'36"
+      allure: "5'30/km"
+  montee: "M184.6,23.8 L191.9,21.1 L202.0,15.9 L212.1,8.5 L214.8,8.9"
+  montee_legende: "en bleu foncé, le premier mur"
+  chiffres:
+    - titre: "Ma course la plus longue"
+      texte: "29,8 km et 1 900 m de dénivelé, en 2&nbsp;h&nbsp;55 : ma plus longue distance et mon plus gros dénivelé de la saison."
+      saison: true
+    - titre: "Mon plus gros écart"
+      texte: "Victoire avec <b>16'02 d'avance</b> sur le deuxième, parmi 257 classés : ma plus large marge de la saison."
+      saison: true
+    - titre: "Le premier mur"
+      texte: "Au km 5,5 : 223 m de dénivelé à <b>24,5 %</b>, en 8'54."
+    - titre: "La dernière montée"
+      texte: "82 m à 15 % dans les marches, après 26 km de course, en 5'00, avec une crampe en prime."
+
+font-de-mai-2026:
+  pointages:
+    - nom_lieu: "Croix du Garlaban"
+      km: 18
+      place: 1
+      ecart: "3'28 d'avance"
+      x: 62.9
+      y: 10.5
+      temps: "1h38'18"
+      allure: "5'38/km"
+    - nom: "Arrivée"
+      place: 1
+      ecart: "2'29 d'avance"
+      temps: "2h31'41"
+      allure: "5'10/km"
+  montee: "M233.8,28.2 L242.4,27.3 L252.5,24.6 L262.6,22.2 L272.7,19.3 L282.8,16.1 L292.9,13.1 L303.0,8.9 L313.1,5.7 L323.2,5.6 L330.9,6.3"
+  montee_legende: "en bleu foncé, la montée du Taoumé"
+  chiffres:
+    - titre: "Les tronçons"
+      texte: "Meilleur temps des 205 arrivants sur <b>le premier tronçon</b>, jusqu'à la croix du Garlaban."
+    - titre: "La montée du Taoumé"
+      texte: "Là où la course s'est jouée : 335 m de dénivelé sur 2,7 km (12,7 %), en 17'58, soit <b>1 120 m/h</b>."
+    - titre: "La croix du Garlaban"
+      texte: "184 m de dénivelé à <b>20 %</b> de moyenne pour rejoindre le pointage, en 8'40."
+
+beaumes-de-venise-2026:
+  pointages_montre: true
+  pointages:
+    - nom_lieu: "Km 2,5"
+      km: 2.5
+      x: 9.8
+      y: 76.6
+      temps: "10'32"
+      allure: "4'13/km"
+    - nom_lieu: "Haut du mur du km 7"
+      km: 9.5
+      x: 37.1
+      y: 5.2
+      temps: "55'27"
+      allure: "6'25/km"
+    - nom_lieu: "Début de la dernière descente"
+      km: 23.2
+      x: 90.6
+      y: 54.5
+      temps: "2h05'29"
+      allure: "5'07/km"
+    - nom: "Arrivée"
+      temps: "2h16'25"
+      allure: "4'38/km"
+  montee: "M285.2,22.9 L292.9,22.8 L303.0,17.2 L312.5,12.6"
+  montee_legende: "en bleu foncé, le mur du km 7"
+  chiffres:
+    - titre: "Le classement"
+      texte: "Victoire avec <b>7'57 d'avance</b> sur le deuxième, parmi 219 classés."
+    - titre: "Le mur du km 7"
+      texte: "151 m de dénivelé en 700 m, à <b>21,6 %</b>, montés en 6'36."
+    - titre: "La dernière descente"
+      texte: "197 m de descente sur 2,4 km jusqu'à l'arrivée, à <b>12,9 km/h</b>, en lâchant enfin les chevaux."
+
+ventoux-2026:
+  pointages:
+    - km: 8
+      place: 66
+      x: 28.3
+      y: 35.5
+      temps: "38'53"
+      allure: "4'46/km"
+    - km: 17
+      place: 62
+      ecart: "4 places gagnées"
+      x: 61.5
+      y: 38.6
+      temps: "1h26'23"
+      allure: "5'05/km"
+    - nom: "Arrivée"
+      place: 85
+      ecart: "23 places perdues"
+      temps: "2h20'44"
+      allure: "5'01/km"
+  montee: "M356.9,12.5 L363.6,11.5 L373.7,8.6 L383.8,5.9 L393.9,3.0 L404.0,2.0 L406.4,2.5"
+  montee_legende: "en bleu foncé, la montée la plus raide"
+  chiffres:
+    - titre: "Le classement"
+      texte: "85<sup>e</sup> sur 1 344 classés aux championnats de France, soit <b>les 7 % de tête</b>."
+    - titre: "Les montées"
+      texte: "4 places gagnées entre les km 8 et 17. La plus raide : 202 m de dénivelé à 15 %, en 9'29, soit <b>1 280 m/h</b>."
+    - titre: "Les descentes"
+      texte: "<b>23 places perdues</b> sur les 11 derniers kilomètres, dans les longues descentes caillouteuses, dont 347 m d'un seul tenant à 14,5 km/h."
+
+mineurs-2026:
+  pointages:
+    - km: 16
+      place: 1
+      ecart: "1'00 d'avance"
+      x: 57.5
+      y: 26.4
+      temps: "1h16'36"
+      allure: "4'52/km"
+    - nom: "Arrivée"
+      place: 2
+      ecart: "8 s de retard"
+      temps: "2h18'49"
+      allure: "5'23/km"
+  montee: "M432.2,32.6 L434.3,32.6 L444.4,31.7 L454.5,29.1 L464.6,28.1 L474.7,27.4 L484.8,25.2 L494.9,20.5 L505.1,15.7 L515.2,10.0 L525.3,4.8 L531.1,3.2"
+  montee_legende: "en bleu foncé, la première montée, où je passe en tête"
+  chiffres:
+    - titre: "Les tronçons"
+      texte: "Meilleur temps des 271 arrivants sur <b>le premier tronçon</b>, avec une minute d'avance au pointage."
+    - titre: "Ma montée la plus rapide"
+      texte: "La première des trois montées du cœur du parcours : 424 m à 15 %, en 20'39, soit <b>1 230 m/h</b>. Ma meilleure vitesse de la saison sur une montée de plus de 300 m."
+      saison: true
+    - titre: "Le final roulant"
+      texte: "Les 6,8 derniers kilomètres en légère descente, à <b>14 km/h</b>, où je suis rejoint puis battu au sprint."
+
+galinette-2026:
+  pointages_montre: true
+  pointages:
+    - nom_lieu: "Haut de la montée d'entrée"
+      km: 3.7
+      x: 15.8
+      y: 6.5
+      temps: "20'48"
+      allure: "5'37/km"
+    - nom_lieu: "Haut de la deuxième montée"
+      km: 13
+      x: 55.6
+      y: 45.8
+      temps: "1h05'07"
+      allure: "4'46/km"
+    - nom_lieu: "Km 21"
+      km: 21
+      x: 89.7
+      y: 62.7
+      temps: "1h40'46"
+      allure: "4'27/km"
+    - nom: "Arrivée"
+      temps: "1h50'07"
+      allure: "3'57/km"
+  montee: "M47.0,31.1 L50.5,31.5 L60.6,30.4 L70.7,27.8 L80.8,26.5 L90.9,24.7 L101.0,22.2 L111.1,18.7 L121.2,15.5 L131.3,11.0 L141.4,6.4 L151.5,3.8 L158.1,2.6"
+  montee_legende: "en bleu foncé, la montée d'entrée"
+  chiffres:
+    - titre: "Le classement"
+      texte: "2<sup>e</sup> sur 362 classés, à <b>14 s</b> du vainqueur, après une course menée à deux."
+    - titre: "La montée d'entrée"
+      texte: "332 m de dénivelé dès le km 1, à 12,8 %, en 16'25, soit <b>1 210 m/h</b>. Le peloton est trié."
+    - titre: "La descente vers le village"
+      texte: "1,7 km à <b>16,5 km/h</b> pour finir, quelques secondes reprises mais pas assez."
+
+nocturne-noel-2025:
+  montee: "M0.0,36.9 L0.0,36.9 L10.1,36.8 L20.2,36.3 L30.3,36.1 L40.4,36.1 L50.5,35.7 L60.6,35.4 L70.7,34.4 L80.8,33.5 L90.9,33.5 L101.0,33.1 L111.1,31.8 L121.2,30.6 L131.3,29.4 L141.4,28.1 L151.5,27.1 L161.6,25.9 L171.7,24.8 L181.8,23.5 L191.9,22.1 L202.0,21.0 L212.1,20.0 L222.2,18.8 L232.3,17.9 L242.4,17.3 L252.5,15.6 L262.6,14.0 L272.7,13.0 L282.8,12.2 L292.9,11.7 L303.0,11.0 L313.1,10.1 L323.2,9.0 L333.3,7.9 L343.4,6.4 L353.5,5.0 L363.6,3.6 L373.7,3.0 L383.8,2.0 L390.2,2.4"
+  montee_legende: "en bleu foncé, la montée principale"
+  chiffres:
+    - titre: "Le classement"
+      texte: "Victoire avec <b>2'51 d'avance</b> sur le deuxième, parmi 234 classés."
+    - titre: "La montée principale"
+      texte: "Du km 0,0 au km 5,8 : 439 m de dénivelé à 7,5 % de moyenne, montés en 31'59, soit <b>820 m/h</b>."
+    - titre: "La dernière descente"
+      texte: "241 m de descente sur 2,6 km jusqu'à l'arrivée, en 9'19, soit <b>16,9 km/h</b> de moyenne."
+
+pichauris-2025:
+  montee: "M384.6,37.7 L393.9,33.8 L404.0,31.7 L414.1,27.7 L424.2,25.1 L434.3,22.6 L444.4,20.7 L454.5,19.4 L464.6,17.9 L474.7,15.3 L484.8,10.1 L494.9,7.5 L505.1,7.9 L515.2,4.6 L522.3,2.8"
+  montee_legende: "en bleu foncé, la grande montée"
+  chiffres:
+    - titre: "Le classement"
+      texte: "Arrivé 12<sup>e</sup> après une erreur de parcours en tête de course, puis <b>reclassé 1<sup>er</sup> ex æquo</b>."
+    - titre: "La grande montée"
+      texte: "455 m de dénivelé sur 3,4 km (13,3 %), en 24'01, soit <b>1 140 m/h</b>, en duo à l'avant."
+    - titre: "Le détour"
+      texte: "<b>24,7 km</b> à la montre au lieu de 20,5, et environ 300 m de dénivelé en plus."
+
+roquefortrail-2025:
+  chiffres:
+    - titre: "Le classement"
+      texte: "10<sup>e</sup> sur 398 classés, soit <b>les 3 % de tête</b>."
+    - titre: "La plus grande descente"
+      texte: "215 m de descente sur 1,6 km, en 7'51, soit <b>12,3 km/h</b> de moyenne."
+
+gapencimes-2025:
+  pointages:
+    - nom_lieu: "Col de Guizière"
+      km: 16
+      place: 18
+      ecart: "18'24 de retard"
+      x: 54.8
+      y: 24.9
+      temps: "1h44'44"
+      allure: "6'36/km"
+    - nom_lieu: "Camping Napoléon"
+      km: 25
+      place: 23
+      ecart: "27'19 de retard"
+      x: 86.7
+      y: 80.2
+      temps: "2h35'13"
+      allure: "5'30/km"
+    - nom: "Arrivée"
+      place: 25
+      ecart: "29'22 de retard"
+      temps: "2h51'14"
+      allure: "4'13/km"
+  montee: "M177.1,23.6 L181.8,23.6 L191.9,21.5 L202.0,19.4 L212.1,18.1 L222.2,14.8 L232.3,12.5 L242.4,9.1 L252.5,6.7 L262.6,4.2 L272.7,2.9 L282.8,2.3 L291.7,2.0"
+  montee_legende: "en bleu foncé, la première montée"
+  chiffres:
+    - titre: "La première montée"
+      texte: "722 m de dénivelé sur 3,3 km, à <b>21,9 %</b>, en 37'47, en remontant la vague partie un quart d'heure avant."
+    - titre: "La descente la plus raide"
+      texte: "724 m de descente sur 4 km, à 18 %, en <b>21'52</b>."
+
+roquefortrail-2024:
+  chiffres:
+    - titre: "Le classement"
+      texte: "19<sup>e</sup> sur 397 classés, soit <b>les 5 % de tête</b>."
+    - titre: "La plus grande descente"
+      texte: "213 m de descente sur 1,6 km, en 6'46, soit <b>14,1 km/h</b> de moyenne."

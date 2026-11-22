@@ -9,6 +9,7 @@
 # challenges  : liste des challenges dont la course fait partie (voir _data/challenges.yml)
 # commentaire : une phrase, affichée sous la ligne
 # chaussures  : modèle porté
+# resultats_url : lien vers le classement complet (affiché sur la page du récit)
 
 - ref: championnats-regionaux-2026
   nom: "Championnats régionaux de trail"
@@ -24,6 +25,7 @@
   challenges:
   commentaire: "Champion régional sur un format hybride entre cross et trail : un départ dans un champ boueux, puis trois boucles roulantes menées en tête."
   chaussures: "Hoka Zinal 3"
+  resultats_url: "https://www.athle.fr/bases/liste.aspx?frmbase=resultats&frmmode=1&frmespace=0&frmcompetition=329863"
 
 - ref: pichauris-2026
   nom: "Alpi Trail de Pichauris"
@@ -39,6 +41,7 @@
   challenges: [trails-provence]
   commentaire: "En tête de bout en bout sous la pluie, et sur le bon chemin cette fois. Une victoire maîtrisée, prudent dans les descentes mouillées."
   chaussures: "Hoka Zinal 3"
+  resultats_url: "https://chronosports.fr/classification/alpintrailpichauris-2026"
 
 - ref: volx-2026
   nom: "Volx en course"
@@ -54,6 +57,7 @@
   challenges: [trails-provence]
   commentaire: "Seul en tête dès la première montée, avec un départ à 15 h en pleine chaleur. Ma meilleure cote UTMB."
   chaussures: "NNormal Kjerag"
+  resultats_url: "https://www.ultratiming.live/evenement/volx-en-course-2026/epreuve/21km/resultats"
 
 - ref: etoiles-2026
   nom: "Trail des Étoiles"
@@ -69,6 +73,7 @@
   challenges: [trails-provence, region-sud]
   commentaire: "Genou encore fragile : course d'attente, puis attaque dans les deux derniers kilomètres. Victoire avec 25 secondes d'avance."
   chaussures: "Hoka Zinal 3"
+  resultats_url: "https://sys04.kms.fr/live/g-live/g-live.html?f=../epreuves/2026/LeTrailDesEtoiles_2026_WiclaxFtp/Trail-des-etoiles_2026.clax"
 
 - ref: melezes-2026
   nom: "Trail des Mélèzes du Mercantour"
@@ -84,6 +89,7 @@
   challenges: [trails-provence, region-sud]
   commentaire: "Parti avec une douleur au genou, fini les quatre derniers kilomètres en marchant. Un pari raté."
   chaussures: "NNormal Kjerag"
+  resultats_url: "https://live.sportips.fr/race/TMM26/resultats"
 
 - ref: col-du-noyer-2026
   nom: "Trail du Col du Noyer"
@@ -99,6 +105,7 @@
   challenges: [trails-provence]
   commentaire: "Au contact du vainqueur jusqu'à la crête, doublé pour la 2e place dans le dernier kilomètre."
   chaussures: "NNormal Kjerag"
+  resultats_url: "https://as2pic.org/resultats/trail-du-col-du-noyer-2026?parcours=Le+trail+des+cr%C3%AAtes"
 
 - ref: var-verdon-2026
   nom: "Var Verdon Trail Canyon"
@@ -114,6 +121,7 @@
   challenges: [trails-provence]
   commentaire: "Une course préparée segment par segment sur la trace, et menée de bout en bout."
   chaussures:
+  resultats_url: "https://timingzone.com/var-verdon-trail-canyon-2026/#2_A68DBA"
 
 - ref: mimet-2026
   nom: "Trail de Mimet"
@@ -129,6 +137,7 @@
   challenges: [trails-provence, region-sud]
   commentaire: "Seul devant du début à la fin, sur le parcours le plus exigeant de ma saison. 16 minutes d'avance."
   chaussures: "NNormal Kjerag"
+  resultats_url: "https://chronospheres.fr/evenements/detail_resultats/Trail-de-Mimet-2026-1359/5937"
 
 - ref: font-de-mai-2026
   nom: "Trail de la Font de Mai"
@@ -144,6 +153,7 @@
   challenges: [trails-provence, region-sud]
   commentaire: "Au coude à coude jusqu'au 8e kilomètre, puis la montée du Taoumé fait la différence."
   chaussures: "Dynafit Sky DNA"
+  resultats_url: "https://sportips.fr/chronoweb/public/223/resultats?parcours=1004"
 
 - ref: beaumes-de-venise-2026
   nom: "Trail des Beaumes de Venise"
@@ -159,6 +169,7 @@
   challenges: [trails-provence]
   commentaire: "En tête du départ à l'arrivée, sur un parcours varié comme je les aime."
   chaussures: "Dynafit Sky DNA"
+  resultats_url: "https://www.nikrome.com/resultats_evenement.php?event_id=202604121"
 
 - ref: ventoux-2026
   nom: "Trail du Ventoux"
@@ -174,6 +185,7 @@
   challenges: [region-sud]
   commentaire: "Premier championnat de France de trail court, avec une préparation perturbée par une entorse. Beaucoup appris dans les descentes caillouteuses."
   chaussures: "Dynafit Sky DNA"
+  resultats_url: "https://www.nikrome.com/resultats_evenement.php?event_id=202603291"
 
 - ref: mineurs-2026
   nom: "Trail des Mineurs"
@@ -189,6 +201,7 @@
   challenges: [trails-provence]
   commentaire: "Seul en tête après les montées, repris sur le plat final et battu au sprint dans le village."
   chaussures: "La Sportiva Helios III"
+  resultats_url: "https://sys04.kms.fr/live/g-live/g-live.html?f=../epreuves/2026/RondeDesMineurs_2026_WiclaxFtp/La-Ronde-des-Mineurs_2026.clax"
 
 - ref: galinette-2026
   nom: "Trail de la Galinette"
@@ -204,6 +217,7 @@
   challenges: [trails-provence]
   commentaire: "Vingt kilomètres en duel pour la victoire, lâché à la fin. 14 secondes d'écart."
   chaussures: "Dynafit Sky DNA"
+  resultats_url: "https://chronospheres.fr/evenements/detail_resultats/TRAIL-DE-LA-GALINETTE-2026-1285/5574"
 
 - ref: nocturne-noel-2025
   nom: "Alpi Trail Nocturne de Noël"
@@ -218,6 +232,7 @@
   mention:
   commentaire:
   chaussures:
+  resultats_url: "https://kms.fr/v5/public/Resultat__Course/14218"
 
 - ref: pichauris-2025
   nom: "Alpi Trail de Pichauris"
@@ -232,6 +247,7 @@
   mention: "1er ex æquo"
   commentaire: "En tête quand une erreur de balisage m'a fait sortir du parcours (4 km et 300 m D+ en plus). L'organisation nous a reclassés premiers ex æquo, Julien et moi."
   chaussures:
+  resultats_url: "https://chronosports.fr/classification/alpintrailpichauris-2025"
 
 - ref: roquefortrail-2025
   nom: "Roquefortrail"
@@ -246,6 +262,7 @@
   mention: "Nocturne"
   commentaire:
   chaussures:
+  resultats_url: "https://sys04.kms.fr/live/g-live/g-live.html?f=../epreuves/2025/RoqueForTrail_2025_WiclaxFtp/Roquefor-Trail_2025.clax"
 
 - ref: gapencimes-2025
   nom: "Trail Gapen'Cimes"
@@ -260,6 +277,7 @@
   mention:
   commentaire:
   chaussures:
+  resultats_url: "https://as2pic.org/resultats/gapen-cimes-2025?parcours=Trail+des+Cr%C3%AAtes"
 
 - ref: roquefortrail-2024
   nom: "Roquefortrail"
@@ -274,6 +292,7 @@
   mention: "Nocturne"
   commentaire:
   chaussures:
+  resultats_url: "https://sys04.kms.fr/live/g-live/g-live.html?f=../epreuves/2024/RoqueforTrail_2024_WiclaxFtp/RoqueforTrail-By-Night_2024_apres-crs_fusion-champ-opn.clax"
 
 - ref: givre-2020
   nom: "Trail Givré de Montanay"
