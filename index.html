@@ -22,12 +22,12 @@ description: "Uriel Lascombes, coureur de trail court à Marseille (Trail Club d
   {% include photo.html %}
 </section>
 
-{%- assign recits = site.recits | sort: "date" | reverse -%}
+{%- assign recits = site.recits | concat: site.articles | sort: "date" | reverse -%}
 {%- if recits.size > 0 %}
 <section class="wrap block" aria-labelledby="recits-titre">
   <div class="block-head">
-    <h2 id="recits-titre" class="section-title">Récits de course</h2>
-    <a class="more" href="{{ '/recits/' | relative_url }}">Tous les récits</a>
+    <h2 id="recits-titre" class="section-title">Journal</h2>
+    <a class="more" href="{{ '/journal/' | relative_url }}">Tout le journal</a>
   </div>
   <div class="recit-grid">
     {%- for r in recits limit: 3 %}{% include recit-card.html %}{% endfor %}

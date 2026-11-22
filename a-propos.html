@@ -33,6 +33,7 @@ description: "Uriel Lascombes, coureur de trail court à Marseille, Trail Club d
       <div><dt>Club</dt><dd><a href="{{ p.club_lien }}" target="_blank" rel="noopener">{{ p.club_nom }}</a></dd></div>
       <div><dt>Entraîneur</dt><dd><a href="{{ p.coach_lien }}" target="_blank" rel="noopener">{{ p.coach_nom }}</a></dd></div>
       <div><dt>Formats</dt><dd>Trail court, 20 à 30 km</dd></div>
+      <div><dt>Labo</dt><dd>VO2max ≈ 84 · VMA 21 km/h <a class="kv-more" href="{{ '/journal/test-effort-2026/' | relative_url }}">Le test</a></dd></div>
       {%- if p.challenges_en_cours.size > 0 %}
       <div><dt>En cours</dt><dd>{% for ch in p.challenges_en_cours %}{{ ch }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}<span class="kv-note">classements provisoires</span></dd></div>
       {%- endif %}

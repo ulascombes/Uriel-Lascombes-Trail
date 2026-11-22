@@ -44,6 +44,9 @@ photographes:
   julie-dumey:
     nom: "@julie.dumey"
     lien: "https://www.instagram.com/julie.dumey/"
+  marc-cote:
+    nom: "@marc_cote_trail"
+    lien: "https://www.instagram.com/marc_cote_trail/"
   bencyl:
     nom: "@bencyl_prod"
     lien: "https://www.instagram.com/bencyl_prod/"
@@ -218,3 +221,27 @@ photos:
   volx-2026-6.jpg:
     course: volx-2026
     photographe:
+  pichauris-2026-1.jpg:
+    course: pichauris-2026
+    photographe: marc-cote
+    portrait: true
+    cadrage: "center 12%"
+  pichauris-2026-2.jpg:
+    course: pichauris-2026
+    photographe: bencyl
+    portrait: true
+  pichauris-2026-3.jpg:
+    course: pichauris-2026
+    photographe: bencyl
+  pichauris-2026-4.jpg:
+    course: pichauris-2026
+    photographe: marc-cote
+    portrait: true
+  pichauris-2026-5.jpg:
+    course: pichauris-2026
+    photographe: marc-cote
+    portrait: true
+  pichauris-2026-6.jpg:
+    course: pichauris-2026
+    photographe:
+    portrait: true

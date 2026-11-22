@@ -7,6 +7,6 @@
 <script type="application/ld+json">{"@context": "https://schema.org", {{ person | remove_first: "{" }}</script>
 {%- elsif page.layout == 'test' %}
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "name": {{ page.marque | append: ' ' | append: page.title | prepend: 'Test ' | jsonify }}, "url": {{ page.url | absolute_url | jsonify }}, "inLanguage": "fr", "author": {{ person }}, "itemReviewed": {"@type": "Product", "name": {{ page.marque | append: ' ' | append: page.title | jsonify }}, "brand": {"@type": "Brand", "name": {{ page.marque | jsonify }}}{% if page.image and page.image != "" %}, "image": {{ page.image | absolute_url | jsonify }}{% endif %}}, "reviewBody": {{ page.content | strip_html | strip_newlines | strip | jsonify }}}</script>
-{%- elsif page.layout == 'recit' %}
+{%- elsif page.layout == 'recit' or page.layout == 'article' %}
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": {{ page.title | jsonify }}, "datePublished": {{ page.date | date_to_xmlschema | jsonify }}, "inLanguage": "fr", "url": {{ page.url | absolute_url | jsonify }}, "author": {{ person }}}</script>
 {%- endif %}

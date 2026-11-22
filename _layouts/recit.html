@@ -8,7 +8,7 @@ layout: default
 {%- assign m = d | date: "%-m" | minus: 1 -%}
 <article class="recit">
   <header class="recit-head wrap-narrow">
-    <p class="kicker"><a href="{{ '/recits/' | relative_url }}">Récits</a> · <time datetime="{{ d | date: '%Y-%m-%d' }}">{{ d | date: "%-d" }} {{ mois[m] }} {{ d | date: "%Y" }}</time></p>
+    <p class="kicker"><a href="{{ '/journal/' | relative_url }}">Journal</a> · <time datetime="{{ d | date: '%Y-%m-%d' }}">{{ d | date: "%-d" }} {{ mois[m] }} {{ d | date: "%Y" }}</time></p>
     <h1 class="recit-title">{{ page.title }}</h1>
     {%- if c.classement %}
     <p class="recit-result{% if c.classement == 1 %} is-win{% elsif c.classement <= 3 %} is-podium{% endif %}">
@@ -43,6 +43,16 @@ layout: default
   <div class="wrap">
   {%- assign ph_src = page.image -%}{%- assign ph_alt = page.image_alt | default: page.title -%}{%- assign ph_legende = page.image_legende -%}{%- assign ph_class = 'recit-photo' -%}
   {% include photo.html %}
+  </div>
+  {%- endif %}
+
+  {%- assign rprof = site.data.profils[page.ref] -%}
+  {%- if rprof %}
+  <div class="wrap recit-profile-wrap">
+    <figure class="recit-profile">
+      <svg viewBox="0 0 1000 40" preserveAspectRatio="none" role="img" aria-label="Profil d'altitude de la course"><path class="rp-area" d="{{ rprof.d }} L1000,40 L0,40 Z"/><path class="rp-line" d="{{ rprof.d }}" vector-effect="non-scaling-stroke"/></svg>
+      <figcaption><span>Altitude de {{ rprof.alt_min }} à {{ rprof.alt_max }} m</span>{% if c.km %}<span>{{ c.km | replace: ".", "," }} km</span>{% endif %}</figcaption>
+    </figure>
   </div>
   {%- endif %}
 

@@ -14,6 +14,10 @@ collections:
   tests:
     output: true
     permalink: /tests/:name/
+  # Articles du journal (hors récits de course) : tests d'effort, entraînement, bilans…
+  articles:
+    output: true
+    permalink: /journal/:name/
 
 defaults:
   - scope:
@@ -26,9 +30,15 @@ defaults:
       type: tests
     values:
       layout: test
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: article
 
 exclude:
   - "Claude outputs"
   - README.md
+  - _outils
   - Gemfile
   - Gemfile.lock

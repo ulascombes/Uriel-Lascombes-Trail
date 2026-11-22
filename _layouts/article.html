@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{%- comment -%} Article du journal (hors récit de course) : test, entraînement, bilan… {%- endcomment -%}
+{%- assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," -%}
+{%- assign m = page.date | date: "%-m" | minus: 1 -%}
+<article class="recit article">
+  <header class="recit-head wrap-narrow">
+    <p class="kicker"><a href="{{ '/journal/' | relative_url }}">Journal</a>{% if page.etiquette %} · {{ page.etiquette }}{% endif %} · <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d" }} {{ mois[m] }} {{ page.date | date: "%Y" }}</time></p>
+    <h1 class="recit-title">{{ page.title }}</h1>
+    {%- if page.chapo %}<p class="recit-chapo">{{ page.chapo }}</p>{% endif %}
+  </header>
+
+  {%- if page.chiffres %}
+  <div class="wrap-narrow">
+    <dl class="facts facts-evol">
+      {%- for f in page.chiffres %}
+      <div><dt>{{ f.label }}</dt><dd><span class="fe-old">{{ f.avant }}</span><span class="fe-arrow" aria-label="puis">→</span><span class="fe-new">{{ f.apres }}</span>{% if f.unite %}<small>{{ f.unite }}</small>{% endif %}</dd></div>
+      {%- endfor %}
+    </dl>
+    {%- if page.chiffres_note %}<p class="facts-note">{{ page.chiffres_note }}</p>{% endif %}
+  </div>
+  {%- endif %}
+
+  {%- if page.image and page.image != "" %}
+  <div class="wrap">
+  {%- assign ph_src = page.image -%}{%- assign ph_alt = page.image_alt | default: page.title -%}{%- assign ph_legende = page.image_legende -%}{%- assign ph_class = 'recit-photo' -%}
+  {% include photo.html %}
+  </div>
+  {%- endif %}
+
+  <div class="recit-body wrap-narrow prose">
+    {{ content }}
+  </div>
+</article>

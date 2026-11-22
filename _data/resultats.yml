@@ -10,6 +10,21 @@
 # commentaire : une phrase, affichée sous la ligne
 # chaussures  : modèle porté
 
+- ref: pichauris-2026
+  nom: "Alpi Trail de Pichauris"
+  date: 2026-11-08
+  km: 25
+  dplus: 1250
+  temps: "2:08:42"
+  classement: 1
+  itra: 779
+  utmb: 768
+  betrail: "70.33"
+  mention:
+  challenges: [trails-provence]
+  commentaire: "En tête de bout en bout sous la pluie, et sur le bon chemin cette fois. Une victoire maîtrisée, prudent dans les descentes mouillées."
+  chaussures: "Hoka Zinal 3"
+
 - ref: volx-2026
   nom: "Volx en course"
   date: 2026-09-12

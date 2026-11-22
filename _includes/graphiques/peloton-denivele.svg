@@ -1,0 +1,51 @@
+<svg class="ch" viewBox="0 0 600 360" role="img" aria-labelledby="pel2-t pel2-d">
+<title id="pel2-t">Performance du jour selon le dénivelé par kilomètre</title>
+<desc id="pel2-d">Plus le parcours grimpe, plus je suis au-dessus de mon niveau habituel face aux mêmes adversaires. Sur les parcours roulants, je le suis moins.</desc>
+<line class="ch-grid" x1="56" x2="560" y1="41.2" y2="41.2"/>
+<text class="ch-tick" x="48" y="45.2" text-anchor="end">−6 %</text>
+<line class="ch-grid" x1="56" x2="560" y1="93.0" y2="93.0"/>
+<text class="ch-tick" x="48" y="97.0" text-anchor="end">−3 %</text>
+<line class="ch-grid" x1="56" x2="560" y1="144.8" y2="144.8"/>
+<text class="ch-tick" x="48" y="148.8" text-anchor="end">0 %</text>
+<line class="ch-grid" x1="56" x2="560" y1="196.5" y2="196.5"/>
+<text class="ch-tick" x="48" y="200.5" text-anchor="end">+3 %</text>
+<line class="ch-grid" x1="56" x2="560" y1="248.2" y2="248.2"/>
+<text class="ch-tick" x="48" y="252.2" text-anchor="end">+6 %</text>
+<line class="ch-grid" x1="56" x2="560" y1="300.0" y2="300.0"/>
+<text class="ch-tick" x="48" y="304.0" text-anchor="end">+9 %</text>
+<line class="ch-axis" x1="56" x2="560" y1="144.8" y2="144.8"/>
+<text class="ch-tick" x="56.0" y="320" text-anchor="middle">20</text>
+<text class="ch-tick" x="156.8" y="320" text-anchor="middle">30</text>
+<text class="ch-tick" x="257.6" y="320" text-anchor="middle">40</text>
+<text class="ch-tick" x="358.4" y="320" text-anchor="middle">50</text>
+<text class="ch-tick" x="459.2" y="320" text-anchor="middle">60</text>
+<text class="ch-tick" x="560.0" y="320" text-anchor="middle">70</text>
+<text class="ch-unit" x="560" y="342" text-anchor="end">mètres de dénivelé positif par kilomètre</text>
+<text class="ch-unit" x="56" y="14">plus rapide que d'habitude</text>
+<text class="ch-unit" x="560" y="294" text-anchor="end">plus lent que d'habitude</text>
+<line class="ch-trend" x1="76.2" y1="271.6" x2="529.8" y2="67.0"/>
+<circle class="ch-dot ch-old" cx="178.4" cy="219.6" r="4.5"/>
+<text class="ch-val" x="187.4" y="224.6" text-anchor="start">Roquefortrail 2024</text>
+<circle class="ch-dot ch-old" cx="323.6" cy="200.1" r="4.5"/>
+<circle class="ch-dot ch-old" cx="190.4" cy="178.1" r="4.5"/>
+<circle class="ch-dot ch-new" cx="408.8" cy="66.2" r="4.5"/>
+<circle class="ch-dot ch-new" cx="358.4" cy="66.2" r="4.5"/>
+<circle class="ch-dot ch-new" cx="336.5" cy="123.7" r="4.5"/>
+<circle class="ch-dot ch-old" cx="265.1" cy="240.7" r="4.5"/>
+<text class="ch-val" x="273.1" y="244.7" text-anchor="start">Mineurs</text>
+<circle class="ch-dot ch-old" cx="322.4" cy="179.8" r="4.5"/>
+<circle class="ch-dot ch-old" cx="377.8" cy="186.4" r="4.5"/>
+<circle class="ch-dot ch-old" cx="412.4" cy="169.7" r="4.5"/>
+<circle class="ch-dot ch-new" cx="514.8" cy="85.2" r="4.5"/>
+<text class="ch-val" x="522.8" y="97.2" text-anchor="start">Mimet</text>
+<circle class="ch-dot ch-new" cx="489.9" cy="124.0" r="4.5"/>
+<circle class="ch-dot ch-new" cx="421.4" cy="55.8" r="4.5"/>
+<text class="ch-val" x="413.4" y="59.8" text-anchor="end">Col du Noyer</text>
+<circle class="ch-dot ch-new" cx="502.4" cy="81.0" r="4.5"/>
+<text class="ch-val" x="493.4" y="95.0" text-anchor="end">Étoiles</text>
+<circle class="ch-dot ch-new" cx="478.4" cy="61.3" r="4.5"/>
+<text class="ch-val" x="470.4" y="57.3" text-anchor="end">Volx</text>
+<circle class="ch-dot ch-old" cx="358.4" cy="169.5" r="4.5"/>
+<circle class="ch-dot ch-old" cx="87.6" cy="275.3" r="4.5"/>
+<text class="ch-val" x="95.6" y="279.3" text-anchor="start">Championnats régionaux</text>
+</svg>

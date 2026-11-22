@@ -1,0 +1,62 @@
+<svg class="ch" viewBox="0 0 600 360" role="img" aria-labelledby="labo-fc-t labo-fc-d">
+<title id="labo-fc-t">Fréquence cardiaque selon la vitesse, 2025 et 2026</title>
+<desc id="labo-fc-d">À chaque vitesse, la fréquence cardiaque de 2026 est 10 à 20 battements plus basse qu'en 2025 : 175 contre 157 à 16 km/h.</desc>
+<line class="ch-grid" x1="52" x2="526" y1="314.0" y2="314.0"/>
+<text class="ch-tick" x="44" y="318.0" text-anchor="end">130</text>
+<line class="ch-grid" x1="52" x2="526" y1="265.3" y2="265.3"/>
+<text class="ch-tick" x="44" y="269.3" text-anchor="end">140</text>
+<line class="ch-grid" x1="52" x2="526" y1="216.7" y2="216.7"/>
+<text class="ch-tick" x="44" y="220.7" text-anchor="end">150</text>
+<line class="ch-grid" x1="52" x2="526" y1="168.0" y2="168.0"/>
+<text class="ch-tick" x="44" y="172.0" text-anchor="end">160</text>
+<line class="ch-grid" x1="52" x2="526" y1="119.3" y2="119.3"/>
+<text class="ch-tick" x="44" y="123.3" text-anchor="end">170</text>
+<line class="ch-grid" x1="52" x2="526" y1="70.7" y2="70.7"/>
+<text class="ch-tick" x="44" y="74.7" text-anchor="end">180</text>
+<line class="ch-grid" x1="52" x2="526" y1="22.0" y2="22.0"/>
+<text class="ch-tick" x="44" y="26.0" text-anchor="end">190</text>
+<text class="ch-unit" x="44" y="14" text-anchor="end">bpm</text>
+<text class="ch-tick" x="99.4" y="334" text-anchor="middle">12</text>
+<text class="ch-tick" x="194.2" y="334" text-anchor="middle">14</text>
+<text class="ch-tick" x="289.0" y="334" text-anchor="middle">16</text>
+<text class="ch-tick" x="383.8" y="334" text-anchor="middle">18</text>
+<text class="ch-tick" x="478.6" y="334" text-anchor="middle">20</text>
+<line class="ch-axis" x1="52" x2="526" y1="314" y2="314"/>
+<text class="ch-unit" x="526" y="354" text-anchor="end">vitesse (km/h)</text>
+<path class="ch-line ch-old" d="M52.0,241.0 L75.7,211.8 L99.4,177.7 L123.1,177.7 L146.8,168.0 L170.5,158.3 L194.2,148.5 L217.9,119.3 L241.6,129.1 L265.3,109.6 L289.0,95.0 L312.7,80.4 L336.4,70.7 L360.1,60.9 L383.8,51.2 L407.5,46.3 L431.2,41.5 L454.9,36.6"/>
+<circle class="ch-dot ch-old" cx="52.0" cy="241.0" r="2.6"/>
+<circle class="ch-dot ch-old" cx="75.7" cy="211.8" r="2.6"/>
+<circle class="ch-dot ch-old" cx="99.4" cy="177.7" r="2.6"/>
+<circle class="ch-dot ch-old" cx="123.1" cy="177.7" r="2.6"/>
+<circle class="ch-dot ch-old" cx="146.8" cy="168.0" r="2.6"/>
+<circle class="ch-dot ch-old" cx="170.5" cy="158.3" r="2.6"/>
+<circle class="ch-dot ch-old" cx="194.2" cy="148.5" r="2.6"/>
+<circle class="ch-dot ch-old" cx="217.9" cy="119.3" r="2.6"/>
+<circle class="ch-dot ch-old" cx="241.6" cy="129.1" r="2.6"/>
+<circle class="ch-dot ch-old" cx="265.3" cy="109.6" r="2.6"/>
+<circle class="ch-dot ch-old" cx="289.0" cy="95.0" r="2.6"/>
+<circle class="ch-dot ch-old" cx="312.7" cy="80.4" r="2.6"/>
+<circle class="ch-dot ch-old" cx="336.4" cy="70.7" r="2.6"/>
+<circle class="ch-dot ch-old" cx="360.1" cy="60.9" r="2.6"/>
+<circle class="ch-dot ch-old" cx="383.8" cy="51.2" r="2.6"/>
+<circle class="ch-dot ch-old" cx="407.5" cy="46.3" r="2.6"/>
+<circle class="ch-dot ch-old" cx="431.2" cy="41.5" r="2.6"/>
+<circle class="ch-dot ch-old" cx="454.9" cy="36.6" r="2.6"/>
+<path class="ch-line ch-new" d="M52.0,260.5 L99.4,250.7 L146.8,216.7 L194.2,206.9 L241.6,221.5 L289.0,182.6 L336.4,153.4 L383.8,129.1 L431.2,114.5 L478.6,85.3 L526.0,70.7"/>
+<circle class="ch-dot ch-new" cx="52.0" cy="260.5" r="2.6"/>
+<circle class="ch-dot ch-new" cx="99.4" cy="250.7" r="2.6"/>
+<circle class="ch-dot ch-new" cx="146.8" cy="216.7" r="2.6"/>
+<circle class="ch-dot ch-new" cx="194.2" cy="206.9" r="2.6"/>
+<circle class="ch-dot ch-new" cx="241.6" cy="221.5" r="2.6"/>
+<circle class="ch-dot ch-new" cx="289.0" cy="182.6" r="2.6"/>
+<circle class="ch-dot ch-new" cx="336.4" cy="153.4" r="2.6"/>
+<circle class="ch-dot ch-new" cx="383.8" cy="129.1" r="2.6"/>
+<circle class="ch-dot ch-new" cx="431.2" cy="114.5" r="2.6"/>
+<circle class="ch-dot ch-new" cx="478.6" cy="85.3" r="2.6"/>
+<circle class="ch-dot ch-new" cx="526.0" cy="70.7" r="2.6"/>
+<text class="ch-lab ch-old" x="462.9" y="40.6">2025</text>
+<text class="ch-lab ch-new" x="534.0" y="74.7">2026</text>
+<line class="ch-note-line" x1="289.0" x2="289.0" y1="100.0" y2="177.6"/>
+<text class="ch-note" x="279.0" y="142.8" text-anchor="end">−18 bpm</text>
+<text class="ch-note ch-note-s" x="279.0" y="160.8" text-anchor="end">à 16 km/h</text>
+</svg>

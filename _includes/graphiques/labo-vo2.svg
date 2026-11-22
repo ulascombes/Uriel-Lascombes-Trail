@@ -1,0 +1,62 @@
+<svg class="ch" viewBox="0 0 600 360" role="img" aria-labelledby="labo-vo2-t labo-vo2-d">
+<title id="labo-vo2-t">Consommation d'oxygène selon la vitesse, 2025 et 2026</title>
+<desc id="labo-vo2-d">Jusqu'à 17 km/h, les deux courbes se superposent : même coût en oxygène. Le maximum passe de 68,8 en 2025 à environ 84 en 2026.</desc>
+<line class="ch-grid" x1="52" x2="526" y1="314.0" y2="314.0"/>
+<text class="ch-tick" x="44" y="318.0" text-anchor="end">40</text>
+<line class="ch-grid" x1="52" x2="526" y1="255.6" y2="255.6"/>
+<text class="ch-tick" x="44" y="259.6" text-anchor="end">50</text>
+<line class="ch-grid" x1="52" x2="526" y1="197.2" y2="197.2"/>
+<text class="ch-tick" x="44" y="201.2" text-anchor="end">60</text>
+<line class="ch-grid" x1="52" x2="526" y1="138.8" y2="138.8"/>
+<text class="ch-tick" x="44" y="142.8" text-anchor="end">70</text>
+<line class="ch-grid" x1="52" x2="526" y1="80.4" y2="80.4"/>
+<text class="ch-tick" x="44" y="84.4" text-anchor="end">80</text>
+<line class="ch-grid" x1="52" x2="526" y1="22.0" y2="22.0"/>
+<text class="ch-tick" x="44" y="26.0" text-anchor="end">90</text>
+<text class="ch-unit" x="44" y="14" text-anchor="end">mL/kg/min</text>
+<text class="ch-tick" x="99.4" y="334" text-anchor="middle">12</text>
+<text class="ch-tick" x="194.2" y="334" text-anchor="middle">14</text>
+<text class="ch-tick" x="289.0" y="334" text-anchor="middle">16</text>
+<text class="ch-tick" x="383.8" y="334" text-anchor="middle">18</text>
+<text class="ch-tick" x="478.6" y="334" text-anchor="middle">20</text>
+<line class="ch-axis" x1="52" x2="526" y1="314" y2="314"/>
+<text class="ch-unit" x="526" y="354" text-anchor="end">vitesse (km/h)</text>
+<rect class="ch-band" x="52.0" y="22" width="284.4" height="292"/>
+<text class="ch-note" x="62.0" y="44">même coût en oxygène</text>
+<text class="ch-note ch-note-s" x="62.0" y="62">jusqu'à 17 km/h</text>
+<path class="ch-line ch-old" d="M52.0,286.0 L75.7,280.1 L99.4,248.6 L123.1,248.0 L146.8,232.8 L170.5,233.4 L194.2,231.7 L217.9,215.3 L241.6,206.0 L265.3,200.1 L289.0,203.0 L312.7,199.0 L336.4,194.9 L360.1,179.7 L383.8,176.8 L407.5,175.0 L431.2,150.5 L454.9,145.8"/>
+<circle class="ch-dot ch-old" cx="52.0" cy="286.0" r="2.6"/>
+<circle class="ch-dot ch-old" cx="75.7" cy="280.1" r="2.6"/>
+<circle class="ch-dot ch-old" cx="99.4" cy="248.6" r="2.6"/>
+<circle class="ch-dot ch-old" cx="123.1" cy="248.0" r="2.6"/>
+<circle class="ch-dot ch-old" cx="146.8" cy="232.8" r="2.6"/>
+<circle class="ch-dot ch-old" cx="170.5" cy="233.4" r="2.6"/>
+<circle class="ch-dot ch-old" cx="194.2" cy="231.7" r="2.6"/>
+<circle class="ch-dot ch-old" cx="217.9" cy="215.3" r="2.6"/>
+<circle class="ch-dot ch-old" cx="241.6" cy="206.0" r="2.6"/>
+<circle class="ch-dot ch-old" cx="265.3" cy="200.1" r="2.6"/>
+<circle class="ch-dot ch-old" cx="289.0" cy="203.0" r="2.6"/>
+<circle class="ch-dot ch-old" cx="312.7" cy="199.0" r="2.6"/>
+<circle class="ch-dot ch-old" cx="336.4" cy="194.9" r="2.6"/>
+<circle class="ch-dot ch-old" cx="360.1" cy="179.7" r="2.6"/>
+<circle class="ch-dot ch-old" cx="383.8" cy="176.8" r="2.6"/>
+<circle class="ch-dot ch-old" cx="407.5" cy="175.0" r="2.6"/>
+<circle class="ch-dot ch-old" cx="431.2" cy="150.5" r="2.6"/>
+<circle class="ch-dot ch-old" cx="454.9" cy="145.8" r="2.6"/>
+<path class="ch-line ch-new" d="M52.0,278.4 L99.4,266.7 L146.8,258.5 L194.2,236.3 L241.6,225.2 L289.0,207.7 L336.4,182.0 L383.8,140.6 L431.2,113.7 L478.6,87.4 L526.0,60.5"/>
+<circle class="ch-dot ch-new" cx="52.0" cy="278.4" r="2.6"/>
+<circle class="ch-dot ch-new" cx="99.4" cy="266.7" r="2.6"/>
+<circle class="ch-dot ch-new" cx="146.8" cy="258.5" r="2.6"/>
+<circle class="ch-dot ch-new" cx="194.2" cy="236.3" r="2.6"/>
+<circle class="ch-dot ch-new" cx="241.6" cy="225.2" r="2.6"/>
+<circle class="ch-dot ch-new" cx="289.0" cy="207.7" r="2.6"/>
+<circle class="ch-dot ch-new" cx="336.4" cy="182.0" r="2.6"/>
+<circle class="ch-dot ch-new" cx="383.8" cy="140.6" r="2.6"/>
+<circle class="ch-dot ch-new" cx="431.2" cy="113.7" r="2.6"/>
+<circle class="ch-dot ch-new" cx="478.6" cy="87.4" r="2.6"/>
+<circle class="ch-dot ch-new" cx="526.0" cy="60.5" r="2.6"/>
+<text class="ch-lab ch-old" x="462.9" y="149.8">2025</text>
+<text class="ch-val ch-old" x="462.9" y="167.8">max 68,8</text>
+<text class="ch-lab ch-new" x="534.0" y="64.5">2026</text>
+<text class="ch-val ch-new" x="534.0" y="82.5">max ≈ 84</text>
+</svg>

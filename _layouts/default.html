@@ -7,6 +7,9 @@
   {%- if page.layout == 'test' %}
   {%- assign seo_title = 'Test ' | append: page.marque | append: ' ' | append: page.title | append: ' : avis et poids mesuré' %}
   {%- capture auto_desc %}Mon avis sur la {{ page.marque }} {{ page.title }} en trail{% if page.poids %} : {{ page.poids }} g mesurés en {{ page.taille }}{% if page.sans_semelle %} (sans semelle de propreté){% endif %}{% endif %}, drop {{ page.drop | replace: ".", "," }} mm, et les courses faites avec.{% endcapture %}
+  {%- elsif page.layout == 'article' %}
+  {%- assign seo_title = page.title %}
+  {%- assign auto_desc = page.chapo %}
   {%- elsif page.layout == 'recit' %}
   {%- capture seo_title %}{{ page.title }} {{ page.date | date: "%Y" }} : récit de course{% endcapture %}
   {%- assign auto_desc = page.chapo %}
@@ -22,7 +25,7 @@
   {%- assign desc = page.description | default: auto_desc | default: site.description | strip_html | strip_newlines | strip | truncate: 160 %}
   <meta name="description" content="{{ desc }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
-  <meta property="og:type" content="{% if page.layout == 'recit' %}article{% else %}website{% endif %}">
+  <meta property="og:type" content="{% if page.layout == 'recit' or page.layout == 'article' %}article{% else %}website{% endif %}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
   <meta property="og:description" content="{{ desc }}">
@@ -33,8 +36,9 @@
   {% include seo-jsonld.html %}
   <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}?v=2" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
-  <link rel="preload" href="{{ '/assets/fonts/archivo.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/hanken-grotesk.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <link rel="stylesheet" href="{{ '/assets/css/relief.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body class="{% if page.layout == 'home' %}is-home{% endif %}">
   <header class="site-header">
@@ -42,7 +46,7 @@
       <a class="brand" href="{{ '/' | relative_url }}">Uriel Lascombes</a>
       <nav aria-label="Navigation principale">
         <a href="{{ '/resultats/' | relative_url }}"{% if page.url == '/resultats/' %} aria-current="page"{% endif %}>Résultats</a>
-        <a href="{{ '/recits/' | relative_url }}"{% if page.url contains '/recits/' %} aria-current="page"{% endif %}>Récits</a>
+        <a href="{{ '/journal/' | relative_url }}"{% if page.url contains '/journal/' or page.url contains '/recits/' %} aria-current="page"{% endif %}>Journal</a>
         {%- if site.tests.size > 0 %}
         <a href="{{ '/tests/' | relative_url }}"{% if page.url contains '/tests/' %} aria-current="page"{% endif %}>Tests</a>
         {%- endif %}
@@ -59,7 +63,7 @@
     <div class="wrap footer-grid">
       <div>
         <p class="footer-name">Uriel Lascombes</p>
-        <p class="footer-meta">{{ p.accroche }} · {{ p.club_nom }}</p>
+        <p class="footer-meta">{{ p.accroche }}</p>
         <div class="footer-partners">
           <a class="footer-coach footer-club" href="{{ p.club_lien }}" target="_blank" rel="noopener"><span>Licencié au</span><img src="{{ '/assets/images/logos/tcp.png' | relative_url }}" alt="{{ p.club_nom }}"></a>
           <a class="footer-coach" href="{{ p.coach_lien }}" target="_blank" rel="noopener"><span>Entraîné par</span><img src="{{ '/assets/images/logos/jbs-training.png' | relative_url }}" alt="JBS Training, {{ p.coach_nom }}"></a>

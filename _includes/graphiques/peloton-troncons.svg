@@ -1,0 +1,35 @@
+<svg class="ch" viewBox="0 0 600 280" role="img" aria-labelledby="pel3-t pel3-d">
+<title id="pel3-t">Mon rang sur chaque tronçon, parmi les dix premiers</title>
+<desc id="pel3-d">Sur quatre des cinq courses avec temps de passage, mon dernier tronçon est mon moins bon. Seule exception : Volx.</desc>
+<text class="ch-unit" x="190" y="18">tronçons, du départ à l'arrivée</text>
+<text class="ch-unit" x="590" y="18" text-anchor="end">place finale</text>
+<text class="ch-lab-s" x="0" y="49">Mineurs 2026</text>
+<line class="ch-grid" x1="190" x2="246" y1="44" y2="44"/>
+<circle class="rk-1" cx="190" cy="44" r="14"/><text class="rk-t rk-t-on" x="190" y="49" text-anchor="middle">1</text>
+<circle class="rk-bad" cx="246" cy="44" r="14"/><text class="rk-t rk-t-on" x="246" y="49" text-anchor="middle">2</text>
+<text class="ch-val" x="590" y="49" text-anchor="end">2e à 8 s</text>
+<text class="ch-lab-s" x="0" y="95">Font de Mai 2026</text>
+<line class="ch-grid" x1="190" x2="246" y1="90" y2="90"/>
+<circle class="rk-1" cx="190" cy="90" r="14"/><text class="rk-t rk-t-on" x="190" y="95" text-anchor="middle">1</text>
+<circle class="rk-bad" cx="246" cy="90" r="14"/><text class="rk-t rk-t-on" x="246" y="95" text-anchor="middle">4</text>
+<text class="ch-val" x="590" y="95" text-anchor="end">1er</text>
+<text class="ch-lab-s" x="0" y="141">Col du Noyer 2026</text>
+<line class="ch-grid" x1="190" x2="302" y1="136" y2="136"/>
+<circle class="rk" cx="190" cy="136" r="14"/><text class="rk-t" x="190" y="141" text-anchor="middle">2</text>
+<circle class="rk" cx="246" cy="136" r="14"/><text class="rk-t" x="246" y="141" text-anchor="middle">2</text>
+<circle class="rk-bad" cx="302" cy="136" r="14"/><text class="rk-t rk-t-on" x="302" y="141" text-anchor="middle">4</text>
+<text class="ch-val" x="590" y="141" text-anchor="end">3e</text>
+<text class="ch-lab-s" x="0" y="187">Pichauris 2026</text>
+<line class="ch-grid" x1="190" x2="302" y1="182" y2="182"/>
+<circle class="rk-1" cx="190" cy="182" r="14"/><text class="rk-t rk-t-on" x="190" y="187" text-anchor="middle">1</text>
+<circle class="rk-1" cx="246" cy="182" r="14"/><text class="rk-t rk-t-on" x="246" y="187" text-anchor="middle">1</text>
+<circle class="rk-bad" cx="302" cy="182" r="14"/><text class="rk-t rk-t-on" x="302" y="187" text-anchor="middle">3</text>
+<text class="ch-val" x="590" y="187" text-anchor="end">1er</text>
+<text class="ch-lab-s" x="0" y="233">Volx 2026</text>
+<line class="ch-grid" x1="190" x2="358" y1="228" y2="228"/>
+<circle class="rk-1" cx="190" cy="228" r="14"/><text class="rk-t rk-t-on" x="190" y="233" text-anchor="middle">1</text>
+<circle class="rk-1" cx="246" cy="228" r="14"/><text class="rk-t rk-t-on" x="246" y="233" text-anchor="middle">1</text>
+<circle class="rk-1" cx="302" cy="228" r="14"/><text class="rk-t rk-t-on" x="302" y="233" text-anchor="middle">1</text>
+<circle class="rk-1" cx="358" cy="228" r="14"/><text class="rk-t rk-t-on" x="358" y="233" text-anchor="middle">1</text>
+<text class="ch-val" x="590" y="233" text-anchor="end">1er</text>
+</svg>

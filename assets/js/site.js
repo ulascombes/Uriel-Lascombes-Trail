@@ -58,3 +58,19 @@
     start();
   });
 })();
+
+/* Journal : filtre Tout / Courses / Articles (sans JavaScript, tout reste affiché). */
+(function () {
+  var nav = document.querySelector('.journal-filter');
+  if (!nav) return;
+  var cards = document.querySelectorAll('#journal-liste .recit-card');
+  var buttons = nav.querySelectorAll('button');
+  nav.hidden = false;
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = b.dataset.filtre;
+      buttons.forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
+      cards.forEach(function (c) { c.classList.toggle('is-hidden', f !== 'tout' && c.dataset.type !== f); });
+    });
+  });
+})();

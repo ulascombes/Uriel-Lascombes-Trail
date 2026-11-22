@@ -10,6 +10,9 @@ sitemap: false
   {%- for r in site.recits %}{% unless r.published == false %}
   <url><loc>{{ r.url | absolute_url }}</loc><lastmod>{{ r.date | date_to_xmlschema }}</lastmod></url>
   {%- endunless %}{% endfor %}
+  {%- for a in site.articles %}{% unless a.published == false %}
+  <url><loc>{{ a.url | absolute_url }}</loc><lastmod>{{ a.date | date_to_xmlschema }}</lastmod></url>
+  {%- endunless %}{% endfor %}
   {%- for t in site.tests %}
   <url><loc>{{ t.url | absolute_url }}</loc></url>
   {%- endfor %}

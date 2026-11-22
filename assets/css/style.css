@@ -958,3 +958,59 @@ a.tag-challenge:hover { background: var(--ink); color: var(--paper); }
 .footer-club img { height: 44px; }
 .coach-card img, .club-card img { width: 150px; height: 52px; object-fit: contain; object-position: left center; }
 .club-card + .coach-card { margin-top: 0.8rem; }
+
+/* ---------- Journal : filtre ---------- */
+.journal-filter { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: -1rem 0 0.5rem; }
+.journal-filter[hidden] { display: none; }
+.journal-filter button {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.85rem;
+  background: transparent;
+  color: var(--ink-2);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.journal-filter button:hover { border-color: var(--accent); }
+.journal-filter button[aria-pressed="true"] { border-color: var(--ink); color: var(--ink); font-weight: 600; }
+.recit-card.is-hidden { display: none; }
+
+/* ---------- Article : chiffres avant → après ---------- */
+.facts-evol { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.facts-evol dd { flex-wrap: wrap; gap: 0.25rem 0.4rem; align-items: baseline; }
+.facts-evol .fe-old { color: var(--muted); font-weight: 500; }
+.facts-evol .fe-arrow { color: var(--accent); font-weight: 400; }
+.facts-evol small { font-size: 0.6em; font-weight: 500; font-stretch: 100%; color: var(--muted); letter-spacing: 0.02em; }
+.facts-note { font-size: 0.78rem; color: var(--muted); margin: 0.6rem 0 0; }
+
+/* ---------- Graphiques (SVG en ligne, style presse) ---------- */
+.chart { margin: 2rem 0 2.2rem; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart figcaption { font-family: var(--sans); font-size: 0.78rem; line-height: 1.4; color: var(--muted); margin-top: 0.5rem; }
+.ch text { font-family: var(--sans); font-size: 13px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+.ch .ch-unit { font-size: 12px; letter-spacing: 0.04em; }
+.ch-grid { stroke: var(--line); stroke-width: 1; }
+.ch-axis { stroke: var(--ink-2); stroke-width: 1; }
+.ch-band { fill: var(--paper-2); }
+.ch-line { fill: none; stroke-width: 2.4; stroke-linejoin: round; stroke-linecap: round; }
+.ch-line.ch-old, .ch-track.ch-old { stroke: var(--muted); }
+.ch-line.ch-new, .ch-track.ch-new { stroke: var(--accent); }
+.ch-dot.ch-old, .ch-mark.ch-old { fill: var(--muted); }
+.ch-dot.ch-new, .ch-mark.ch-new { fill: var(--accent); }
+.ch-mark { stroke: var(--paper); stroke-width: 2; }
+.ch-track { stroke-width: 2; }
+.ch .ch-lab { font-size: 15px; font-weight: 700; }
+.ch .ch-lab.ch-old, .ch .ch-val.ch-old { fill: var(--muted); }
+.ch .ch-lab.ch-new, .ch .ch-val.ch-new { fill: var(--accent-ink); }
+.ch .ch-note { font-family: var(--serif); font-style: italic; font-size: 15px; fill: var(--ink-2); }
+.ch .ch-note-s { font-size: 13px; fill: var(--muted); }
+.ch-note-line { stroke: var(--ink-2); stroke-width: 1; }
+@media (max-width: 640px) {
+  .ch text { font-size: 18px; }
+  .ch .ch-unit { font-size: 16px; }
+  .ch .ch-lab { font-size: 20px; }
+  .ch .ch-note { font-size: 19px; }
+  .ch .ch-note-s, .ch .ch-val { font-size: 17px; }
+}
+.kv-more { margin-left: 0.5rem; font-size: 0.85rem; }

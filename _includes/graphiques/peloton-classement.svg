@@ -1,0 +1,149 @@
+<svg class="ch" viewBox="0 0 600 266" role="img" aria-labelledby="pel1-t pel1-d">
+<title id="pel1-t">Les coureurs recroisés, classés par niveau</title>
+<desc id="pel1-d">Chaque point est un coureur croisé au moins deux fois. Fin 2025, 25 d'entre eux étaient estimés plus rapides que moi ; au second semestre 2026, 2.</desc>
+<text class="ch-tick" x="101.2" y="200" text-anchor="middle">0 %</text>
+<text class="ch-tick" x="254.1" y="200" text-anchor="middle">+10 %</text>
+<text class="ch-tick" x="407.1" y="200" text-anchor="middle">+20 %</text>
+<text class="ch-tick" x="560.0" y="200" text-anchor="middle">+30 %</text>
+<line class="ch-axis" x1="40" x2="560" y1="180" y2="180"/>
+<text class="ch-unit" x="560" y="220" text-anchor="end">temps en plus par rapport à mon niveau actuel</text>
+<text class="ch-unit" x="40" y="220">plus rapides</text>
+<circle class="ch-pel" cx="70.6" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="85.9" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="101.2" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="116.5" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="131.8" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="162.4" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="162.4" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="162.4" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="177.6" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="177.6" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="177.6" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="177.6" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="192.9" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="192.9" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="192.9" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="208.2" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="223.5" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="223.5" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="223.5" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="223.5" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="223.5" cy="139.0" r="4"/>
+<circle class="ch-pel" cx="238.8" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="238.8" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="254.1" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="254.1" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="254.1" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="254.1" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="269.4" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="284.7" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="284.7" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="300.0" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="300.0" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="300.0" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="300.0" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="315.3" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="330.6" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="330.6" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="330.6" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="330.6" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="330.6" cy="139.0" r="4"/>
+<circle class="ch-pel" cx="330.6" cy="130.0" r="4"/>
+<circle class="ch-pel" cx="330.6" cy="121.0" r="4"/>
+<circle class="ch-pel" cx="330.6" cy="112.0" r="4"/>
+<circle class="ch-pel" cx="345.9" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="345.9" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="345.9" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="361.2" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="361.2" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="361.2" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="361.2" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="361.2" cy="139.0" r="4"/>
+<circle class="ch-pel" cx="361.2" cy="130.0" r="4"/>
+<circle class="ch-pel" cx="361.2" cy="121.0" r="4"/>
+<circle class="ch-pel" cx="376.5" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="376.5" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="376.5" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="376.5" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="376.5" cy="139.0" r="4"/>
+<circle class="ch-pel" cx="376.5" cy="130.0" r="4"/>
+<circle class="ch-pel" cx="391.8" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="391.8" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="391.8" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="391.8" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="391.8" cy="139.0" r="4"/>
+<circle class="ch-pel" cx="391.8" cy="130.0" r="4"/>
+<circle class="ch-pel" cx="391.8" cy="121.0" r="4"/>
+<circle class="ch-pel" cx="391.8" cy="112.0" r="4"/>
+<circle class="ch-pel" cx="407.1" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="407.1" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="407.1" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="407.1" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="407.1" cy="139.0" r="4"/>
+<circle class="ch-pel" cx="422.4" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="422.4" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="422.4" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="422.4" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="422.4" cy="139.0" r="4"/>
+<circle class="ch-pel" cx="422.4" cy="130.0" r="4"/>
+<circle class="ch-pel" cx="422.4" cy="121.0" r="4"/>
+<circle class="ch-pel" cx="422.4" cy="112.0" r="4"/>
+<circle class="ch-pel" cx="437.6" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="437.6" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="437.6" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="437.6" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="452.9" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="452.9" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="452.9" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="452.9" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="452.9" cy="139.0" r="4"/>
+<circle class="ch-pel" cx="468.2" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="468.2" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="468.2" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="468.2" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="468.2" cy="139.0" r="4"/>
+<circle class="ch-pel" cx="468.2" cy="130.0" r="4"/>
+<circle class="ch-pel" cx="483.5" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="483.5" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="483.5" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="483.5" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="483.5" cy="139.0" r="4"/>
+<circle class="ch-pel" cx="483.5" cy="130.0" r="4"/>
+<circle class="ch-pel" cx="498.8" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="498.8" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="498.8" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="498.8" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="498.8" cy="139.0" r="4"/>
+<circle class="ch-pel" cx="498.8" cy="130.0" r="4"/>
+<circle class="ch-pel" cx="498.8" cy="121.0" r="4"/>
+<circle class="ch-pel" cx="498.8" cy="112.0" r="4"/>
+<circle class="ch-pel" cx="498.8" cy="103.0" r="4"/>
+<circle class="ch-pel" cx="498.8" cy="94.0" r="4"/>
+<circle class="ch-pel" cx="498.8" cy="85.0" r="4"/>
+<circle class="ch-pel" cx="514.1" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="514.1" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="514.1" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="514.1" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="514.1" cy="139.0" r="4"/>
+<circle class="ch-pel" cx="514.1" cy="130.0" r="4"/>
+<circle class="ch-pel" cx="529.4" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="529.4" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="529.4" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="529.4" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="544.7" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="544.7" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="544.7" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="544.7" cy="148.0" r="4"/>
+<circle class="ch-pel" cx="544.7" cy="139.0" r="4"/>
+<circle class="ch-pel" cx="544.7" cy="130.0" r="4"/>
+<circle class="ch-pel" cx="560.0" cy="175.0" r="4"/>
+<circle class="ch-pel" cx="560.0" cy="166.0" r="4"/>
+<circle class="ch-pel" cx="560.0" cy="157.0" r="4"/>
+<circle class="ch-pel" cx="560.0" cy="148.0" r="4"/>
+<line class="ch-me-line ch-old-me" x1="249.6" x2="249.6" y1="64" y2="180"/>
+<line class="ch-me-line" x1="111.6" x2="111.6" y1="34" y2="180"/>
+<line class="ch-me-line" x1="101.2" x2="101.2" y1="34" y2="180"/>
+<text class="ch-lab ch-old" x="257.6" y="56">Fin 2025 : 26<tspan baseline-shift="super" font-size="70%">e</tspan></text>
+<text class="ch-lab ch-new" x="109.2" y="26">2026 : 4<tspan baseline-shift="super" font-size="70%">e</tspan> puis 3<tspan baseline-shift="super" font-size="70%">e</tspan></text>
+<text class="ch-note ch-note-s" x="560" y="240" text-anchor="end">et 493 autres au-delà de +30 %</text>
+</svg>

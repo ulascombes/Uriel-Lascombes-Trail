@@ -1,0 +1,16 @@
+---
+layout: page
+title: Journal
+permalink: /journal/
+description: "Le journal d'Uriel Lascombes : récits de course, tests d'effort, entraînement."
+---
+<p class="lede">Mes récits de course, et quelques articles à côté : tests d'effort, entraînement, bilans de saison.</p>
+{%- assign entrees = site.recits | concat: site.articles | sort: "date" | reverse %}
+<nav class="journal-filter" aria-label="Filtrer le journal" hidden>
+  <button type="button" data-filtre="tout" aria-pressed="true">Tout</button>
+  <button type="button" data-filtre="course" aria-pressed="false">Courses</button>
+  <button type="button" data-filtre="article" aria-pressed="false">Articles</button>
+</nav>
+<div class="recit-grid" id="journal-liste">
+  {%- for r in entrees %}{% unless r.published == false %}{% include recit-card.html %}{% endunless %}{% endfor %}
+</div>

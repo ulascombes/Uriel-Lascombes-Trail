@@ -1,0 +1,35 @@
+<svg class="ch ch-short" viewBox="0 0 600 200" role="img" aria-labelledby="labo-s-t labo-s-d">
+<title id="labo-s-t">Seuil et VMA, 2025 et 2026</title>
+<desc id="labo-s-d">Le seuil passe de 17,5 à environ 18,3 km/h, la VMA de 19,3 à 21 km/h.</desc>
+<line class="ch-grid" x1="70.0" x2="70.0" y1="34" y2="170"/>
+<text class="ch-tick" x="70.0" y="190" text-anchor="middle">14</text>
+<line class="ch-grid" x1="133.2" x2="133.2" y1="34" y2="170"/>
+<text class="ch-tick" x="133.2" y="190" text-anchor="middle">15</text>
+<line class="ch-grid" x1="196.5" x2="196.5" y1="34" y2="170"/>
+<text class="ch-tick" x="196.5" y="190" text-anchor="middle">16</text>
+<line class="ch-grid" x1="259.8" x2="259.8" y1="34" y2="170"/>
+<text class="ch-tick" x="259.8" y="190" text-anchor="middle">17</text>
+<line class="ch-grid" x1="323.0" x2="323.0" y1="34" y2="170"/>
+<text class="ch-tick" x="323.0" y="190" text-anchor="middle">18</text>
+<line class="ch-grid" x1="386.2" x2="386.2" y1="34" y2="170"/>
+<text class="ch-tick" x="386.2" y="190" text-anchor="middle">19</text>
+<line class="ch-grid" x1="449.5" x2="449.5" y1="34" y2="170"/>
+<text class="ch-tick" x="449.5" y="190" text-anchor="middle">20</text>
+<line class="ch-grid" x1="512.8" x2="512.8" y1="34" y2="170"/>
+<text class="ch-tick" x="512.8" y="190" text-anchor="middle">21</text>
+<line class="ch-grid" x1="576.0" x2="576.0" y1="34" y2="170"/>
+<text class="ch-tick" x="576.0" y="190" text-anchor="middle">22</text>
+<text class="ch-unit" x="576" y="18" text-anchor="end">km/h</text>
+<text class="ch-lab ch-old" x="56" y="75" text-anchor="end">2025</text>
+<line class="ch-track ch-old" x1="291.4" x2="405.2" y1="70" y2="70"/>
+<circle class="ch-mark ch-old" cx="291.4" cy="70" r="6"/>
+<text class="ch-val ch-old" x="291.4" y="56" text-anchor="middle">seuil 17,5</text>
+<circle class="ch-mark ch-old" cx="405.2" cy="70" r="6"/>
+<text class="ch-val ch-old" x="405.2" y="56" text-anchor="middle">VMA 19,3</text>
+<text class="ch-lab ch-new" x="56" y="145" text-anchor="end">2026</text>
+<line class="ch-track ch-new" x1="342.0" x2="512.8" y1="140" y2="140"/>
+<circle class="ch-mark ch-new" cx="342.0" cy="140" r="6"/>
+<text class="ch-val ch-new" x="342.0" y="126" text-anchor="middle">seuil ≈ 18,3</text>
+<circle class="ch-mark ch-new" cx="512.8" cy="140" r="6"/>
+<text class="ch-val ch-new" x="512.8" y="126" text-anchor="middle">VMA 21</text>
+</svg>
