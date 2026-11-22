@@ -10,6 +10,21 @@
 # commentaire : une phrase, affichée sous la ligne
 # chaussures  : modèle porté
 
+- ref: championnats-regionaux-2026
+  nom: "Championnats régionaux de trail"
+  date: 2026-11-21
+  km: 23
+  dplus: 530
+  temps: "1:32:26"
+  classement: 1
+  itra:
+  utmb:
+  betrail:
+  mention: "Championnat régional"
+  challenges:
+  commentaire: "Champion régional sur un format hybride entre cross et trail : un départ dans un champ boueux, puis trois boucles roulantes menées en tête."
+  chaussures: "Hoka Zinal 3"
+
 - ref: pichauris-2026
   nom: "Alpi Trail de Pichauris"
   date: 2026-11-08
