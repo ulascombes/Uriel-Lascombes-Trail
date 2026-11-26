@@ -2,11 +2,10 @@
 # Clé = l'année entre guillemets. Supprime une ligne pour la retirer.
 
 "2026":
-  - titre: "Leader"
+  - titre: "Vainqueur"
     challenge: "Challenge des Trails de Provence"
     lien: "https://www.trailsdeprovence.fr/"
-    note: "classement provisoire"
-  - titre: "Leader"
+    note: "classement Trail court"
+  - titre: "Vainqueur"
     challenge: "Challenge Trail Région Sud"
     lien: "https://www.provence-athle.fr/index.php/challenges"
-    note: "classement provisoire"

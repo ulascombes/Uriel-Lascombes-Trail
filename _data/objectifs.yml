@@ -18,8 +18,8 @@ courses:
     format: "Trail court"
     date: 2027-05-15
     lieu: "Guerlédan, Bretagne"
-    km:
-    dplus:
+    km: 35
+    dplus: 1300
     lien: "https://www.athle.fr/contenu/6271"
     championnat: true
 
@@ -33,11 +33,12 @@ courses:
     logo: "/assets/images/logos/marathon-mont-blanc.png"
     championnat: false
 
-  - nom: "Championnats de France de course verticale"
-    format: "Kilomètre vertical"
-    date: 2027-07-03
-    lieu: "Arrens-Marsous, Hautes-Pyrénées"
-    km:
-    dplus: 1000
-    lien: "https://www.athle.fr/contenu/calendrier-championnats-de-france/32"
-    championnat: true
+  - nom: "Restonica Trail"
+    format: "Tavignanu Trail (TT50K)"
+    date: 2027-07-10
+    lieu: "Corte, Corse"
+    km: 33
+    dplus: 2400
+    lien: "https://restonica.utmb.world/races/TT50K"
+    logo: "/assets/images/logos/restonica.png"
+    championnat: false
